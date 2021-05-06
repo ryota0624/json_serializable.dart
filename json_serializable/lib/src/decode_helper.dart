@@ -109,18 +109,35 @@ abstract class DecodeHelper implements HelperCore {
         fieldKeyMapArg = ', fieldKeyMap: const $mapLiteral';
       }
 
-      buffer..write(fieldKeyMapArg)..write(')');
+      buffer
+        ..write(fieldKeyMapArg)
+        ..write(')')
+        ..writeln(';\n}')
+        ..writeln();
     } else {
-      buffer..write(checks)..write('''
-  return ${data.content}''');
+      buffer
+        ..write(checks)
+        ..write('''
+  final v = ${data.content};''')
+        ..writeln();
+
       for (final field in data.fieldsToSet) {
         buffer
           ..writeln()
-          ..write('    ..$field = ')
-          ..write(deserializeFun(field));
+          ..write('''
+  final $field = ${deserializeFun(field)};
+  if ($field != null) {
+      v.$field = $field;
+  }
+          ''');
       }
+      buffer
+        ..write('''
+  return v;
+        ''')
+        ..writeln()
+        ..writeln('}');
     }
-    buffer..writeln(';\n}')..writeln();
 
     return CreateFactoryResult(buffer.toString(), data.usedCtorParamsAndFields);
   }
