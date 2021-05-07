@@ -4,9 +4,11 @@
 
 import 'package:analyzer/dart/element/element.dart';
 import 'package:analyzer/dart/element/nullability_suffix.dart';
+import 'package:analyzer/dart/element/type.dart';
 import 'package:build/build.dart';
 import 'package:source_gen/source_gen.dart';
 
+import 'force_nullable_interface_type.dart';
 import 'helper_core.dart';
 import 'json_literal_generator.dart';
 import 'type_helpers/generic_factory_helper.dart';
@@ -48,10 +50,13 @@ abstract class DecodeHelper implements HelperCore {
 
     buffer.write(') {\n');
 
-    String deserializeFun(String paramOrFieldName,
-            {ParameterElement? ctorParam}) =>
+    String deserializeFun(
+      String paramOrFieldName, {
+      ParameterElement? ctorParam,
+      bool forceNullable = false,
+    }) =>
         _deserializeForField(accessibleFields[paramOrFieldName]!,
-            ctorParam: ctorParam);
+            ctorParam: ctorParam, forceNullable: forceNullable);
 
     final data = _writeConstructorInvocation(
       element,
@@ -125,7 +130,7 @@ abstract class DecodeHelper implements HelperCore {
         buffer
           ..writeln()
           ..write('''
-  final $field = ${deserializeFun(field)};
+  final $field = ${deserializeFun(field, forceNullable: true)};
   if ($field != null) {
       v.$field = $field;
   }
@@ -182,9 +187,13 @@ abstract class DecodeHelper implements HelperCore {
     FieldElement field, {
     ParameterElement? ctorParam,
     bool checkedProperty = false,
+    bool forceNullable = false,
   }) {
     final jsonKeyName = safeNameAccess(field);
-    final targetType = ctorParam?.type ?? field.type;
+    var targetType = ctorParam?.type ?? field.type;
+    if (forceNullable && targetType is InterfaceType) {
+      targetType = ForceNullableInterfaceType(targetType);
+    }
     final contextHelper = getHelperContext(field);
     final defaultProvided = jsonKeyFor(field).defaultValue != null;
 
