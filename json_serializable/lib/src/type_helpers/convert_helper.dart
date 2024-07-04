@@ -3,18 +3,19 @@
 // BSD-style license that can be found in the LICENSE file.
 
 import 'package:analyzer/dart/element/type.dart';
+import 'package:source_helper/source_helper.dart';
 
-import '../shared_checkers.dart';
+import '../lambda_result.dart';
 import '../type_helper.dart';
-import '../utils.dart';
 
 /// Information used by [ConvertHelper] when handling `JsonKey`-annotated
 /// fields with `toJson` or `fromJson` values set.
 class ConvertData {
   final String name;
   final DartType paramType;
+  final DartType returnType;
 
-  ConvertData(this.name, this.paramType);
+  ConvertData(this.name, this.paramType, this.returnType);
 }
 
 abstract class TypeHelperContextWithConvert extends TypeHelperContext {
@@ -23,11 +24,12 @@ abstract class TypeHelperContextWithConvert extends TypeHelperContext {
   ConvertData? get deserializeConvertData;
 }
 
+/// Handles `JsonKey`-annotated fields with `toJson` or `fromJson` values set.
 class ConvertHelper extends TypeHelper<TypeHelperContextWithConvert> {
   const ConvertHelper();
 
   @override
-  String? serialize(
+  Object? serialize(
     DartType targetType,
     String expression,
     TypeHelperContextWithConvert context,
@@ -39,11 +41,11 @@ class ConvertHelper extends TypeHelper<TypeHelperContextWithConvert> {
 
     assert(toJsonData.paramType is TypeParameterType ||
         targetType.isAssignableTo(toJsonData.paramType));
-    return '${toJsonData.name}($expression)';
+    return LambdaResult(expression, toJsonData.name);
   }
 
   @override
-  String? deserialize(
+  Object? deserialize(
     DartType targetType,
     String expression,
     TypeHelperContextWithConvert context,
@@ -54,7 +56,10 @@ class ConvertHelper extends TypeHelper<TypeHelperContextWithConvert> {
       return null;
     }
 
-    final asContent = asStatement(fromJsonData.paramType);
-    return '${fromJsonData.name}($expression$asContent)';
+    return LambdaResult(
+      expression,
+      fromJsonData.name,
+      asContent: fromJsonData.paramType,
+    );
   }
 }

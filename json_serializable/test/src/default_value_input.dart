@@ -5,7 +5,7 @@
 part of '_json_serializable_test_input.dart';
 
 @ShouldThrow(
-  'Error with `@JsonKey` on `field`. '
+  'Error with `@JsonKey` on the `field` field. '
   '`defaultValue` is `Symbol`, it must be a literal.',
   element: 'field',
 )
@@ -19,10 +19,17 @@ class DefaultWithSymbol {
 
 int _function() => 42;
 
-@ShouldThrow(
-  'Error with `@JsonKey` on `field`. '
-  '`defaultValue` is `Function`, it must be a literal.',
-  element: 'field',
+@ShouldGenerate(
+  r'''
+DefaultWithFunction _$DefaultWithFunctionFromJson(Map<String, dynamic> json) =>
+    DefaultWithFunction()..field = json['field'] ?? _function();
+
+Map<String, dynamic> _$DefaultWithFunctionToJson(
+        DefaultWithFunction instance) =>
+    <String, dynamic>{
+      'field': instance.field,
+    };
+''',
 )
 @JsonSerializable()
 class DefaultWithFunction {
@@ -33,7 +40,20 @@ class DefaultWithFunction {
 }
 
 @ShouldThrow(
-  'Error with `@JsonKey` on `field`. '
+  'Error with `@JsonKey` on the `field` field. '
+  '`defaultValue` is `List > Function`, it must be a literal.',
+  element: 'field',
+)
+@JsonSerializable()
+class DefaultWithFunctionInList {
+  @JsonKey(defaultValue: [_function])
+  Object? field;
+
+  DefaultWithFunctionInList();
+}
+
+@ShouldThrow(
+  'Error with `@JsonKey` on the `field` field. '
   '`defaultValue` is `Type`, it must be a literal.',
   element: 'field',
 )
@@ -46,7 +66,7 @@ class DefaultWithType {
 }
 
 @ShouldThrow(
-  'Error with `@JsonKey` on `field`. '
+  'Error with `@JsonKey` on the `field` field. '
   '`defaultValue` is `Duration`, it must be a literal.',
   element: 'field',
 )
@@ -61,7 +81,7 @@ class DefaultWithConstObject {
 enum Enum { value }
 
 @ShouldThrow(
-  'Error with `@JsonKey` on `field`. '
+  'Error with `@JsonKey` on the `field` field. '
   '`defaultValue` is `List > Enum`, it must be a literal.',
   element: 'field',
 )
@@ -73,21 +93,29 @@ class DefaultWithNestedEnum {
   DefaultWithNestedEnum();
 }
 
+@ShouldThrow(
+  '`JsonKey.nullForUndefinedEnumValue` cannot be used with '
+  '`JsonKey.defaultValue`.',
+  element: 'enumValue',
+)
+@JsonSerializable()
+class BadEnumDefaultValue {
+  @JsonKey(defaultValue: JsonKey.nullForUndefinedEnumValue)
+  Enum? enumValue;
+
+  BadEnumDefaultValue();
+}
+
 @ShouldGenerate(
   r'''
 DefaultWithToJsonClass _$DefaultWithToJsonClassFromJson(
-    Map<String, dynamic> json) {
-  return DefaultWithToJsonClass()
-    ..fieldDefaultValueToJson = DefaultWithToJsonClass._fromJson(
-            json['fieldDefaultValueToJson'] as String) ??
-        7;
-}
+        Map<String, dynamic> json) =>
+    DefaultWithToJsonClass()
+      ..fieldDefaultValueToJson = json['fieldDefaultValueToJson'] == null
+          ? 7
+          : DefaultWithToJsonClass._fromJson(
+              json['fieldDefaultValueToJson'] as String);
 ''',
-  expectedLogItems: [
-    '''
-The field `fieldDefaultValueToJson` has both `defaultValue` and `fromJson` defined which likely won't work for your scenario.
-Instead of using `defaultValue`, set `nullable: false` and handle `null` in the `fromJson` function.'''
-  ],
 )
 @JsonSerializable(createToJson: false)
 class DefaultWithToJsonClass {
@@ -103,10 +131,13 @@ class DefaultWithToJsonClass {
   r'''
 DefaultWithDisallowNullRequiredClass
     _$DefaultWithDisallowNullRequiredClassFromJson(Map<String, dynamic> json) {
-  $checkKeys(json,
-      requiredKeys: const ['theField'], disallowNullValues: const ['theField']);
+  $checkKeys(
+    json,
+    requiredKeys: const ['theField'],
+    disallowNullValues: const ['theField'],
+  );
   return DefaultWithDisallowNullRequiredClass()
-    ..theField = json['theField'] as int? ?? 7;
+    ..theField = (json['theField'] as num?)?.toInt() ?? 7;
 }
 ''',
   expectedLogItems: [
@@ -122,21 +153,64 @@ class DefaultWithDisallowNullRequiredClass {
   DefaultWithDisallowNullRequiredClass();
 }
 
+@ShouldGenerate(
+  r'''
+CtorDefaultValueAndJsonKeyDefaultValue
+    _$CtorDefaultValueAndJsonKeyDefaultValueFromJson(
+            Map<String, dynamic> json) =>
+        CtorDefaultValueAndJsonKeyDefaultValue(
+          (json['theField'] as num?)?.toInt() ?? 7,
+        );
+''',
+  expectedLogItems: [
+    'The constructor parameter for `theField` has a default value `6`, but the '
+        '`JsonKey.defaultValue` value `7` will be used for missing or `null` '
+        'values in JSON decoding.',
+  ],
+)
+@JsonSerializable(createToJson: false)
+class CtorDefaultValueAndJsonKeyDefaultValue {
+  @JsonKey(defaultValue: 7)
+  final int theField;
+
+  CtorDefaultValueAndJsonKeyDefaultValue([this.theField = 6]);
+}
+
+@ShouldGenerate(
+  r'''
+SameCtorAndJsonKeyDefaultValue _$SameCtorAndJsonKeyDefaultValueFromJson(
+        Map<String, dynamic> json) =>
+    SameCtorAndJsonKeyDefaultValue(
+      (json['theField'] as num?)?.toInt() ?? 3,
+    );
+''',
+  expectedLogItems: [
+    'The default value `3` for `theField` is defined twice '
+        'in the constructor and in the `JsonKey.defaultValue`.',
+  ],
+)
+@JsonSerializable(createToJson: false)
+class SameCtorAndJsonKeyDefaultValue {
+  @JsonKey(defaultValue: 3)
+  final int theField;
+
+  SameCtorAndJsonKeyDefaultValue([this.theField = 3]);
+}
+
 @ShouldGenerate(r'''
 DefaultDoubleConstants _$DefaultDoubleConstantsFromJson(
-    Map<String, dynamic> json) {
-  return DefaultDoubleConstants()
-    ..defaultNan = (json['defaultNan'] as num?)?.toDouble() ?? double.nan
-    ..defaultNegativeInfinity =
-        (json['defaultNegativeInfinity'] as num?)?.toDouble() ??
-            double.negativeInfinity
-    ..defaultInfinity =
-        (json['defaultInfinity'] as num?)?.toDouble() ?? double.infinity
-    ..defaultMinPositive =
-        (json['defaultMinPositive'] as num?)?.toDouble() ?? 5e-324
-    ..defaultMaxFinite = (json['defaultMaxFinite'] as num?)?.toDouble() ??
-        1.7976931348623157e+308;
-}
+        Map<String, dynamic> json) =>
+    DefaultDoubleConstants()
+      ..defaultNan = (json['defaultNan'] as num?)?.toDouble() ?? double.nan
+      ..defaultNegativeInfinity =
+          (json['defaultNegativeInfinity'] as num?)?.toDouble() ??
+              double.negativeInfinity
+      ..defaultInfinity =
+          (json['defaultInfinity'] as num?)?.toDouble() ?? double.infinity
+      ..defaultMinPositive =
+          (json['defaultMinPositive'] as num?)?.toDouble() ?? 5e-324
+      ..defaultMaxFinite = (json['defaultMaxFinite'] as num?)?.toDouble() ??
+          1.7976931348623157e+308;
 ''')
 @JsonSerializable(createToJson: false)
 class DefaultDoubleConstants {

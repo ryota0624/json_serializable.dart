@@ -1,6 +1,80 @@
+## 4.9.0
+
+- Require Dart 3.0
+- Add `JsonSerializable(createJsonKeys: true)`.
+  ([#1401](https://github.com/google/json_serializable.dart/pull/1401))
+
+## 4.8.1
+
+- Require Dart 2.19
+- Add topics.
+
+## 4.8.0
+
+- DEPRECATED `JsonKey.ignore`. Replaced by...
+- Added `JsonKey.includeFromJson` and `JsonKey.includeToJson` to allow 
+  fine-grained control of if a field is encoded/decoded.  
+- Added `JsonSerializable.createPerFieldToJson` which allows generating
+  a `_$ModelPerFieldToJson`, enabling partial encoding of a model.
+- Update `JsonKey` documentation to align with new features in 
+  `package:json_serializable`.
+- Require Dart SDK `>=2.18.0`.
+
+## 4.7.0
+
+- Added `JsonEnum.valueField` which allows specifying a field in an 
+  "enhanced enum" to use for serialization instead of specifying each value
+  individually with `JsonValue`.
+- Require Dart SDK 2.17
+
+## 4.6.0
+
+- Added `JsonSerializable(createFieldMap: true)`.
+  ([#1164](https://github.com/google/json_serializable.dart/pull/1164))
+- Added `JsonSerializable(converters: <JsonConverter>[])`
+  ([#1072](https://github.com/google/json_serializable.dart/issues/1072))
+
+## 4.5.0
+
+- Added `FieldRename.screamingSnake`.
+
+## 4.4.0
+
+- Added `JsonKey.readValue`.
+- Non-breaking updates to `checkedCreate` and `checkedConvert` to support
+  `JsonKey.readValue`.
+- Improved `toString` in included exceptions.
+
+## 4.3.0
+
+- Changed the type of `JsonKey.unknownEnumValue` from `Object?` to `Enum?`.
+  Assuming this feature has been used correctly, it shouldn't be a breaking
+  change.
+- Changed the type of the `$enumDecodeNullable` parameter `unknownValue` from
+  `Object?` to `Enum?`.
+
+## 4.2.0
+
+- Added `JsonSerializable.constructor` field to allow specifying an alternative
+  constructor to invoke when creating a `fromJson` helper.
+- Added `JsonEnum` for annotating `enum` types.
+- Added `$enumDecodeNullable` and `$enumDecode` helpers to minimize generated
+  code.
+- Added `const` `JsonKey.nullForUndefinedEnumValue` for use in
+  `JsonKey.unknownEnumValue` when you want to use `null` for an unknown value.
+- Require Dart SDK `>=2.14.0`.
+
+## 4.1.0
+
+- Added a `const` constructor to `JsonConverter`.
+- Added `$checkedCreate` helper that will be used by `package:json_serializable`
+  v5+ and replaces both `$checkedNew` and `$checkedConvert`.
+- Annotate annotations with the supported target types, to minimize incorrect
+  usage.
+
 ## 4.0.1
 
-- Fix a potential error with `checked: true` when `ArgumentError.message` is 
+- Fix a potential error with `checked: true` when `ArgumentError.message` is
   `null`.
 - Updated `JsonSerializable.fromJson` to handle `null` values.
 - Deprecate `JsonSerializable` `defaults` and `withDefaults()`.

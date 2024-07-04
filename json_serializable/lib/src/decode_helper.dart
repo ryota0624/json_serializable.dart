@@ -7,6 +7,7 @@ import 'package:analyzer/dart/element/nullability_suffix.dart';
 import 'package:analyzer/dart/element/type.dart';
 import 'package:build/build.dart';
 import 'package:source_gen/source_gen.dart';
+import 'package:source_helper/source_helper.dart';
 
 import 'force_nullable_interface_type.dart';
 import 'helper_core.dart';
@@ -22,7 +23,7 @@ class CreateFactoryResult {
   CreateFactoryResult(this.output, this.usedFields);
 }
 
-abstract class DecodeHelper implements HelperCore {
+mixin DecodeHelper implements HelperCore {
   CreateFactoryResult createFactory(
     Map<String, FieldElement> accessibleFields,
     Map<String, String> unavailableReasons,
@@ -32,7 +33,7 @@ abstract class DecodeHelper implements HelperCore {
 
     final mapType = config.anyMap ? 'Map' : 'Map<String, dynamic>';
     buffer.write('$targetClassReference '
-        '${prefix}FromJson${genericClassArgumentsImpl(true)}'
+        '${prefix}FromJson${genericClassArgumentsImpl(withConstraints: true)}'
         '($mapType json');
 
     if (config.genericArgumentFactories) {
@@ -48,7 +49,9 @@ abstract class DecodeHelper implements HelperCore {
       }
     }
 
-    buffer.write(') {\n');
+    buffer.write(')');
+
+    final fromJsonLines = <String>[];
 
     String deserializeFun(
       String paramOrFieldName, {
@@ -60,46 +63,55 @@ abstract class DecodeHelper implements HelperCore {
 
     final data = _writeConstructorInvocation(
       element,
+      config.constructor,
       accessibleFields.keys,
       accessibleFields.values
-          .where((fe) =>
-              !fe.isFinal ||
-              // Handle the case where `fe` defines a getter in `element`
-              // and there is a setter in a super class
-              // See google/json_serializable.dart#613
-              element.lookUpSetter(fe.name, element.library) != null)
+          .where((fe) => element.lookUpSetter(fe.name, element.library) != null)
           .map((fe) => fe.name)
           .toList(),
       unavailableReasons,
       deserializeFun,
     );
 
-    final checks = _checkKeys(accessibleFields.values
-        .where((fe) => data.usedCtorParamsAndFields.contains(fe.name)));
+    final checks = _checkKeys(
+      accessibleFields.values
+          .where((fe) => data.usedCtorParamsAndFields.contains(fe.name)),
+    ).toList();
 
     if (config.checked) {
       final classLiteral = escapeDartString(element.name);
 
-      buffer..write('''
-  return \$checkedNew(
+      final sectionBuffer = StringBuffer()
+        ..write('''
+  \$checkedCreate(
     $classLiteral,
     json,
-    () {\n''')..write(checks)..write('''
+    (\$checkedConvert) {\n''')
+        ..write(checks.join())
+        ..write('''
     final val = ${data.content};''');
 
-      for (final field in data.fieldsToSet) {
-        buffer.writeln();
-        final safeName = safeNameAccess(accessibleFields[field]!);
-        buffer
+      for (final fieldName in data.fieldsToSet) {
+        sectionBuffer.writeln();
+        final fieldValue = accessibleFields[fieldName]!;
+        final safeName = safeNameAccess(fieldValue);
+        sectionBuffer
           ..write('''
-    \$checkedConvert(json, $safeName, (v) => ''')
-          ..write('val.$field = ')
-          ..write(_deserializeForField(accessibleFields[field]!,
-              checkedProperty: true))
-          ..write(');');
+    \$checkedConvert($safeName, (v) => ''')
+          ..write('val.$fieldName = ')
+          ..write(
+            _deserializeForField(fieldValue, checkedProperty: true),
+          );
+
+        final readValueFunc = jsonKeyFor(fieldValue).readValueFunctionName;
+        if (readValueFunc != null) {
+          sectionBuffer.writeln(',readValue: $readValueFunc,');
+        }
+
+        sectionBuffer.write(');');
       }
 
-      buffer.write('''\n    return val;
+      sectionBuffer.write('''\n    return val;
   }''');
 
       final fieldKeyMap = Map.fromEntries(data.usedCtorParamsAndFields
@@ -127,7 +139,7 @@ abstract class DecodeHelper implements HelperCore {
         ..writeln();
 
       for (final field in data.fieldsToSet) {
-        buffer
+        sectionBuffer
           ..writeln()
           ..write('''
   final $field = ${deserializeFun(field, forceNullable: true)};
@@ -147,7 +159,7 @@ abstract class DecodeHelper implements HelperCore {
     return CreateFactoryResult(buffer.toString(), data.usedCtorParamsAndFields);
   }
 
-  String _checkKeys(Iterable<FieldElement> accessibleFields) {
+  Iterable<String> _checkKeys(Iterable<FieldElement> accessibleFields) sync* {
     final args = <String>[];
 
     String constantList(Iterable<FieldElement> things) =>
@@ -176,13 +188,13 @@ abstract class DecodeHelper implements HelperCore {
       args.add('disallowNullValues: $disallowNullKeyLiteral');
     }
 
-    if (args.isEmpty) {
-      return '';
-    } else {
-      return '\$checkKeys(json, ${args.join(', ')});\n';
+    if (args.isNotEmpty) {
+      yield '\$checkKeys(json, ${args.map((e) => '$e, ').join()});\n';
     }
   }
 
+  /// If [checkedProperty] is `true`, we're using this function to write to a
+  /// setter.
   String _deserializeForField(
     FieldElement field, {
     ParameterElement? ctorParam,
@@ -195,53 +207,50 @@ abstract class DecodeHelper implements HelperCore {
       targetType = ForceNullableInterfaceType(targetType);
     }
     final contextHelper = getHelperContext(field);
-    final defaultProvided = jsonKeyFor(field).defaultValue != null;
+    final jsonKey = jsonKeyFor(field);
+    final defaultValue = jsonKey.defaultValue;
+    final readValueFunc = jsonKey.readValueFunctionName;
+
+    String deserialize(String expression) => contextHelper
+        .deserialize(
+          targetType,
+          expression,
+          defaultValue: defaultValue,
+        )
+        .toString();
 
     String value;
     try {
       if (config.checked) {
-        value = contextHelper
-            .deserialize(
-              targetType,
-              'v',
-              defaultProvided: defaultProvided,
-            )
-            .toString();
+        value = deserialize('v');
         if (!checkedProperty) {
-          value = '\$checkedConvert(json, $jsonKeyName, (v) => $value)';
+          final readValueBit =
+              readValueFunc == null ? '' : ',readValue: $readValueFunc,';
+          value = '\$checkedConvert($jsonKeyName, (v) => $value$readValueBit)';
         }
       } else {
-        assert(!checkedProperty,
-            'should only be true if `_generator.checked` is true.');
+        assert(
+          !checkedProperty,
+          'should only be true if `_generator.checked` is true.',
+        );
 
-        value = contextHelper
-            .deserialize(
-              targetType,
-              'json[$jsonKeyName]',
-              defaultProvided: defaultProvided,
-            )
-            .toString();
+        value = deserialize(
+          readValueFunc == null
+              ? 'json[$jsonKeyName]'
+              : '$readValueFunc(json, $jsonKeyName)',
+        );
       }
     } on UnsupportedTypeError catch (e) // ignore: avoid_catching_errors
     {
       throw createInvalidGenerationError('fromJson', field, e);
     }
 
-    final jsonKey = jsonKeyFor(field);
-    final defaultValue = jsonKey.defaultValue;
     if (defaultValue != null) {
       if (jsonKey.disallowNullValue && jsonKey.required) {
         log.warning('The `defaultValue` on field `${field.name}` will have no '
             'effect because both `disallowNullValue` and `required` are set to '
             '`true`.');
       }
-      if (contextHelper.deserializeConvertData != null) {
-        log.warning('The field `${field.name}` has both `defaultValue` and '
-            '`fromJson` defined which likely won\'t work for your scenario.\n'
-            'Instead of using `defaultValue`, set `nullable: false` and handle '
-            '`null` in the `fromJson` function.');
-      }
-      value = '$value ?? $defaultValue';
     }
     return value;
   }
@@ -259,6 +268,7 @@ abstract class DecodeHelper implements HelperCore {
 /// been defined by a constructor parameter with the same name.
 _ConstructorData _writeConstructorInvocation(
   ClassElement classElement,
+  String constructorName,
   Iterable<String> availableConstructorParameters,
   Iterable<String> writableFields,
   Map<String, String> unavailableReasons,
@@ -267,13 +277,7 @@ _ConstructorData _writeConstructorInvocation(
 ) {
   final className = classElement.name;
 
-  final ctor = classElement.unnamedConstructor;
-  if (ctor == null) {
-    // TODO: support using another ctor - google/json_serializable.dart#50
-    throw InvalidGenerationSourceError(
-        'The class `$className` has no default constructor.',
-        element: classElement);
-  }
+  final ctor = constructorByName(classElement, constructorName);
 
   final usedCtorParamsAndFields = <String>{};
   final constructorArguments = <ParameterElement>[];
@@ -281,7 +285,7 @@ _ConstructorData _writeConstructorInvocation(
 
   for (final arg in ctor.parameters) {
     if (!availableConstructorParameters.contains(arg.name)) {
-      if (arg.isNotOptional) {
+      if (arg.isRequired) {
         var msg = 'Cannot populate the required constructor '
             'argument: ${arg.name}.';
 
@@ -310,8 +314,14 @@ _ConstructorData _writeConstructorInvocation(
   final remainingFieldsForInvocationBody =
       writableFields.toSet().difference(usedCtorParamsAndFields);
 
+  final constructorExtra = constructorName.isEmpty ? '' : '.$constructorName';
+
   final buffer = StringBuffer()
-    ..write('$className${genericClassArguments(classElement, false)}(');
+    ..write(
+      '$className'
+      '${genericClassArguments(classElement, false)}'
+      '$constructorExtra(',
+    );
   if (constructorArguments.isNotEmpty) {
     buffer
       ..writeln()

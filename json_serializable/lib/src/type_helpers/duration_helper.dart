@@ -4,9 +4,10 @@
 
 import 'package:analyzer/dart/element/type.dart';
 import 'package:source_gen/source_gen.dart' show TypeChecker;
+import 'package:source_helper/source_helper.dart';
 
+import '../default_container.dart';
 import '../type_helper.dart';
-import '../utils.dart';
 
 class DurationHelper extends TypeHelper {
   const DurationHelper();
@@ -33,7 +34,7 @@ class DurationHelper extends TypeHelper {
   }
 
   @override
-  String? deserialize(
+  Object? deserialize(
     DartType targetType,
     String expression,
     TypeHelperContext context,
@@ -43,11 +44,10 @@ class DurationHelper extends TypeHelper {
       return null;
     }
 
-    return commonNullPrefix(
-      targetType.isNullableType,
+    return DefaultContainer(
       expression,
-      'Duration(microseconds: $expression as int)',
-    ).toString();
+      'Duration(microseconds: ($expression as num).toInt())',
+    );
   }
 }
 

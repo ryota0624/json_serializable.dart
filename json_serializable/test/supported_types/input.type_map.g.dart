@@ -1,17 +1,17 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
+// ignore_for_file: lines_longer_than_80_chars, text_direction_code_point_in_literal, inference_failure_on_function_invocation, inference_failure_on_collection_literal
+
 part of 'input.type_map.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-SimpleClass _$SimpleClassFromJson(Map<String, dynamic> json) {
-  return SimpleClass(
-    json['value'] as Map<String, dynamic>,
-    json['withDefault'] as Map<String, dynamic>? ?? {'a': 1},
-  );
-}
+SimpleClass _$SimpleClassFromJson(Map<String, dynamic> json) => SimpleClass(
+      json['value'] as Map<String, dynamic>,
+      json['withDefault'] as Map<String, dynamic>? ?? {'a': 1},
+    );
 
 Map<String, dynamic> _$SimpleClassToJson(SimpleClass instance) =>
     <String, dynamic>{
@@ -19,12 +19,11 @@ Map<String, dynamic> _$SimpleClassToJson(SimpleClass instance) =>
       'withDefault': instance.withDefault,
     };
 
-SimpleClassNullable _$SimpleClassNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullable(
-    json['value'] as Map<String, dynamic>?,
-    json['withDefault'] as Map<String, dynamic>? ?? {'a': 1},
-  );
-}
+SimpleClassNullable _$SimpleClassNullableFromJson(Map<String, dynamic> json) =>
+    SimpleClassNullable(
+      json['value'] as Map<String, dynamic>?,
+      json['withDefault'] as Map<String, dynamic>? ?? {'a': 1},
+    );
 
 Map<String, dynamic> _$SimpleClassNullableToJson(
         SimpleClassNullable instance) =>
@@ -34,13 +33,12 @@ Map<String, dynamic> _$SimpleClassNullableToJson(
     };
 
 SimpleClassOfBigIntToBigInt _$SimpleClassOfBigIntToBigIntFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfBigIntToBigInt(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(BigInt.parse(k), BigInt.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfBigIntToBigInt(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(BigInt.parse(k), BigInt.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfBigIntToBigIntToJson(
         SimpleClassOfBigIntToBigInt instance) =>
@@ -50,13 +48,12 @@ Map<String, dynamic> _$SimpleClassOfBigIntToBigIntToJson(
     };
 
 SimpleClassNullableOfBigIntToBigInt
-    _$SimpleClassNullableOfBigIntToBigIntFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfBigIntToBigInt(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(BigInt.parse(k), BigInt.parse(e as String)),
-    ),
-  );
-}
+    _$SimpleClassNullableOfBigIntToBigIntFromJson(Map<String, dynamic> json) =>
+        SimpleClassNullableOfBigIntToBigInt(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(BigInt.parse(k), BigInt.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfBigIntToBigIntToJson(
         SimpleClassNullableOfBigIntToBigInt instance) =>
@@ -66,13 +63,12 @@ Map<String, dynamic> _$SimpleClassNullableOfBigIntToBigIntToJson(
     };
 
 SimpleClassOfDateTimeToBigInt _$SimpleClassOfDateTimeToBigIntFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfDateTimeToBigInt(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(DateTime.parse(k), BigInt.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfDateTimeToBigInt(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(DateTime.parse(k), BigInt.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfDateTimeToBigIntToJson(
         SimpleClassOfDateTimeToBigInt instance) =>
@@ -82,13 +78,13 @@ Map<String, dynamic> _$SimpleClassOfDateTimeToBigIntToJson(
     };
 
 SimpleClassNullableOfDateTimeToBigInt
-    _$SimpleClassNullableOfDateTimeToBigIntFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfDateTimeToBigInt(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(DateTime.parse(k), BigInt.parse(e as String)),
-    ),
-  );
-}
+    _$SimpleClassNullableOfDateTimeToBigIntFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDateTimeToBigInt(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(DateTime.parse(k), BigInt.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDateTimeToBigIntToJson(
         SimpleClassNullableOfDateTimeToBigInt instance) =>
@@ -98,13 +94,12 @@ Map<String, dynamic> _$SimpleClassNullableOfDateTimeToBigIntToJson(
     };
 
 SimpleClassOfDynamicToBigInt _$SimpleClassOfDynamicToBigIntFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfDynamicToBigInt(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(k, BigInt.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfDynamicToBigInt(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(k, BigInt.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfDynamicToBigIntToJson(
         SimpleClassOfDynamicToBigInt instance) =>
@@ -113,13 +108,12 @@ Map<String, dynamic> _$SimpleClassOfDynamicToBigIntToJson(
     };
 
 SimpleClassNullableOfDynamicToBigInt
-    _$SimpleClassNullableOfDynamicToBigIntFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfDynamicToBigInt(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, BigInt.parse(e as String)),
-    ),
-  );
-}
+    _$SimpleClassNullableOfDynamicToBigIntFromJson(Map<String, dynamic> json) =>
+        SimpleClassNullableOfDynamicToBigInt(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, BigInt.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDynamicToBigIntToJson(
         SimpleClassNullableOfDynamicToBigInt instance) =>
@@ -128,47 +122,20 @@ Map<String, dynamic> _$SimpleClassNullableOfDynamicToBigIntToJson(
     };
 
 SimpleClassOfEnumTypeToBigInt _$SimpleClassOfEnumTypeToBigIntFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfEnumTypeToBigInt(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(
-          _$enumDecode(_$EnumTypeEnumMap, k), BigInt.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfEnumTypeToBigInt(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(
+            $enumDecode(_$EnumTypeEnumMap, k), BigInt.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfEnumTypeToBigIntToJson(
         SimpleClassOfEnumTypeToBigInt instance) =>
     <String, dynamic>{
       'value': instance.value
-          .map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e.toString())),
+          .map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e.toString())),
     };
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
 
 const _$EnumTypeEnumMap = {
   EnumType.alpha: 'alpha',
@@ -178,30 +145,29 @@ const _$EnumTypeEnumMap = {
 };
 
 SimpleClassNullableOfEnumTypeToBigInt
-    _$SimpleClassNullableOfEnumTypeToBigIntFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfEnumTypeToBigInt(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(
-          _$enumDecode(_$EnumTypeEnumMap, k), BigInt.parse(e as String)),
-    ),
-  );
-}
+    _$SimpleClassNullableOfEnumTypeToBigIntFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfEnumTypeToBigInt(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(
+                $enumDecode(_$EnumTypeEnumMap, k), BigInt.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfEnumTypeToBigIntToJson(
         SimpleClassNullableOfEnumTypeToBigInt instance) =>
     <String, dynamic>{
       'value': instance.value
-          ?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e.toString())),
+          ?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e.toString())),
     };
 
 SimpleClassOfIntToBigInt _$SimpleClassOfIntToBigIntFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfIntToBigInt(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(int.parse(k), BigInt.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfIntToBigInt(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(int.parse(k), BigInt.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfIntToBigIntToJson(
         SimpleClassOfIntToBigInt instance) =>
@@ -211,13 +177,12 @@ Map<String, dynamic> _$SimpleClassOfIntToBigIntToJson(
     };
 
 SimpleClassNullableOfIntToBigInt _$SimpleClassNullableOfIntToBigIntFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfIntToBigInt(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(int.parse(k), BigInt.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfIntToBigInt(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(int.parse(k), BigInt.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfIntToBigIntToJson(
         SimpleClassNullableOfIntToBigInt instance) =>
@@ -227,13 +192,12 @@ Map<String, dynamic> _$SimpleClassNullableOfIntToBigIntToJson(
     };
 
 SimpleClassOfObjectToBigInt _$SimpleClassOfObjectToBigIntFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfObjectToBigInt(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(k, BigInt.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfObjectToBigInt(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(k, BigInt.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfObjectToBigIntToJson(
         SimpleClassOfObjectToBigInt instance) =>
@@ -242,13 +206,12 @@ Map<String, dynamic> _$SimpleClassOfObjectToBigIntToJson(
     };
 
 SimpleClassNullableOfObjectToBigInt
-    _$SimpleClassNullableOfObjectToBigIntFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfObjectToBigInt(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, BigInt.parse(e as String)),
-    ),
-  );
-}
+    _$SimpleClassNullableOfObjectToBigIntFromJson(Map<String, dynamic> json) =>
+        SimpleClassNullableOfObjectToBigInt(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, BigInt.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfObjectToBigIntToJson(
         SimpleClassNullableOfObjectToBigInt instance) =>
@@ -257,13 +220,12 @@ Map<String, dynamic> _$SimpleClassNullableOfObjectToBigIntToJson(
     };
 
 SimpleClassOfStringToBigInt _$SimpleClassOfStringToBigIntFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfStringToBigInt(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(k, BigInt.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfStringToBigInt(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(k, BigInt.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfStringToBigIntToJson(
         SimpleClassOfStringToBigInt instance) =>
@@ -272,13 +234,12 @@ Map<String, dynamic> _$SimpleClassOfStringToBigIntToJson(
     };
 
 SimpleClassNullableOfStringToBigInt
-    _$SimpleClassNullableOfStringToBigIntFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfStringToBigInt(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, BigInt.parse(e as String)),
-    ),
-  );
-}
+    _$SimpleClassNullableOfStringToBigIntFromJson(Map<String, dynamic> json) =>
+        SimpleClassNullableOfStringToBigInt(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, BigInt.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfStringToBigIntToJson(
         SimpleClassNullableOfStringToBigInt instance) =>
@@ -287,13 +248,12 @@ Map<String, dynamic> _$SimpleClassNullableOfStringToBigIntToJson(
     };
 
 SimpleClassOfUriToBigInt _$SimpleClassOfUriToBigIntFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfUriToBigInt(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(Uri.parse(k), BigInt.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfUriToBigInt(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(Uri.parse(k), BigInt.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfUriToBigIntToJson(
         SimpleClassOfUriToBigInt instance) =>
@@ -303,13 +263,12 @@ Map<String, dynamic> _$SimpleClassOfUriToBigIntToJson(
     };
 
 SimpleClassNullableOfUriToBigInt _$SimpleClassNullableOfUriToBigIntFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfUriToBigInt(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(Uri.parse(k), BigInt.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfUriToBigInt(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(Uri.parse(k), BigInt.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfUriToBigIntToJson(
         SimpleClassNullableOfUriToBigInt instance) =>
@@ -319,14 +278,13 @@ Map<String, dynamic> _$SimpleClassNullableOfUriToBigIntToJson(
     };
 
 SimpleClassOfBigIntToBigIntNullable
-    _$SimpleClassOfBigIntToBigIntNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfBigIntToBigIntNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(
-          BigInt.parse(k), e == null ? null : BigInt.parse(e as String)),
-    ),
-  );
-}
+    _$SimpleClassOfBigIntToBigIntNullableFromJson(Map<String, dynamic> json) =>
+        SimpleClassOfBigIntToBigIntNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(
+                BigInt.parse(k), e == null ? null : BigInt.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfBigIntToBigIntNullableToJson(
         SimpleClassOfBigIntToBigIntNullable instance) =>
@@ -337,14 +295,13 @@ Map<String, dynamic> _$SimpleClassOfBigIntToBigIntNullableToJson(
 
 SimpleClassNullableOfBigIntToBigIntNullable
     _$SimpleClassNullableOfBigIntToBigIntNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfBigIntToBigIntNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(
-          BigInt.parse(k), e == null ? null : BigInt.parse(e as String)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfBigIntToBigIntNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(
+                BigInt.parse(k), e == null ? null : BigInt.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfBigIntToBigIntNullableToJson(
         SimpleClassNullableOfBigIntToBigIntNullable instance) =>
@@ -354,14 +311,14 @@ Map<String, dynamic> _$SimpleClassNullableOfBigIntToBigIntNullableToJson(
     };
 
 SimpleClassOfDateTimeToBigIntNullable
-    _$SimpleClassOfDateTimeToBigIntNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfDateTimeToBigIntNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(
-          DateTime.parse(k), e == null ? null : BigInt.parse(e as String)),
-    ),
-  );
-}
+    _$SimpleClassOfDateTimeToBigIntNullableFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfDateTimeToBigIntNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(DateTime.parse(k),
+                e == null ? null : BigInt.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfDateTimeToBigIntNullableToJson(
         SimpleClassOfDateTimeToBigIntNullable instance) =>
@@ -372,14 +329,13 @@ Map<String, dynamic> _$SimpleClassOfDateTimeToBigIntNullableToJson(
 
 SimpleClassNullableOfDateTimeToBigIntNullable
     _$SimpleClassNullableOfDateTimeToBigIntNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfDateTimeToBigIntNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(
-          DateTime.parse(k), e == null ? null : BigInt.parse(e as String)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDateTimeToBigIntNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(DateTime.parse(k),
+                e == null ? null : BigInt.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDateTimeToBigIntNullableToJson(
         SimpleClassNullableOfDateTimeToBigIntNullable instance) =>
@@ -389,13 +345,12 @@ Map<String, dynamic> _$SimpleClassNullableOfDateTimeToBigIntNullableToJson(
     };
 
 SimpleClassOfDynamicToBigIntNullable
-    _$SimpleClassOfDynamicToBigIntNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfDynamicToBigIntNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(k, e == null ? null : BigInt.parse(e as String)),
-    ),
-  );
-}
+    _$SimpleClassOfDynamicToBigIntNullableFromJson(Map<String, dynamic> json) =>
+        SimpleClassOfDynamicToBigIntNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(k, e == null ? null : BigInt.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfDynamicToBigIntNullableToJson(
         SimpleClassOfDynamicToBigIntNullable instance) =>
@@ -405,13 +360,12 @@ Map<String, dynamic> _$SimpleClassOfDynamicToBigIntNullableToJson(
 
 SimpleClassNullableOfDynamicToBigIntNullable
     _$SimpleClassNullableOfDynamicToBigIntNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfDynamicToBigIntNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e == null ? null : BigInt.parse(e as String)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDynamicToBigIntNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, e == null ? null : BigInt.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDynamicToBigIntNullableToJson(
         SimpleClassNullableOfDynamicToBigIntNullable instance) =>
@@ -420,49 +374,47 @@ Map<String, dynamic> _$SimpleClassNullableOfDynamicToBigIntNullableToJson(
     };
 
 SimpleClassOfEnumTypeToBigIntNullable
-    _$SimpleClassOfEnumTypeToBigIntNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfEnumTypeToBigIntNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k),
-          e == null ? null : BigInt.parse(e as String)),
-    ),
-  );
-}
+    _$SimpleClassOfEnumTypeToBigIntNullableFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfEnumTypeToBigIntNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k),
+                e == null ? null : BigInt.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfEnumTypeToBigIntNullableToJson(
         SimpleClassOfEnumTypeToBigIntNullable instance) =>
     <String, dynamic>{
       'value': instance.value
-          .map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e?.toString())),
+          .map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e?.toString())),
     };
 
 SimpleClassNullableOfEnumTypeToBigIntNullable
     _$SimpleClassNullableOfEnumTypeToBigIntNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfEnumTypeToBigIntNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k),
-          e == null ? null : BigInt.parse(e as String)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfEnumTypeToBigIntNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k),
+                e == null ? null : BigInt.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfEnumTypeToBigIntNullableToJson(
         SimpleClassNullableOfEnumTypeToBigIntNullable instance) =>
     <String, dynamic>{
       'value': instance.value
-          ?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e?.toString())),
+          ?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e?.toString())),
     };
 
 SimpleClassOfIntToBigIntNullable _$SimpleClassOfIntToBigIntNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfIntToBigIntNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) =>
-          MapEntry(int.parse(k), e == null ? null : BigInt.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfIntToBigIntNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(
+            int.parse(k), e == null ? null : BigInt.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfIntToBigIntNullableToJson(
         SimpleClassOfIntToBigIntNullable instance) =>
@@ -473,14 +425,13 @@ Map<String, dynamic> _$SimpleClassOfIntToBigIntNullableToJson(
 
 SimpleClassNullableOfIntToBigIntNullable
     _$SimpleClassNullableOfIntToBigIntNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfIntToBigIntNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) =>
-          MapEntry(int.parse(k), e == null ? null : BigInt.parse(e as String)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfIntToBigIntNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(
+                int.parse(k), e == null ? null : BigInt.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfIntToBigIntNullableToJson(
         SimpleClassNullableOfIntToBigIntNullable instance) =>
@@ -490,13 +441,12 @@ Map<String, dynamic> _$SimpleClassNullableOfIntToBigIntNullableToJson(
     };
 
 SimpleClassOfObjectToBigIntNullable
-    _$SimpleClassOfObjectToBigIntNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfObjectToBigIntNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(k, e == null ? null : BigInt.parse(e as String)),
-    ),
-  );
-}
+    _$SimpleClassOfObjectToBigIntNullableFromJson(Map<String, dynamic> json) =>
+        SimpleClassOfObjectToBigIntNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(k, e == null ? null : BigInt.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfObjectToBigIntNullableToJson(
         SimpleClassOfObjectToBigIntNullable instance) =>
@@ -506,13 +456,12 @@ Map<String, dynamic> _$SimpleClassOfObjectToBigIntNullableToJson(
 
 SimpleClassNullableOfObjectToBigIntNullable
     _$SimpleClassNullableOfObjectToBigIntNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfObjectToBigIntNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e == null ? null : BigInt.parse(e as String)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfObjectToBigIntNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, e == null ? null : BigInt.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfObjectToBigIntNullableToJson(
         SimpleClassNullableOfObjectToBigIntNullable instance) =>
@@ -521,13 +470,12 @@ Map<String, dynamic> _$SimpleClassNullableOfObjectToBigIntNullableToJson(
     };
 
 SimpleClassOfStringToBigIntNullable
-    _$SimpleClassOfStringToBigIntNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfStringToBigIntNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(k, e == null ? null : BigInt.parse(e as String)),
-    ),
-  );
-}
+    _$SimpleClassOfStringToBigIntNullableFromJson(Map<String, dynamic> json) =>
+        SimpleClassOfStringToBigIntNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(k, e == null ? null : BigInt.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfStringToBigIntNullableToJson(
         SimpleClassOfStringToBigIntNullable instance) =>
@@ -537,13 +485,12 @@ Map<String, dynamic> _$SimpleClassOfStringToBigIntNullableToJson(
 
 SimpleClassNullableOfStringToBigIntNullable
     _$SimpleClassNullableOfStringToBigIntNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfStringToBigIntNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e == null ? null : BigInt.parse(e as String)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfStringToBigIntNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, e == null ? null : BigInt.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfStringToBigIntNullableToJson(
         SimpleClassNullableOfStringToBigIntNullable instance) =>
@@ -552,14 +499,13 @@ Map<String, dynamic> _$SimpleClassNullableOfStringToBigIntNullableToJson(
     };
 
 SimpleClassOfUriToBigIntNullable _$SimpleClassOfUriToBigIntNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfUriToBigIntNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) =>
-          MapEntry(Uri.parse(k), e == null ? null : BigInt.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfUriToBigIntNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(
+            Uri.parse(k), e == null ? null : BigInt.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfUriToBigIntNullableToJson(
         SimpleClassOfUriToBigIntNullable instance) =>
@@ -570,14 +516,13 @@ Map<String, dynamic> _$SimpleClassOfUriToBigIntNullableToJson(
 
 SimpleClassNullableOfUriToBigIntNullable
     _$SimpleClassNullableOfUriToBigIntNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfUriToBigIntNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) =>
-          MapEntry(Uri.parse(k), e == null ? null : BigInt.parse(e as String)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfUriToBigIntNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(
+                Uri.parse(k), e == null ? null : BigInt.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfUriToBigIntNullableToJson(
         SimpleClassNullableOfUriToBigIntNullable instance) =>
@@ -587,13 +532,12 @@ Map<String, dynamic> _$SimpleClassNullableOfUriToBigIntNullableToJson(
     };
 
 SimpleClassOfBigIntToBool _$SimpleClassOfBigIntToBoolFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfBigIntToBool(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(BigInt.parse(k), e as bool),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfBigIntToBool(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(BigInt.parse(k), e as bool),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfBigIntToBoolToJson(
         SimpleClassOfBigIntToBool instance) =>
@@ -602,13 +546,12 @@ Map<String, dynamic> _$SimpleClassOfBigIntToBoolToJson(
     };
 
 SimpleClassNullableOfBigIntToBool _$SimpleClassNullableOfBigIntToBoolFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfBigIntToBool(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(BigInt.parse(k), e as bool),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfBigIntToBool(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(BigInt.parse(k), e as bool),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfBigIntToBoolToJson(
         SimpleClassNullableOfBigIntToBool instance) =>
@@ -617,13 +560,12 @@ Map<String, dynamic> _$SimpleClassNullableOfBigIntToBoolToJson(
     };
 
 SimpleClassOfDateTimeToBool _$SimpleClassOfDateTimeToBoolFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfDateTimeToBool(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(DateTime.parse(k), e as bool),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfDateTimeToBool(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(DateTime.parse(k), e as bool),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfDateTimeToBoolToJson(
         SimpleClassOfDateTimeToBool instance) =>
@@ -632,13 +574,12 @@ Map<String, dynamic> _$SimpleClassOfDateTimeToBoolToJson(
     };
 
 SimpleClassNullableOfDateTimeToBool
-    _$SimpleClassNullableOfDateTimeToBoolFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfDateTimeToBool(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(DateTime.parse(k), e as bool),
-    ),
-  );
-}
+    _$SimpleClassNullableOfDateTimeToBoolFromJson(Map<String, dynamic> json) =>
+        SimpleClassNullableOfDateTimeToBool(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(DateTime.parse(k), e as bool),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDateTimeToBoolToJson(
         SimpleClassNullableOfDateTimeToBool instance) =>
@@ -647,11 +588,10 @@ Map<String, dynamic> _$SimpleClassNullableOfDateTimeToBoolToJson(
     };
 
 SimpleClassOfDynamicToBool _$SimpleClassOfDynamicToBoolFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfDynamicToBool(
-    Map<String, bool>.from(json['value'] as Map),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfDynamicToBool(
+      Map<String, bool>.from(json['value'] as Map),
+    );
 
 Map<String, dynamic> _$SimpleClassOfDynamicToBoolToJson(
         SimpleClassOfDynamicToBool instance) =>
@@ -660,13 +600,12 @@ Map<String, dynamic> _$SimpleClassOfDynamicToBoolToJson(
     };
 
 SimpleClassNullableOfDynamicToBool _$SimpleClassNullableOfDynamicToBoolFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfDynamicToBool(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e as bool),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfDynamicToBool(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(k, e as bool),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfDynamicToBoolToJson(
         SimpleClassNullableOfDynamicToBool instance) =>
@@ -675,43 +614,41 @@ Map<String, dynamic> _$SimpleClassNullableOfDynamicToBoolToJson(
     };
 
 SimpleClassOfEnumTypeToBool _$SimpleClassOfEnumTypeToBoolFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfEnumTypeToBool(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k), e as bool),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfEnumTypeToBool(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k), e as bool),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfEnumTypeToBoolToJson(
         SimpleClassOfEnumTypeToBool instance) =>
     <String, dynamic>{
-      'value': instance.value.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e)),
+      'value': instance.value.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e)),
     };
 
 SimpleClassNullableOfEnumTypeToBool
-    _$SimpleClassNullableOfEnumTypeToBoolFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfEnumTypeToBool(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k), e as bool),
-    ),
-  );
-}
+    _$SimpleClassNullableOfEnumTypeToBoolFromJson(Map<String, dynamic> json) =>
+        SimpleClassNullableOfEnumTypeToBool(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k), e as bool),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfEnumTypeToBoolToJson(
         SimpleClassNullableOfEnumTypeToBool instance) =>
     <String, dynamic>{
-      'value': instance.value?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e)),
+      'value':
+          instance.value?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e)),
     };
 
 SimpleClassOfIntToBool _$SimpleClassOfIntToBoolFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfIntToBool(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(int.parse(k), e as bool),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfIntToBool(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(int.parse(k), e as bool),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfIntToBoolToJson(
         SimpleClassOfIntToBool instance) =>
@@ -720,13 +657,12 @@ Map<String, dynamic> _$SimpleClassOfIntToBoolToJson(
     };
 
 SimpleClassNullableOfIntToBool _$SimpleClassNullableOfIntToBoolFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfIntToBool(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(int.parse(k), e as bool),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfIntToBool(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(int.parse(k), e as bool),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfIntToBoolToJson(
         SimpleClassNullableOfIntToBool instance) =>
@@ -735,11 +671,10 @@ Map<String, dynamic> _$SimpleClassNullableOfIntToBoolToJson(
     };
 
 SimpleClassOfObjectToBool _$SimpleClassOfObjectToBoolFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfObjectToBool(
-    Map<String, bool>.from(json['value'] as Map),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfObjectToBool(
+      Map<String, bool>.from(json['value'] as Map),
+    );
 
 Map<String, dynamic> _$SimpleClassOfObjectToBoolToJson(
         SimpleClassOfObjectToBool instance) =>
@@ -748,13 +683,12 @@ Map<String, dynamic> _$SimpleClassOfObjectToBoolToJson(
     };
 
 SimpleClassNullableOfObjectToBool _$SimpleClassNullableOfObjectToBoolFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfObjectToBool(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e as bool),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfObjectToBool(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(k, e as bool),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfObjectToBoolToJson(
         SimpleClassNullableOfObjectToBool instance) =>
@@ -763,11 +697,10 @@ Map<String, dynamic> _$SimpleClassNullableOfObjectToBoolToJson(
     };
 
 SimpleClassOfStringToBool _$SimpleClassOfStringToBoolFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfStringToBool(
-    Map<String, bool>.from(json['value'] as Map),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfStringToBool(
+      Map<String, bool>.from(json['value'] as Map),
+    );
 
 Map<String, dynamic> _$SimpleClassOfStringToBoolToJson(
         SimpleClassOfStringToBool instance) =>
@@ -776,13 +709,12 @@ Map<String, dynamic> _$SimpleClassOfStringToBoolToJson(
     };
 
 SimpleClassNullableOfStringToBool _$SimpleClassNullableOfStringToBoolFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfStringToBool(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e as bool),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfStringToBool(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(k, e as bool),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfStringToBoolToJson(
         SimpleClassNullableOfStringToBool instance) =>
@@ -791,13 +723,12 @@ Map<String, dynamic> _$SimpleClassNullableOfStringToBoolToJson(
     };
 
 SimpleClassOfUriToBool _$SimpleClassOfUriToBoolFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfUriToBool(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(Uri.parse(k), e as bool),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfUriToBool(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(Uri.parse(k), e as bool),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfUriToBoolToJson(
         SimpleClassOfUriToBool instance) =>
@@ -806,13 +737,12 @@ Map<String, dynamic> _$SimpleClassOfUriToBoolToJson(
     };
 
 SimpleClassNullableOfUriToBool _$SimpleClassNullableOfUriToBoolFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfUriToBool(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(Uri.parse(k), e as bool),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfUriToBool(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(Uri.parse(k), e as bool),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfUriToBoolToJson(
         SimpleClassNullableOfUriToBool instance) =>
@@ -821,13 +751,12 @@ Map<String, dynamic> _$SimpleClassNullableOfUriToBoolToJson(
     };
 
 SimpleClassOfBigIntToBoolNullable _$SimpleClassOfBigIntToBoolNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfBigIntToBoolNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(BigInt.parse(k), e as bool?),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfBigIntToBoolNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(BigInt.parse(k), e as bool?),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfBigIntToBoolNullableToJson(
         SimpleClassOfBigIntToBoolNullable instance) =>
@@ -837,13 +766,12 @@ Map<String, dynamic> _$SimpleClassOfBigIntToBoolNullableToJson(
 
 SimpleClassNullableOfBigIntToBoolNullable
     _$SimpleClassNullableOfBigIntToBoolNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfBigIntToBoolNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(BigInt.parse(k), e as bool?),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfBigIntToBoolNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(BigInt.parse(k), e as bool?),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfBigIntToBoolNullableToJson(
         SimpleClassNullableOfBigIntToBoolNullable instance) =>
@@ -852,13 +780,12 @@ Map<String, dynamic> _$SimpleClassNullableOfBigIntToBoolNullableToJson(
     };
 
 SimpleClassOfDateTimeToBoolNullable
-    _$SimpleClassOfDateTimeToBoolNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfDateTimeToBoolNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(DateTime.parse(k), e as bool?),
-    ),
-  );
-}
+    _$SimpleClassOfDateTimeToBoolNullableFromJson(Map<String, dynamic> json) =>
+        SimpleClassOfDateTimeToBoolNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(DateTime.parse(k), e as bool?),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfDateTimeToBoolNullableToJson(
         SimpleClassOfDateTimeToBoolNullable instance) =>
@@ -868,13 +795,12 @@ Map<String, dynamic> _$SimpleClassOfDateTimeToBoolNullableToJson(
 
 SimpleClassNullableOfDateTimeToBoolNullable
     _$SimpleClassNullableOfDateTimeToBoolNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfDateTimeToBoolNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(DateTime.parse(k), e as bool?),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDateTimeToBoolNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(DateTime.parse(k), e as bool?),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDateTimeToBoolNullableToJson(
         SimpleClassNullableOfDateTimeToBoolNullable instance) =>
@@ -883,11 +809,10 @@ Map<String, dynamic> _$SimpleClassNullableOfDateTimeToBoolNullableToJson(
     };
 
 SimpleClassOfDynamicToBoolNullable _$SimpleClassOfDynamicToBoolNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfDynamicToBoolNullable(
-    Map<String, bool>.from(json['value'] as Map),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfDynamicToBoolNullable(
+      Map<String, bool?>.from(json['value'] as Map),
+    );
 
 Map<String, dynamic> _$SimpleClassOfDynamicToBoolNullableToJson(
         SimpleClassOfDynamicToBoolNullable instance) =>
@@ -897,13 +822,12 @@ Map<String, dynamic> _$SimpleClassOfDynamicToBoolNullableToJson(
 
 SimpleClassNullableOfDynamicToBoolNullable
     _$SimpleClassNullableOfDynamicToBoolNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfDynamicToBoolNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e as bool?),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDynamicToBoolNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, e as bool?),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDynamicToBoolNullableToJson(
         SimpleClassNullableOfDynamicToBoolNullable instance) =>
@@ -912,44 +836,42 @@ Map<String, dynamic> _$SimpleClassNullableOfDynamicToBoolNullableToJson(
     };
 
 SimpleClassOfEnumTypeToBoolNullable
-    _$SimpleClassOfEnumTypeToBoolNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfEnumTypeToBoolNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k), e as bool?),
-    ),
-  );
-}
+    _$SimpleClassOfEnumTypeToBoolNullableFromJson(Map<String, dynamic> json) =>
+        SimpleClassOfEnumTypeToBoolNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k), e as bool?),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfEnumTypeToBoolNullableToJson(
         SimpleClassOfEnumTypeToBoolNullable instance) =>
     <String, dynamic>{
-      'value': instance.value.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e)),
+      'value': instance.value.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e)),
     };
 
 SimpleClassNullableOfEnumTypeToBoolNullable
     _$SimpleClassNullableOfEnumTypeToBoolNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfEnumTypeToBoolNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k), e as bool?),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfEnumTypeToBoolNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k), e as bool?),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfEnumTypeToBoolNullableToJson(
         SimpleClassNullableOfEnumTypeToBoolNullable instance) =>
     <String, dynamic>{
-      'value': instance.value?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e)),
+      'value':
+          instance.value?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e)),
     };
 
 SimpleClassOfIntToBoolNullable _$SimpleClassOfIntToBoolNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfIntToBoolNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(int.parse(k), e as bool?),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfIntToBoolNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(int.parse(k), e as bool?),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfIntToBoolNullableToJson(
         SimpleClassOfIntToBoolNullable instance) =>
@@ -959,13 +881,12 @@ Map<String, dynamic> _$SimpleClassOfIntToBoolNullableToJson(
 
 SimpleClassNullableOfIntToBoolNullable
     _$SimpleClassNullableOfIntToBoolNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfIntToBoolNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(int.parse(k), e as bool?),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfIntToBoolNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(int.parse(k), e as bool?),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfIntToBoolNullableToJson(
         SimpleClassNullableOfIntToBoolNullable instance) =>
@@ -974,11 +895,10 @@ Map<String, dynamic> _$SimpleClassNullableOfIntToBoolNullableToJson(
     };
 
 SimpleClassOfObjectToBoolNullable _$SimpleClassOfObjectToBoolNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfObjectToBoolNullable(
-    Map<String, bool>.from(json['value'] as Map),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfObjectToBoolNullable(
+      Map<String, bool?>.from(json['value'] as Map),
+    );
 
 Map<String, dynamic> _$SimpleClassOfObjectToBoolNullableToJson(
         SimpleClassOfObjectToBoolNullable instance) =>
@@ -988,13 +908,12 @@ Map<String, dynamic> _$SimpleClassOfObjectToBoolNullableToJson(
 
 SimpleClassNullableOfObjectToBoolNullable
     _$SimpleClassNullableOfObjectToBoolNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfObjectToBoolNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e as bool?),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfObjectToBoolNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, e as bool?),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfObjectToBoolNullableToJson(
         SimpleClassNullableOfObjectToBoolNullable instance) =>
@@ -1003,11 +922,10 @@ Map<String, dynamic> _$SimpleClassNullableOfObjectToBoolNullableToJson(
     };
 
 SimpleClassOfStringToBoolNullable _$SimpleClassOfStringToBoolNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfStringToBoolNullable(
-    Map<String, bool>.from(json['value'] as Map),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfStringToBoolNullable(
+      Map<String, bool?>.from(json['value'] as Map),
+    );
 
 Map<String, dynamic> _$SimpleClassOfStringToBoolNullableToJson(
         SimpleClassOfStringToBoolNullable instance) =>
@@ -1017,13 +935,12 @@ Map<String, dynamic> _$SimpleClassOfStringToBoolNullableToJson(
 
 SimpleClassNullableOfStringToBoolNullable
     _$SimpleClassNullableOfStringToBoolNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfStringToBoolNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e as bool?),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfStringToBoolNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, e as bool?),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfStringToBoolNullableToJson(
         SimpleClassNullableOfStringToBoolNullable instance) =>
@@ -1032,13 +949,12 @@ Map<String, dynamic> _$SimpleClassNullableOfStringToBoolNullableToJson(
     };
 
 SimpleClassOfUriToBoolNullable _$SimpleClassOfUriToBoolNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfUriToBoolNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(Uri.parse(k), e as bool?),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfUriToBoolNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(Uri.parse(k), e as bool?),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfUriToBoolNullableToJson(
         SimpleClassOfUriToBoolNullable instance) =>
@@ -1048,13 +964,12 @@ Map<String, dynamic> _$SimpleClassOfUriToBoolNullableToJson(
 
 SimpleClassNullableOfUriToBoolNullable
     _$SimpleClassNullableOfUriToBoolNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfUriToBoolNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(Uri.parse(k), e as bool?),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfUriToBoolNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(Uri.parse(k), e as bool?),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfUriToBoolNullableToJson(
         SimpleClassNullableOfUriToBoolNullable instance) =>
@@ -1063,13 +978,12 @@ Map<String, dynamic> _$SimpleClassNullableOfUriToBoolNullableToJson(
     };
 
 SimpleClassOfBigIntToDateTime _$SimpleClassOfBigIntToDateTimeFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfBigIntToDateTime(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(BigInt.parse(k), DateTime.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfBigIntToDateTime(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(BigInt.parse(k), DateTime.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfBigIntToDateTimeToJson(
         SimpleClassOfBigIntToDateTime instance) =>
@@ -1079,13 +993,13 @@ Map<String, dynamic> _$SimpleClassOfBigIntToDateTimeToJson(
     };
 
 SimpleClassNullableOfBigIntToDateTime
-    _$SimpleClassNullableOfBigIntToDateTimeFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfBigIntToDateTime(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(BigInt.parse(k), DateTime.parse(e as String)),
-    ),
-  );
-}
+    _$SimpleClassNullableOfBigIntToDateTimeFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfBigIntToDateTime(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(BigInt.parse(k), DateTime.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfBigIntToDateTimeToJson(
         SimpleClassNullableOfBigIntToDateTime instance) =>
@@ -1095,13 +1009,12 @@ Map<String, dynamic> _$SimpleClassNullableOfBigIntToDateTimeToJson(
     };
 
 SimpleClassOfDateTimeToDateTime _$SimpleClassOfDateTimeToDateTimeFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfDateTimeToDateTime(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(DateTime.parse(k), DateTime.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfDateTimeToDateTime(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(DateTime.parse(k), DateTime.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfDateTimeToDateTimeToJson(
         SimpleClassOfDateTimeToDateTime instance) =>
@@ -1112,13 +1025,12 @@ Map<String, dynamic> _$SimpleClassOfDateTimeToDateTimeToJson(
 
 SimpleClassNullableOfDateTimeToDateTime
     _$SimpleClassNullableOfDateTimeToDateTimeFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfDateTimeToDateTime(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(DateTime.parse(k), DateTime.parse(e as String)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDateTimeToDateTime(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(DateTime.parse(k), DateTime.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDateTimeToDateTimeToJson(
         SimpleClassNullableOfDateTimeToDateTime instance) =>
@@ -1128,13 +1040,12 @@ Map<String, dynamic> _$SimpleClassNullableOfDateTimeToDateTimeToJson(
     };
 
 SimpleClassOfDynamicToDateTime _$SimpleClassOfDynamicToDateTimeFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfDynamicToDateTime(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(k, DateTime.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfDynamicToDateTime(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(k, DateTime.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfDynamicToDateTimeToJson(
         SimpleClassOfDynamicToDateTime instance) =>
@@ -1144,13 +1055,12 @@ Map<String, dynamic> _$SimpleClassOfDynamicToDateTimeToJson(
 
 SimpleClassNullableOfDynamicToDateTime
     _$SimpleClassNullableOfDynamicToDateTimeFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfDynamicToDateTime(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, DateTime.parse(e as String)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDynamicToDateTime(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, DateTime.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDynamicToDateTimeToJson(
         SimpleClassNullableOfDynamicToDateTime instance) =>
@@ -1159,48 +1069,45 @@ Map<String, dynamic> _$SimpleClassNullableOfDynamicToDateTimeToJson(
     };
 
 SimpleClassOfEnumTypeToDateTime _$SimpleClassOfEnumTypeToDateTimeFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfEnumTypeToDateTime(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(
-          _$enumDecode(_$EnumTypeEnumMap, k), DateTime.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfEnumTypeToDateTime(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(
+            $enumDecode(_$EnumTypeEnumMap, k), DateTime.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfEnumTypeToDateTimeToJson(
         SimpleClassOfEnumTypeToDateTime instance) =>
     <String, dynamic>{
       'value': instance.value
-          .map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e.toIso8601String())),
+          .map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e.toIso8601String())),
     };
 
 SimpleClassNullableOfEnumTypeToDateTime
     _$SimpleClassNullableOfEnumTypeToDateTimeFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfEnumTypeToDateTime(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(
-          _$enumDecode(_$EnumTypeEnumMap, k), DateTime.parse(e as String)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfEnumTypeToDateTime(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(
+                $enumDecode(_$EnumTypeEnumMap, k), DateTime.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfEnumTypeToDateTimeToJson(
         SimpleClassNullableOfEnumTypeToDateTime instance) =>
     <String, dynamic>{
       'value': instance.value
-          ?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e.toIso8601String())),
+          ?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e.toIso8601String())),
     };
 
 SimpleClassOfIntToDateTime _$SimpleClassOfIntToDateTimeFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfIntToDateTime(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(int.parse(k), DateTime.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfIntToDateTime(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(int.parse(k), DateTime.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfIntToDateTimeToJson(
         SimpleClassOfIntToDateTime instance) =>
@@ -1210,13 +1117,12 @@ Map<String, dynamic> _$SimpleClassOfIntToDateTimeToJson(
     };
 
 SimpleClassNullableOfIntToDateTime _$SimpleClassNullableOfIntToDateTimeFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfIntToDateTime(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(int.parse(k), DateTime.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfIntToDateTime(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(int.parse(k), DateTime.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfIntToDateTimeToJson(
         SimpleClassNullableOfIntToDateTime instance) =>
@@ -1226,13 +1132,12 @@ Map<String, dynamic> _$SimpleClassNullableOfIntToDateTimeToJson(
     };
 
 SimpleClassOfObjectToDateTime _$SimpleClassOfObjectToDateTimeFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfObjectToDateTime(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(k, DateTime.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfObjectToDateTime(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(k, DateTime.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfObjectToDateTimeToJson(
         SimpleClassOfObjectToDateTime instance) =>
@@ -1241,13 +1146,13 @@ Map<String, dynamic> _$SimpleClassOfObjectToDateTimeToJson(
     };
 
 SimpleClassNullableOfObjectToDateTime
-    _$SimpleClassNullableOfObjectToDateTimeFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfObjectToDateTime(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, DateTime.parse(e as String)),
-    ),
-  );
-}
+    _$SimpleClassNullableOfObjectToDateTimeFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfObjectToDateTime(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, DateTime.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfObjectToDateTimeToJson(
         SimpleClassNullableOfObjectToDateTime instance) =>
@@ -1256,13 +1161,12 @@ Map<String, dynamic> _$SimpleClassNullableOfObjectToDateTimeToJson(
     };
 
 SimpleClassOfStringToDateTime _$SimpleClassOfStringToDateTimeFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfStringToDateTime(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(k, DateTime.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfStringToDateTime(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(k, DateTime.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfStringToDateTimeToJson(
         SimpleClassOfStringToDateTime instance) =>
@@ -1271,13 +1175,13 @@ Map<String, dynamic> _$SimpleClassOfStringToDateTimeToJson(
     };
 
 SimpleClassNullableOfStringToDateTime
-    _$SimpleClassNullableOfStringToDateTimeFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfStringToDateTime(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, DateTime.parse(e as String)),
-    ),
-  );
-}
+    _$SimpleClassNullableOfStringToDateTimeFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfStringToDateTime(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, DateTime.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfStringToDateTimeToJson(
         SimpleClassNullableOfStringToDateTime instance) =>
@@ -1286,13 +1190,12 @@ Map<String, dynamic> _$SimpleClassNullableOfStringToDateTimeToJson(
     };
 
 SimpleClassOfUriToDateTime _$SimpleClassOfUriToDateTimeFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfUriToDateTime(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(Uri.parse(k), DateTime.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfUriToDateTime(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(Uri.parse(k), DateTime.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfUriToDateTimeToJson(
         SimpleClassOfUriToDateTime instance) =>
@@ -1302,13 +1205,12 @@ Map<String, dynamic> _$SimpleClassOfUriToDateTimeToJson(
     };
 
 SimpleClassNullableOfUriToDateTime _$SimpleClassNullableOfUriToDateTimeFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfUriToDateTime(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(Uri.parse(k), DateTime.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfUriToDateTime(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(Uri.parse(k), DateTime.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfUriToDateTimeToJson(
         SimpleClassNullableOfUriToDateTime instance) =>
@@ -1318,14 +1220,14 @@ Map<String, dynamic> _$SimpleClassNullableOfUriToDateTimeToJson(
     };
 
 SimpleClassOfBigIntToDateTimeNullable
-    _$SimpleClassOfBigIntToDateTimeNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfBigIntToDateTimeNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(
-          BigInt.parse(k), e == null ? null : DateTime.parse(e as String)),
-    ),
-  );
-}
+    _$SimpleClassOfBigIntToDateTimeNullableFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfBigIntToDateTimeNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(BigInt.parse(k),
+                e == null ? null : DateTime.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfBigIntToDateTimeNullableToJson(
         SimpleClassOfBigIntToDateTimeNullable instance) =>
@@ -1336,14 +1238,13 @@ Map<String, dynamic> _$SimpleClassOfBigIntToDateTimeNullableToJson(
 
 SimpleClassNullableOfBigIntToDateTimeNullable
     _$SimpleClassNullableOfBigIntToDateTimeNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfBigIntToDateTimeNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(
-          BigInt.parse(k), e == null ? null : DateTime.parse(e as String)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfBigIntToDateTimeNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(BigInt.parse(k),
+                e == null ? null : DateTime.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfBigIntToDateTimeNullableToJson(
         SimpleClassNullableOfBigIntToDateTimeNullable instance) =>
@@ -1354,14 +1255,13 @@ Map<String, dynamic> _$SimpleClassNullableOfBigIntToDateTimeNullableToJson(
 
 SimpleClassOfDateTimeToDateTimeNullable
     _$SimpleClassOfDateTimeToDateTimeNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassOfDateTimeToDateTimeNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(
-          DateTime.parse(k), e == null ? null : DateTime.parse(e as String)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassOfDateTimeToDateTimeNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(DateTime.parse(k),
+                e == null ? null : DateTime.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfDateTimeToDateTimeNullableToJson(
         SimpleClassOfDateTimeToDateTimeNullable instance) =>
@@ -1372,14 +1272,13 @@ Map<String, dynamic> _$SimpleClassOfDateTimeToDateTimeNullableToJson(
 
 SimpleClassNullableOfDateTimeToDateTimeNullable
     _$SimpleClassNullableOfDateTimeToDateTimeNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfDateTimeToDateTimeNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(
-          DateTime.parse(k), e == null ? null : DateTime.parse(e as String)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDateTimeToDateTimeNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(DateTime.parse(k),
+                e == null ? null : DateTime.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDateTimeToDateTimeNullableToJson(
         SimpleClassNullableOfDateTimeToDateTimeNullable instance) =>
@@ -1390,13 +1289,13 @@ Map<String, dynamic> _$SimpleClassNullableOfDateTimeToDateTimeNullableToJson(
 
 SimpleClassOfDynamicToDateTimeNullable
     _$SimpleClassOfDynamicToDateTimeNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassOfDynamicToDateTimeNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(k, e == null ? null : DateTime.parse(e as String)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassOfDynamicToDateTimeNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) =>
+                MapEntry(k, e == null ? null : DateTime.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfDynamicToDateTimeNullableToJson(
         SimpleClassOfDynamicToDateTimeNullable instance) =>
@@ -1406,13 +1305,13 @@ Map<String, dynamic> _$SimpleClassOfDynamicToDateTimeNullableToJson(
 
 SimpleClassNullableOfDynamicToDateTimeNullable
     _$SimpleClassNullableOfDynamicToDateTimeNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfDynamicToDateTimeNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e == null ? null : DateTime.parse(e as String)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDynamicToDateTimeNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) =>
+                MapEntry(k, e == null ? null : DateTime.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDynamicToDateTimeNullableToJson(
         SimpleClassNullableOfDynamicToDateTimeNullable instance) =>
@@ -1422,49 +1321,46 @@ Map<String, dynamic> _$SimpleClassNullableOfDynamicToDateTimeNullableToJson(
 
 SimpleClassOfEnumTypeToDateTimeNullable
     _$SimpleClassOfEnumTypeToDateTimeNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassOfEnumTypeToDateTimeNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k),
-          e == null ? null : DateTime.parse(e as String)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassOfEnumTypeToDateTimeNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k),
+                e == null ? null : DateTime.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfEnumTypeToDateTimeNullableToJson(
         SimpleClassOfEnumTypeToDateTimeNullable instance) =>
     <String, dynamic>{
       'value': instance.value
-          .map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e?.toIso8601String())),
+          .map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e?.toIso8601String())),
     };
 
 SimpleClassNullableOfEnumTypeToDateTimeNullable
     _$SimpleClassNullableOfEnumTypeToDateTimeNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfEnumTypeToDateTimeNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k),
-          e == null ? null : DateTime.parse(e as String)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfEnumTypeToDateTimeNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k),
+                e == null ? null : DateTime.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfEnumTypeToDateTimeNullableToJson(
         SimpleClassNullableOfEnumTypeToDateTimeNullable instance) =>
     <String, dynamic>{
-      'value': instance.value
-          ?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e?.toIso8601String())),
+      'value': instance.value?.map(
+          (k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e?.toIso8601String())),
     };
 
 SimpleClassOfIntToDateTimeNullable _$SimpleClassOfIntToDateTimeNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfIntToDateTimeNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(
-          int.parse(k), e == null ? null : DateTime.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfIntToDateTimeNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(
+            int.parse(k), e == null ? null : DateTime.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfIntToDateTimeNullableToJson(
         SimpleClassOfIntToDateTimeNullable instance) =>
@@ -1475,14 +1371,13 @@ Map<String, dynamic> _$SimpleClassOfIntToDateTimeNullableToJson(
 
 SimpleClassNullableOfIntToDateTimeNullable
     _$SimpleClassNullableOfIntToDateTimeNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfIntToDateTimeNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(
-          int.parse(k), e == null ? null : DateTime.parse(e as String)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfIntToDateTimeNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(
+                int.parse(k), e == null ? null : DateTime.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfIntToDateTimeNullableToJson(
         SimpleClassNullableOfIntToDateTimeNullable instance) =>
@@ -1492,13 +1387,14 @@ Map<String, dynamic> _$SimpleClassNullableOfIntToDateTimeNullableToJson(
     };
 
 SimpleClassOfObjectToDateTimeNullable
-    _$SimpleClassOfObjectToDateTimeNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfObjectToDateTimeNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(k, e == null ? null : DateTime.parse(e as String)),
-    ),
-  );
-}
+    _$SimpleClassOfObjectToDateTimeNullableFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfObjectToDateTimeNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) =>
+                MapEntry(k, e == null ? null : DateTime.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfObjectToDateTimeNullableToJson(
         SimpleClassOfObjectToDateTimeNullable instance) =>
@@ -1508,13 +1404,13 @@ Map<String, dynamic> _$SimpleClassOfObjectToDateTimeNullableToJson(
 
 SimpleClassNullableOfObjectToDateTimeNullable
     _$SimpleClassNullableOfObjectToDateTimeNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfObjectToDateTimeNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e == null ? null : DateTime.parse(e as String)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfObjectToDateTimeNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) =>
+                MapEntry(k, e == null ? null : DateTime.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfObjectToDateTimeNullableToJson(
         SimpleClassNullableOfObjectToDateTimeNullable instance) =>
@@ -1523,13 +1419,14 @@ Map<String, dynamic> _$SimpleClassNullableOfObjectToDateTimeNullableToJson(
     };
 
 SimpleClassOfStringToDateTimeNullable
-    _$SimpleClassOfStringToDateTimeNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfStringToDateTimeNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(k, e == null ? null : DateTime.parse(e as String)),
-    ),
-  );
-}
+    _$SimpleClassOfStringToDateTimeNullableFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfStringToDateTimeNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) =>
+                MapEntry(k, e == null ? null : DateTime.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfStringToDateTimeNullableToJson(
         SimpleClassOfStringToDateTimeNullable instance) =>
@@ -1539,13 +1436,13 @@ Map<String, dynamic> _$SimpleClassOfStringToDateTimeNullableToJson(
 
 SimpleClassNullableOfStringToDateTimeNullable
     _$SimpleClassNullableOfStringToDateTimeNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfStringToDateTimeNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e == null ? null : DateTime.parse(e as String)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfStringToDateTimeNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) =>
+                MapEntry(k, e == null ? null : DateTime.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfStringToDateTimeNullableToJson(
         SimpleClassNullableOfStringToDateTimeNullable instance) =>
@@ -1554,14 +1451,13 @@ Map<String, dynamic> _$SimpleClassNullableOfStringToDateTimeNullableToJson(
     };
 
 SimpleClassOfUriToDateTimeNullable _$SimpleClassOfUriToDateTimeNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfUriToDateTimeNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(
-          Uri.parse(k), e == null ? null : DateTime.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfUriToDateTimeNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(
+            Uri.parse(k), e == null ? null : DateTime.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfUriToDateTimeNullableToJson(
         SimpleClassOfUriToDateTimeNullable instance) =>
@@ -1572,14 +1468,13 @@ Map<String, dynamic> _$SimpleClassOfUriToDateTimeNullableToJson(
 
 SimpleClassNullableOfUriToDateTimeNullable
     _$SimpleClassNullableOfUriToDateTimeNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfUriToDateTimeNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(
-          Uri.parse(k), e == null ? null : DateTime.parse(e as String)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfUriToDateTimeNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(
+                Uri.parse(k), e == null ? null : DateTime.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfUriToDateTimeNullableToJson(
         SimpleClassNullableOfUriToDateTimeNullable instance) =>
@@ -1589,13 +1484,12 @@ Map<String, dynamic> _$SimpleClassNullableOfUriToDateTimeNullableToJson(
     };
 
 SimpleClassOfBigIntToDouble _$SimpleClassOfBigIntToDoubleFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfBigIntToDouble(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(BigInt.parse(k), (e as num).toDouble()),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfBigIntToDouble(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(BigInt.parse(k), (e as num).toDouble()),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfBigIntToDoubleToJson(
         SimpleClassOfBigIntToDouble instance) =>
@@ -1604,13 +1498,12 @@ Map<String, dynamic> _$SimpleClassOfBigIntToDoubleToJson(
     };
 
 SimpleClassNullableOfBigIntToDouble
-    _$SimpleClassNullableOfBigIntToDoubleFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfBigIntToDouble(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(BigInt.parse(k), (e as num).toDouble()),
-    ),
-  );
-}
+    _$SimpleClassNullableOfBigIntToDoubleFromJson(Map<String, dynamic> json) =>
+        SimpleClassNullableOfBigIntToDouble(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(BigInt.parse(k), (e as num).toDouble()),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfBigIntToDoubleToJson(
         SimpleClassNullableOfBigIntToDouble instance) =>
@@ -1619,13 +1512,12 @@ Map<String, dynamic> _$SimpleClassNullableOfBigIntToDoubleToJson(
     };
 
 SimpleClassOfDateTimeToDouble _$SimpleClassOfDateTimeToDoubleFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfDateTimeToDouble(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(DateTime.parse(k), (e as num).toDouble()),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfDateTimeToDouble(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(DateTime.parse(k), (e as num).toDouble()),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfDateTimeToDoubleToJson(
         SimpleClassOfDateTimeToDouble instance) =>
@@ -1634,13 +1526,13 @@ Map<String, dynamic> _$SimpleClassOfDateTimeToDoubleToJson(
     };
 
 SimpleClassNullableOfDateTimeToDouble
-    _$SimpleClassNullableOfDateTimeToDoubleFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfDateTimeToDouble(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(DateTime.parse(k), (e as num).toDouble()),
-    ),
-  );
-}
+    _$SimpleClassNullableOfDateTimeToDoubleFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDateTimeToDouble(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(DateTime.parse(k), (e as num).toDouble()),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDateTimeToDoubleToJson(
         SimpleClassNullableOfDateTimeToDouble instance) =>
@@ -1649,11 +1541,12 @@ Map<String, dynamic> _$SimpleClassNullableOfDateTimeToDoubleToJson(
     };
 
 SimpleClassOfDynamicToDouble _$SimpleClassOfDynamicToDoubleFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfDynamicToDouble(
-    Map<String, double>.from(json['value'] as Map),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfDynamicToDouble(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(k, (e as num).toDouble()),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfDynamicToDoubleToJson(
         SimpleClassOfDynamicToDouble instance) =>
@@ -1662,13 +1555,12 @@ Map<String, dynamic> _$SimpleClassOfDynamicToDoubleToJson(
     };
 
 SimpleClassNullableOfDynamicToDouble
-    _$SimpleClassNullableOfDynamicToDoubleFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfDynamicToDouble(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, (e as num).toDouble()),
-    ),
-  );
-}
+    _$SimpleClassNullableOfDynamicToDoubleFromJson(Map<String, dynamic> json) =>
+        SimpleClassNullableOfDynamicToDouble(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, (e as num).toDouble()),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDynamicToDoubleToJson(
         SimpleClassNullableOfDynamicToDouble instance) =>
@@ -1677,45 +1569,44 @@ Map<String, dynamic> _$SimpleClassNullableOfDynamicToDoubleToJson(
     };
 
 SimpleClassOfEnumTypeToDouble _$SimpleClassOfEnumTypeToDoubleFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfEnumTypeToDouble(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) =>
-          MapEntry(_$enumDecode(_$EnumTypeEnumMap, k), (e as num).toDouble()),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfEnumTypeToDouble(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) =>
+            MapEntry($enumDecode(_$EnumTypeEnumMap, k), (e as num).toDouble()),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfEnumTypeToDoubleToJson(
         SimpleClassOfEnumTypeToDouble instance) =>
     <String, dynamic>{
-      'value': instance.value.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e)),
+      'value': instance.value.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e)),
     };
 
 SimpleClassNullableOfEnumTypeToDouble
-    _$SimpleClassNullableOfEnumTypeToDoubleFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfEnumTypeToDouble(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) =>
-          MapEntry(_$enumDecode(_$EnumTypeEnumMap, k), (e as num).toDouble()),
-    ),
-  );
-}
+    _$SimpleClassNullableOfEnumTypeToDoubleFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfEnumTypeToDouble(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(
+                $enumDecode(_$EnumTypeEnumMap, k), (e as num).toDouble()),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfEnumTypeToDoubleToJson(
         SimpleClassNullableOfEnumTypeToDouble instance) =>
     <String, dynamic>{
-      'value': instance.value?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e)),
+      'value':
+          instance.value?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e)),
     };
 
 SimpleClassOfIntToDouble _$SimpleClassOfIntToDoubleFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfIntToDouble(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(int.parse(k), (e as num).toDouble()),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfIntToDouble(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(int.parse(k), (e as num).toDouble()),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfIntToDoubleToJson(
         SimpleClassOfIntToDouble instance) =>
@@ -1724,13 +1615,12 @@ Map<String, dynamic> _$SimpleClassOfIntToDoubleToJson(
     };
 
 SimpleClassNullableOfIntToDouble _$SimpleClassNullableOfIntToDoubleFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfIntToDouble(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(int.parse(k), (e as num).toDouble()),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfIntToDouble(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(int.parse(k), (e as num).toDouble()),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfIntToDoubleToJson(
         SimpleClassNullableOfIntToDouble instance) =>
@@ -1739,11 +1629,12 @@ Map<String, dynamic> _$SimpleClassNullableOfIntToDoubleToJson(
     };
 
 SimpleClassOfObjectToDouble _$SimpleClassOfObjectToDoubleFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfObjectToDouble(
-    Map<String, double>.from(json['value'] as Map),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfObjectToDouble(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(k, (e as num).toDouble()),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfObjectToDoubleToJson(
         SimpleClassOfObjectToDouble instance) =>
@@ -1752,13 +1643,12 @@ Map<String, dynamic> _$SimpleClassOfObjectToDoubleToJson(
     };
 
 SimpleClassNullableOfObjectToDouble
-    _$SimpleClassNullableOfObjectToDoubleFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfObjectToDouble(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, (e as num).toDouble()),
-    ),
-  );
-}
+    _$SimpleClassNullableOfObjectToDoubleFromJson(Map<String, dynamic> json) =>
+        SimpleClassNullableOfObjectToDouble(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, (e as num).toDouble()),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfObjectToDoubleToJson(
         SimpleClassNullableOfObjectToDouble instance) =>
@@ -1767,11 +1657,12 @@ Map<String, dynamic> _$SimpleClassNullableOfObjectToDoubleToJson(
     };
 
 SimpleClassOfStringToDouble _$SimpleClassOfStringToDoubleFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfStringToDouble(
-    Map<String, double>.from(json['value'] as Map),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfStringToDouble(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(k, (e as num).toDouble()),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfStringToDoubleToJson(
         SimpleClassOfStringToDouble instance) =>
@@ -1780,13 +1671,12 @@ Map<String, dynamic> _$SimpleClassOfStringToDoubleToJson(
     };
 
 SimpleClassNullableOfStringToDouble
-    _$SimpleClassNullableOfStringToDoubleFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfStringToDouble(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, (e as num).toDouble()),
-    ),
-  );
-}
+    _$SimpleClassNullableOfStringToDoubleFromJson(Map<String, dynamic> json) =>
+        SimpleClassNullableOfStringToDouble(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, (e as num).toDouble()),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfStringToDoubleToJson(
         SimpleClassNullableOfStringToDouble instance) =>
@@ -1795,13 +1685,12 @@ Map<String, dynamic> _$SimpleClassNullableOfStringToDoubleToJson(
     };
 
 SimpleClassOfUriToDouble _$SimpleClassOfUriToDoubleFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfUriToDouble(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(Uri.parse(k), (e as num).toDouble()),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfUriToDouble(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(Uri.parse(k), (e as num).toDouble()),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfUriToDoubleToJson(
         SimpleClassOfUriToDouble instance) =>
@@ -1810,13 +1699,12 @@ Map<String, dynamic> _$SimpleClassOfUriToDoubleToJson(
     };
 
 SimpleClassNullableOfUriToDouble _$SimpleClassNullableOfUriToDoubleFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfUriToDouble(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(Uri.parse(k), (e as num).toDouble()),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfUriToDouble(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(Uri.parse(k), (e as num).toDouble()),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfUriToDoubleToJson(
         SimpleClassNullableOfUriToDouble instance) =>
@@ -1825,13 +1713,12 @@ Map<String, dynamic> _$SimpleClassNullableOfUriToDoubleToJson(
     };
 
 SimpleClassOfBigIntToDoubleNullable
-    _$SimpleClassOfBigIntToDoubleNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfBigIntToDoubleNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(BigInt.parse(k), (e as num?)?.toDouble()),
-    ),
-  );
-}
+    _$SimpleClassOfBigIntToDoubleNullableFromJson(Map<String, dynamic> json) =>
+        SimpleClassOfBigIntToDoubleNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(BigInt.parse(k), (e as num?)?.toDouble()),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfBigIntToDoubleNullableToJson(
         SimpleClassOfBigIntToDoubleNullable instance) =>
@@ -1841,13 +1728,12 @@ Map<String, dynamic> _$SimpleClassOfBigIntToDoubleNullableToJson(
 
 SimpleClassNullableOfBigIntToDoubleNullable
     _$SimpleClassNullableOfBigIntToDoubleNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfBigIntToDoubleNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(BigInt.parse(k), (e as num?)?.toDouble()),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfBigIntToDoubleNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(BigInt.parse(k), (e as num?)?.toDouble()),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfBigIntToDoubleNullableToJson(
         SimpleClassNullableOfBigIntToDoubleNullable instance) =>
@@ -1856,13 +1742,13 @@ Map<String, dynamic> _$SimpleClassNullableOfBigIntToDoubleNullableToJson(
     };
 
 SimpleClassOfDateTimeToDoubleNullable
-    _$SimpleClassOfDateTimeToDoubleNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfDateTimeToDoubleNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(DateTime.parse(k), (e as num?)?.toDouble()),
-    ),
-  );
-}
+    _$SimpleClassOfDateTimeToDoubleNullableFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfDateTimeToDoubleNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(DateTime.parse(k), (e as num?)?.toDouble()),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfDateTimeToDoubleNullableToJson(
         SimpleClassOfDateTimeToDoubleNullable instance) =>
@@ -1872,13 +1758,12 @@ Map<String, dynamic> _$SimpleClassOfDateTimeToDoubleNullableToJson(
 
 SimpleClassNullableOfDateTimeToDoubleNullable
     _$SimpleClassNullableOfDateTimeToDoubleNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfDateTimeToDoubleNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(DateTime.parse(k), (e as num?)?.toDouble()),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDateTimeToDoubleNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(DateTime.parse(k), (e as num?)?.toDouble()),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDateTimeToDoubleNullableToJson(
         SimpleClassNullableOfDateTimeToDoubleNullable instance) =>
@@ -1887,11 +1772,12 @@ Map<String, dynamic> _$SimpleClassNullableOfDateTimeToDoubleNullableToJson(
     };
 
 SimpleClassOfDynamicToDoubleNullable
-    _$SimpleClassOfDynamicToDoubleNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfDynamicToDoubleNullable(
-    Map<String, double>.from(json['value'] as Map),
-  );
-}
+    _$SimpleClassOfDynamicToDoubleNullableFromJson(Map<String, dynamic> json) =>
+        SimpleClassOfDynamicToDoubleNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(k, (e as num?)?.toDouble()),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfDynamicToDoubleNullableToJson(
         SimpleClassOfDynamicToDoubleNullable instance) =>
@@ -1901,13 +1787,12 @@ Map<String, dynamic> _$SimpleClassOfDynamicToDoubleNullableToJson(
 
 SimpleClassNullableOfDynamicToDoubleNullable
     _$SimpleClassNullableOfDynamicToDoubleNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfDynamicToDoubleNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, (e as num?)?.toDouble()),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDynamicToDoubleNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, (e as num?)?.toDouble()),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDynamicToDoubleNullableToJson(
         SimpleClassNullableOfDynamicToDoubleNullable instance) =>
@@ -1916,46 +1801,45 @@ Map<String, dynamic> _$SimpleClassNullableOfDynamicToDoubleNullableToJson(
     };
 
 SimpleClassOfEnumTypeToDoubleNullable
-    _$SimpleClassOfEnumTypeToDoubleNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfEnumTypeToDoubleNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) =>
-          MapEntry(_$enumDecode(_$EnumTypeEnumMap, k), (e as num?)?.toDouble()),
-    ),
-  );
-}
+    _$SimpleClassOfEnumTypeToDoubleNullableFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfEnumTypeToDoubleNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(
+                $enumDecode(_$EnumTypeEnumMap, k), (e as num?)?.toDouble()),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfEnumTypeToDoubleNullableToJson(
         SimpleClassOfEnumTypeToDoubleNullable instance) =>
     <String, dynamic>{
-      'value': instance.value.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e)),
+      'value': instance.value.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e)),
     };
 
 SimpleClassNullableOfEnumTypeToDoubleNullable
     _$SimpleClassNullableOfEnumTypeToDoubleNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfEnumTypeToDoubleNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) =>
-          MapEntry(_$enumDecode(_$EnumTypeEnumMap, k), (e as num?)?.toDouble()),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfEnumTypeToDoubleNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(
+                $enumDecode(_$EnumTypeEnumMap, k), (e as num?)?.toDouble()),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfEnumTypeToDoubleNullableToJson(
         SimpleClassNullableOfEnumTypeToDoubleNullable instance) =>
     <String, dynamic>{
-      'value': instance.value?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e)),
+      'value':
+          instance.value?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e)),
     };
 
 SimpleClassOfIntToDoubleNullable _$SimpleClassOfIntToDoubleNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfIntToDoubleNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(int.parse(k), (e as num?)?.toDouble()),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfIntToDoubleNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(int.parse(k), (e as num?)?.toDouble()),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfIntToDoubleNullableToJson(
         SimpleClassOfIntToDoubleNullable instance) =>
@@ -1965,13 +1849,12 @@ Map<String, dynamic> _$SimpleClassOfIntToDoubleNullableToJson(
 
 SimpleClassNullableOfIntToDoubleNullable
     _$SimpleClassNullableOfIntToDoubleNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfIntToDoubleNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(int.parse(k), (e as num?)?.toDouble()),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfIntToDoubleNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(int.parse(k), (e as num?)?.toDouble()),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfIntToDoubleNullableToJson(
         SimpleClassNullableOfIntToDoubleNullable instance) =>
@@ -1980,11 +1863,12 @@ Map<String, dynamic> _$SimpleClassNullableOfIntToDoubleNullableToJson(
     };
 
 SimpleClassOfObjectToDoubleNullable
-    _$SimpleClassOfObjectToDoubleNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfObjectToDoubleNullable(
-    Map<String, double>.from(json['value'] as Map),
-  );
-}
+    _$SimpleClassOfObjectToDoubleNullableFromJson(Map<String, dynamic> json) =>
+        SimpleClassOfObjectToDoubleNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(k, (e as num?)?.toDouble()),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfObjectToDoubleNullableToJson(
         SimpleClassOfObjectToDoubleNullable instance) =>
@@ -1994,13 +1878,12 @@ Map<String, dynamic> _$SimpleClassOfObjectToDoubleNullableToJson(
 
 SimpleClassNullableOfObjectToDoubleNullable
     _$SimpleClassNullableOfObjectToDoubleNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfObjectToDoubleNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, (e as num?)?.toDouble()),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfObjectToDoubleNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, (e as num?)?.toDouble()),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfObjectToDoubleNullableToJson(
         SimpleClassNullableOfObjectToDoubleNullable instance) =>
@@ -2009,11 +1892,12 @@ Map<String, dynamic> _$SimpleClassNullableOfObjectToDoubleNullableToJson(
     };
 
 SimpleClassOfStringToDoubleNullable
-    _$SimpleClassOfStringToDoubleNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfStringToDoubleNullable(
-    Map<String, double>.from(json['value'] as Map),
-  );
-}
+    _$SimpleClassOfStringToDoubleNullableFromJson(Map<String, dynamic> json) =>
+        SimpleClassOfStringToDoubleNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(k, (e as num?)?.toDouble()),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfStringToDoubleNullableToJson(
         SimpleClassOfStringToDoubleNullable instance) =>
@@ -2023,13 +1907,12 @@ Map<String, dynamic> _$SimpleClassOfStringToDoubleNullableToJson(
 
 SimpleClassNullableOfStringToDoubleNullable
     _$SimpleClassNullableOfStringToDoubleNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfStringToDoubleNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, (e as num?)?.toDouble()),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfStringToDoubleNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, (e as num?)?.toDouble()),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfStringToDoubleNullableToJson(
         SimpleClassNullableOfStringToDoubleNullable instance) =>
@@ -2038,13 +1921,12 @@ Map<String, dynamic> _$SimpleClassNullableOfStringToDoubleNullableToJson(
     };
 
 SimpleClassOfUriToDoubleNullable _$SimpleClassOfUriToDoubleNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfUriToDoubleNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(Uri.parse(k), (e as num?)?.toDouble()),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfUriToDoubleNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(Uri.parse(k), (e as num?)?.toDouble()),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfUriToDoubleNullableToJson(
         SimpleClassOfUriToDoubleNullable instance) =>
@@ -2054,13 +1936,12 @@ Map<String, dynamic> _$SimpleClassOfUriToDoubleNullableToJson(
 
 SimpleClassNullableOfUriToDoubleNullable
     _$SimpleClassNullableOfUriToDoubleNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfUriToDoubleNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(Uri.parse(k), (e as num?)?.toDouble()),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfUriToDoubleNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(Uri.parse(k), (e as num?)?.toDouble()),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfUriToDoubleNullableToJson(
         SimpleClassNullableOfUriToDoubleNullable instance) =>
@@ -2069,13 +1950,13 @@ Map<String, dynamic> _$SimpleClassNullableOfUriToDoubleNullableToJson(
     };
 
 SimpleClassOfBigIntToDuration _$SimpleClassOfBigIntToDurationFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfBigIntToDuration(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(BigInt.parse(k), Duration(microseconds: e as int)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfBigIntToDuration(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(
+            BigInt.parse(k), Duration(microseconds: (e as num).toInt())),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfBigIntToDurationToJson(
         SimpleClassOfBigIntToDuration instance) =>
@@ -2085,13 +1966,14 @@ Map<String, dynamic> _$SimpleClassOfBigIntToDurationToJson(
     };
 
 SimpleClassNullableOfBigIntToDuration
-    _$SimpleClassNullableOfBigIntToDurationFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfBigIntToDuration(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(BigInt.parse(k), Duration(microseconds: e as int)),
-    ),
-  );
-}
+    _$SimpleClassNullableOfBigIntToDurationFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfBigIntToDuration(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(
+                BigInt.parse(k), Duration(microseconds: (e as num).toInt())),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfBigIntToDurationToJson(
         SimpleClassNullableOfBigIntToDuration instance) =>
@@ -2101,13 +1983,13 @@ Map<String, dynamic> _$SimpleClassNullableOfBigIntToDurationToJson(
     };
 
 SimpleClassOfDateTimeToDuration _$SimpleClassOfDateTimeToDurationFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfDateTimeToDuration(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(DateTime.parse(k), Duration(microseconds: e as int)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfDateTimeToDuration(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(
+            DateTime.parse(k), Duration(microseconds: (e as num).toInt())),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfDateTimeToDurationToJson(
         SimpleClassOfDateTimeToDuration instance) =>
@@ -2118,13 +2000,13 @@ Map<String, dynamic> _$SimpleClassOfDateTimeToDurationToJson(
 
 SimpleClassNullableOfDateTimeToDuration
     _$SimpleClassNullableOfDateTimeToDurationFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfDateTimeToDuration(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(DateTime.parse(k), Duration(microseconds: e as int)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDateTimeToDuration(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(
+                DateTime.parse(k), Duration(microseconds: (e as num).toInt())),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDateTimeToDurationToJson(
         SimpleClassNullableOfDateTimeToDuration instance) =>
@@ -2134,13 +2016,12 @@ Map<String, dynamic> _$SimpleClassNullableOfDateTimeToDurationToJson(
     };
 
 SimpleClassOfDynamicToDuration _$SimpleClassOfDynamicToDurationFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfDynamicToDuration(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(k, Duration(microseconds: e as int)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfDynamicToDuration(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(k, Duration(microseconds: (e as num).toInt())),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfDynamicToDurationToJson(
         SimpleClassOfDynamicToDuration instance) =>
@@ -2150,13 +2031,12 @@ Map<String, dynamic> _$SimpleClassOfDynamicToDurationToJson(
 
 SimpleClassNullableOfDynamicToDuration
     _$SimpleClassNullableOfDynamicToDurationFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfDynamicToDuration(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, Duration(microseconds: e as int)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDynamicToDuration(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, Duration(microseconds: (e as num).toInt())),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDynamicToDurationToJson(
         SimpleClassNullableOfDynamicToDuration instance) =>
@@ -2165,48 +2045,46 @@ Map<String, dynamic> _$SimpleClassNullableOfDynamicToDurationToJson(
     };
 
 SimpleClassOfEnumTypeToDuration _$SimpleClassOfEnumTypeToDurationFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfEnumTypeToDuration(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(
-          _$enumDecode(_$EnumTypeEnumMap, k), Duration(microseconds: e as int)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfEnumTypeToDuration(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k),
+            Duration(microseconds: (e as num).toInt())),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfEnumTypeToDurationToJson(
         SimpleClassOfEnumTypeToDuration instance) =>
     <String, dynamic>{
       'value': instance.value
-          .map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e.inMicroseconds)),
+          .map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e.inMicroseconds)),
     };
 
 SimpleClassNullableOfEnumTypeToDuration
     _$SimpleClassNullableOfEnumTypeToDurationFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfEnumTypeToDuration(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(
-          _$enumDecode(_$EnumTypeEnumMap, k), Duration(microseconds: e as int)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfEnumTypeToDuration(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k),
+                Duration(microseconds: (e as num).toInt())),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfEnumTypeToDurationToJson(
         SimpleClassNullableOfEnumTypeToDuration instance) =>
     <String, dynamic>{
       'value': instance.value
-          ?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e.inMicroseconds)),
+          ?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e.inMicroseconds)),
     };
 
 SimpleClassOfIntToDuration _$SimpleClassOfIntToDurationFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfIntToDuration(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(int.parse(k), Duration(microseconds: e as int)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfIntToDuration(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) =>
+            MapEntry(int.parse(k), Duration(microseconds: (e as num).toInt())),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfIntToDurationToJson(
         SimpleClassOfIntToDuration instance) =>
@@ -2216,13 +2094,13 @@ Map<String, dynamic> _$SimpleClassOfIntToDurationToJson(
     };
 
 SimpleClassNullableOfIntToDuration _$SimpleClassNullableOfIntToDurationFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfIntToDuration(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(int.parse(k), Duration(microseconds: e as int)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfIntToDuration(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) =>
+            MapEntry(int.parse(k), Duration(microseconds: (e as num).toInt())),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfIntToDurationToJson(
         SimpleClassNullableOfIntToDuration instance) =>
@@ -2232,13 +2110,12 @@ Map<String, dynamic> _$SimpleClassNullableOfIntToDurationToJson(
     };
 
 SimpleClassOfObjectToDuration _$SimpleClassOfObjectToDurationFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfObjectToDuration(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(k, Duration(microseconds: e as int)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfObjectToDuration(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(k, Duration(microseconds: (e as num).toInt())),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfObjectToDurationToJson(
         SimpleClassOfObjectToDuration instance) =>
@@ -2247,13 +2124,13 @@ Map<String, dynamic> _$SimpleClassOfObjectToDurationToJson(
     };
 
 SimpleClassNullableOfObjectToDuration
-    _$SimpleClassNullableOfObjectToDurationFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfObjectToDuration(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, Duration(microseconds: e as int)),
-    ),
-  );
-}
+    _$SimpleClassNullableOfObjectToDurationFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfObjectToDuration(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, Duration(microseconds: (e as num).toInt())),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfObjectToDurationToJson(
         SimpleClassNullableOfObjectToDuration instance) =>
@@ -2262,13 +2139,12 @@ Map<String, dynamic> _$SimpleClassNullableOfObjectToDurationToJson(
     };
 
 SimpleClassOfStringToDuration _$SimpleClassOfStringToDurationFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfStringToDuration(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(k, Duration(microseconds: e as int)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfStringToDuration(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(k, Duration(microseconds: (e as num).toInt())),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfStringToDurationToJson(
         SimpleClassOfStringToDuration instance) =>
@@ -2277,13 +2153,13 @@ Map<String, dynamic> _$SimpleClassOfStringToDurationToJson(
     };
 
 SimpleClassNullableOfStringToDuration
-    _$SimpleClassNullableOfStringToDurationFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfStringToDuration(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, Duration(microseconds: e as int)),
-    ),
-  );
-}
+    _$SimpleClassNullableOfStringToDurationFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfStringToDuration(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, Duration(microseconds: (e as num).toInt())),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfStringToDurationToJson(
         SimpleClassNullableOfStringToDuration instance) =>
@@ -2292,13 +2168,13 @@ Map<String, dynamic> _$SimpleClassNullableOfStringToDurationToJson(
     };
 
 SimpleClassOfUriToDuration _$SimpleClassOfUriToDurationFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfUriToDuration(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(Uri.parse(k), Duration(microseconds: e as int)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfUriToDuration(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) =>
+            MapEntry(Uri.parse(k), Duration(microseconds: (e as num).toInt())),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfUriToDurationToJson(
         SimpleClassOfUriToDuration instance) =>
@@ -2308,13 +2184,13 @@ Map<String, dynamic> _$SimpleClassOfUriToDurationToJson(
     };
 
 SimpleClassNullableOfUriToDuration _$SimpleClassNullableOfUriToDurationFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfUriToDuration(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(Uri.parse(k), Duration(microseconds: e as int)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfUriToDuration(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) =>
+            MapEntry(Uri.parse(k), Duration(microseconds: (e as num).toInt())),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfUriToDurationToJson(
         SimpleClassNullableOfUriToDuration instance) =>
@@ -2324,14 +2200,14 @@ Map<String, dynamic> _$SimpleClassNullableOfUriToDurationToJson(
     };
 
 SimpleClassOfBigIntToDurationNullable
-    _$SimpleClassOfBigIntToDurationNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfBigIntToDurationNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(
-          BigInt.parse(k), e == null ? null : Duration(microseconds: e as int)),
-    ),
-  );
-}
+    _$SimpleClassOfBigIntToDurationNullableFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfBigIntToDurationNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(BigInt.parse(k),
+                e == null ? null : Duration(microseconds: (e as num).toInt())),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfBigIntToDurationNullableToJson(
         SimpleClassOfBigIntToDurationNullable instance) =>
@@ -2342,14 +2218,13 @@ Map<String, dynamic> _$SimpleClassOfBigIntToDurationNullableToJson(
 
 SimpleClassNullableOfBigIntToDurationNullable
     _$SimpleClassNullableOfBigIntToDurationNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfBigIntToDurationNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(
-          BigInt.parse(k), e == null ? null : Duration(microseconds: e as int)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfBigIntToDurationNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(BigInt.parse(k),
+                e == null ? null : Duration(microseconds: (e as num).toInt())),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfBigIntToDurationNullableToJson(
         SimpleClassNullableOfBigIntToDurationNullable instance) =>
@@ -2360,14 +2235,13 @@ Map<String, dynamic> _$SimpleClassNullableOfBigIntToDurationNullableToJson(
 
 SimpleClassOfDateTimeToDurationNullable
     _$SimpleClassOfDateTimeToDurationNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassOfDateTimeToDurationNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(DateTime.parse(k),
-          e == null ? null : Duration(microseconds: e as int)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassOfDateTimeToDurationNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(DateTime.parse(k),
+                e == null ? null : Duration(microseconds: (e as num).toInt())),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfDateTimeToDurationNullableToJson(
         SimpleClassOfDateTimeToDurationNullable instance) =>
@@ -2378,14 +2252,13 @@ Map<String, dynamic> _$SimpleClassOfDateTimeToDurationNullableToJson(
 
 SimpleClassNullableOfDateTimeToDurationNullable
     _$SimpleClassNullableOfDateTimeToDurationNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfDateTimeToDurationNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(DateTime.parse(k),
-          e == null ? null : Duration(microseconds: e as int)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDateTimeToDurationNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(DateTime.parse(k),
+                e == null ? null : Duration(microseconds: (e as num).toInt())),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDateTimeToDurationNullableToJson(
         SimpleClassNullableOfDateTimeToDurationNullable instance) =>
@@ -2396,14 +2269,13 @@ Map<String, dynamic> _$SimpleClassNullableOfDateTimeToDurationNullableToJson(
 
 SimpleClassOfDynamicToDurationNullable
     _$SimpleClassOfDynamicToDurationNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassOfDynamicToDurationNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) =>
-          MapEntry(k, e == null ? null : Duration(microseconds: e as int)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassOfDynamicToDurationNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(k,
+                e == null ? null : Duration(microseconds: (e as num).toInt())),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfDynamicToDurationNullableToJson(
         SimpleClassOfDynamicToDurationNullable instance) =>
@@ -2413,14 +2285,13 @@ Map<String, dynamic> _$SimpleClassOfDynamicToDurationNullableToJson(
 
 SimpleClassNullableOfDynamicToDurationNullable
     _$SimpleClassNullableOfDynamicToDurationNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfDynamicToDurationNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) =>
-          MapEntry(k, e == null ? null : Duration(microseconds: e as int)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDynamicToDurationNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k,
+                e == null ? null : Duration(microseconds: (e as num).toInt())),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDynamicToDurationNullableToJson(
         SimpleClassNullableOfDynamicToDurationNullable instance) =>
@@ -2430,49 +2301,46 @@ Map<String, dynamic> _$SimpleClassNullableOfDynamicToDurationNullableToJson(
 
 SimpleClassOfEnumTypeToDurationNullable
     _$SimpleClassOfEnumTypeToDurationNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassOfEnumTypeToDurationNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k),
-          e == null ? null : Duration(microseconds: e as int)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassOfEnumTypeToDurationNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k),
+                e == null ? null : Duration(microseconds: (e as num).toInt())),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfEnumTypeToDurationNullableToJson(
         SimpleClassOfEnumTypeToDurationNullable instance) =>
     <String, dynamic>{
       'value': instance.value
-          .map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e?.inMicroseconds)),
+          .map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e?.inMicroseconds)),
     };
 
 SimpleClassNullableOfEnumTypeToDurationNullable
     _$SimpleClassNullableOfEnumTypeToDurationNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfEnumTypeToDurationNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k),
-          e == null ? null : Duration(microseconds: e as int)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfEnumTypeToDurationNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k),
+                e == null ? null : Duration(microseconds: (e as num).toInt())),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfEnumTypeToDurationNullableToJson(
         SimpleClassNullableOfEnumTypeToDurationNullable instance) =>
     <String, dynamic>{
       'value': instance.value
-          ?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e?.inMicroseconds)),
+          ?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e?.inMicroseconds)),
     };
 
 SimpleClassOfIntToDurationNullable _$SimpleClassOfIntToDurationNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfIntToDurationNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(
-          int.parse(k), e == null ? null : Duration(microseconds: e as int)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfIntToDurationNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(int.parse(k),
+            e == null ? null : Duration(microseconds: (e as num).toInt())),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfIntToDurationNullableToJson(
         SimpleClassOfIntToDurationNullable instance) =>
@@ -2483,14 +2351,13 @@ Map<String, dynamic> _$SimpleClassOfIntToDurationNullableToJson(
 
 SimpleClassNullableOfIntToDurationNullable
     _$SimpleClassNullableOfIntToDurationNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfIntToDurationNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(
-          int.parse(k), e == null ? null : Duration(microseconds: e as int)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfIntToDurationNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(int.parse(k),
+                e == null ? null : Duration(microseconds: (e as num).toInt())),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfIntToDurationNullableToJson(
         SimpleClassNullableOfIntToDurationNullable instance) =>
@@ -2500,14 +2367,14 @@ Map<String, dynamic> _$SimpleClassNullableOfIntToDurationNullableToJson(
     };
 
 SimpleClassOfObjectToDurationNullable
-    _$SimpleClassOfObjectToDurationNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfObjectToDurationNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) =>
-          MapEntry(k, e == null ? null : Duration(microseconds: e as int)),
-    ),
-  );
-}
+    _$SimpleClassOfObjectToDurationNullableFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfObjectToDurationNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(k,
+                e == null ? null : Duration(microseconds: (e as num).toInt())),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfObjectToDurationNullableToJson(
         SimpleClassOfObjectToDurationNullable instance) =>
@@ -2517,14 +2384,13 @@ Map<String, dynamic> _$SimpleClassOfObjectToDurationNullableToJson(
 
 SimpleClassNullableOfObjectToDurationNullable
     _$SimpleClassNullableOfObjectToDurationNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfObjectToDurationNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) =>
-          MapEntry(k, e == null ? null : Duration(microseconds: e as int)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfObjectToDurationNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k,
+                e == null ? null : Duration(microseconds: (e as num).toInt())),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfObjectToDurationNullableToJson(
         SimpleClassNullableOfObjectToDurationNullable instance) =>
@@ -2533,14 +2399,14 @@ Map<String, dynamic> _$SimpleClassNullableOfObjectToDurationNullableToJson(
     };
 
 SimpleClassOfStringToDurationNullable
-    _$SimpleClassOfStringToDurationNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfStringToDurationNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) =>
-          MapEntry(k, e == null ? null : Duration(microseconds: e as int)),
-    ),
-  );
-}
+    _$SimpleClassOfStringToDurationNullableFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfStringToDurationNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(k,
+                e == null ? null : Duration(microseconds: (e as num).toInt())),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfStringToDurationNullableToJson(
         SimpleClassOfStringToDurationNullable instance) =>
@@ -2550,14 +2416,13 @@ Map<String, dynamic> _$SimpleClassOfStringToDurationNullableToJson(
 
 SimpleClassNullableOfStringToDurationNullable
     _$SimpleClassNullableOfStringToDurationNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfStringToDurationNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) =>
-          MapEntry(k, e == null ? null : Duration(microseconds: e as int)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfStringToDurationNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k,
+                e == null ? null : Duration(microseconds: (e as num).toInt())),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfStringToDurationNullableToJson(
         SimpleClassNullableOfStringToDurationNullable instance) =>
@@ -2566,14 +2431,13 @@ Map<String, dynamic> _$SimpleClassNullableOfStringToDurationNullableToJson(
     };
 
 SimpleClassOfUriToDurationNullable _$SimpleClassOfUriToDurationNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfUriToDurationNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(
-          Uri.parse(k), e == null ? null : Duration(microseconds: e as int)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfUriToDurationNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(Uri.parse(k),
+            e == null ? null : Duration(microseconds: (e as num).toInt())),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfUriToDurationNullableToJson(
         SimpleClassOfUriToDurationNullable instance) =>
@@ -2584,14 +2448,13 @@ Map<String, dynamic> _$SimpleClassOfUriToDurationNullableToJson(
 
 SimpleClassNullableOfUriToDurationNullable
     _$SimpleClassNullableOfUriToDurationNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfUriToDurationNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(
-          Uri.parse(k), e == null ? null : Duration(microseconds: e as int)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfUriToDurationNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(Uri.parse(k),
+                e == null ? null : Duration(microseconds: (e as num).toInt())),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfUriToDurationNullableToJson(
         SimpleClassNullableOfUriToDurationNullable instance) =>
@@ -2601,13 +2464,12 @@ Map<String, dynamic> _$SimpleClassNullableOfUriToDurationNullableToJson(
     };
 
 SimpleClassOfBigIntToDynamic _$SimpleClassOfBigIntToDynamicFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfBigIntToDynamic(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(BigInt.parse(k), e),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfBigIntToDynamic(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(BigInt.parse(k), e),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfBigIntToDynamicToJson(
         SimpleClassOfBigIntToDynamic instance) =>
@@ -2616,13 +2478,12 @@ Map<String, dynamic> _$SimpleClassOfBigIntToDynamicToJson(
     };
 
 SimpleClassNullableOfBigIntToDynamic
-    _$SimpleClassNullableOfBigIntToDynamicFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfBigIntToDynamic(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(BigInt.parse(k), e),
-    ),
-  );
-}
+    _$SimpleClassNullableOfBigIntToDynamicFromJson(Map<String, dynamic> json) =>
+        SimpleClassNullableOfBigIntToDynamic(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(BigInt.parse(k), e),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfBigIntToDynamicToJson(
         SimpleClassNullableOfBigIntToDynamic instance) =>
@@ -2631,13 +2492,12 @@ Map<String, dynamic> _$SimpleClassNullableOfBigIntToDynamicToJson(
     };
 
 SimpleClassOfDateTimeToDynamic _$SimpleClassOfDateTimeToDynamicFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfDateTimeToDynamic(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(DateTime.parse(k), e),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfDateTimeToDynamic(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(DateTime.parse(k), e),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfDateTimeToDynamicToJson(
         SimpleClassOfDateTimeToDynamic instance) =>
@@ -2647,13 +2507,12 @@ Map<String, dynamic> _$SimpleClassOfDateTimeToDynamicToJson(
 
 SimpleClassNullableOfDateTimeToDynamic
     _$SimpleClassNullableOfDateTimeToDynamicFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfDateTimeToDynamic(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(DateTime.parse(k), e),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDateTimeToDynamic(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(DateTime.parse(k), e),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDateTimeToDynamicToJson(
         SimpleClassNullableOfDateTimeToDynamic instance) =>
@@ -2662,11 +2521,10 @@ Map<String, dynamic> _$SimpleClassNullableOfDateTimeToDynamicToJson(
     };
 
 SimpleClassOfDynamicToDynamic _$SimpleClassOfDynamicToDynamicFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfDynamicToDynamic(
-    json['value'] as Map<String, dynamic>,
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfDynamicToDynamic(
+      json['value'] as Map<String, dynamic>,
+    );
 
 Map<String, dynamic> _$SimpleClassOfDynamicToDynamicToJson(
         SimpleClassOfDynamicToDynamic instance) =>
@@ -2675,11 +2533,11 @@ Map<String, dynamic> _$SimpleClassOfDynamicToDynamicToJson(
     };
 
 SimpleClassNullableOfDynamicToDynamic
-    _$SimpleClassNullableOfDynamicToDynamicFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfDynamicToDynamic(
-    json['value'] as Map<String, dynamic>?,
-  );
-}
+    _$SimpleClassNullableOfDynamicToDynamicFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDynamicToDynamic(
+          json['value'] as Map<String, dynamic>?,
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDynamicToDynamicToJson(
         SimpleClassNullableOfDynamicToDynamic instance) =>
@@ -2688,44 +2546,42 @@ Map<String, dynamic> _$SimpleClassNullableOfDynamicToDynamicToJson(
     };
 
 SimpleClassOfEnumTypeToDynamic _$SimpleClassOfEnumTypeToDynamicFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfEnumTypeToDynamic(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k), e),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfEnumTypeToDynamic(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k), e),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfEnumTypeToDynamicToJson(
         SimpleClassOfEnumTypeToDynamic instance) =>
     <String, dynamic>{
-      'value': instance.value.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e)),
+      'value': instance.value.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e)),
     };
 
 SimpleClassNullableOfEnumTypeToDynamic
     _$SimpleClassNullableOfEnumTypeToDynamicFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfEnumTypeToDynamic(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k), e),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfEnumTypeToDynamic(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k), e),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfEnumTypeToDynamicToJson(
         SimpleClassNullableOfEnumTypeToDynamic instance) =>
     <String, dynamic>{
-      'value': instance.value?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e)),
+      'value':
+          instance.value?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e)),
     };
 
 SimpleClassOfIntToDynamic _$SimpleClassOfIntToDynamicFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfIntToDynamic(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(int.parse(k), e),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfIntToDynamic(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(int.parse(k), e),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfIntToDynamicToJson(
         SimpleClassOfIntToDynamic instance) =>
@@ -2734,13 +2590,12 @@ Map<String, dynamic> _$SimpleClassOfIntToDynamicToJson(
     };
 
 SimpleClassNullableOfIntToDynamic _$SimpleClassNullableOfIntToDynamicFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfIntToDynamic(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(int.parse(k), e),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfIntToDynamic(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(int.parse(k), e),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfIntToDynamicToJson(
         SimpleClassNullableOfIntToDynamic instance) =>
@@ -2749,11 +2604,10 @@ Map<String, dynamic> _$SimpleClassNullableOfIntToDynamicToJson(
     };
 
 SimpleClassOfObjectToDynamic _$SimpleClassOfObjectToDynamicFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfObjectToDynamic(
-    json['value'] as Map<String, dynamic>,
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfObjectToDynamic(
+      json['value'] as Map<String, dynamic>,
+    );
 
 Map<String, dynamic> _$SimpleClassOfObjectToDynamicToJson(
         SimpleClassOfObjectToDynamic instance) =>
@@ -2762,11 +2616,10 @@ Map<String, dynamic> _$SimpleClassOfObjectToDynamicToJson(
     };
 
 SimpleClassNullableOfObjectToDynamic
-    _$SimpleClassNullableOfObjectToDynamicFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfObjectToDynamic(
-    json['value'] as Map<String, dynamic>?,
-  );
-}
+    _$SimpleClassNullableOfObjectToDynamicFromJson(Map<String, dynamic> json) =>
+        SimpleClassNullableOfObjectToDynamic(
+          json['value'] as Map<String, dynamic>?,
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfObjectToDynamicToJson(
         SimpleClassNullableOfObjectToDynamic instance) =>
@@ -2775,11 +2628,10 @@ Map<String, dynamic> _$SimpleClassNullableOfObjectToDynamicToJson(
     };
 
 SimpleClassOfStringToDynamic _$SimpleClassOfStringToDynamicFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfStringToDynamic(
-    json['value'] as Map<String, dynamic>,
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfStringToDynamic(
+      json['value'] as Map<String, dynamic>,
+    );
 
 Map<String, dynamic> _$SimpleClassOfStringToDynamicToJson(
         SimpleClassOfStringToDynamic instance) =>
@@ -2788,11 +2640,10 @@ Map<String, dynamic> _$SimpleClassOfStringToDynamicToJson(
     };
 
 SimpleClassNullableOfStringToDynamic
-    _$SimpleClassNullableOfStringToDynamicFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfStringToDynamic(
-    json['value'] as Map<String, dynamic>?,
-  );
-}
+    _$SimpleClassNullableOfStringToDynamicFromJson(Map<String, dynamic> json) =>
+        SimpleClassNullableOfStringToDynamic(
+          json['value'] as Map<String, dynamic>?,
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfStringToDynamicToJson(
         SimpleClassNullableOfStringToDynamic instance) =>
@@ -2801,13 +2652,12 @@ Map<String, dynamic> _$SimpleClassNullableOfStringToDynamicToJson(
     };
 
 SimpleClassOfUriToDynamic _$SimpleClassOfUriToDynamicFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfUriToDynamic(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(Uri.parse(k), e),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfUriToDynamic(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(Uri.parse(k), e),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfUriToDynamicToJson(
         SimpleClassOfUriToDynamic instance) =>
@@ -2816,13 +2666,12 @@ Map<String, dynamic> _$SimpleClassOfUriToDynamicToJson(
     };
 
 SimpleClassNullableOfUriToDynamic _$SimpleClassNullableOfUriToDynamicFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfUriToDynamic(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(Uri.parse(k), e),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfUriToDynamic(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(Uri.parse(k), e),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfUriToDynamicToJson(
         SimpleClassNullableOfUriToDynamic instance) =>
@@ -2831,269 +2680,262 @@ Map<String, dynamic> _$SimpleClassNullableOfUriToDynamicToJson(
     };
 
 SimpleClassOfBigIntToEnumType _$SimpleClassOfBigIntToEnumTypeFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfBigIntToEnumType(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(BigInt.parse(k), _$enumDecode(_$EnumTypeEnumMap, e)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfBigIntToEnumType(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(BigInt.parse(k), $enumDecode(_$EnumTypeEnumMap, e)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfBigIntToEnumTypeToJson(
         SimpleClassOfBigIntToEnumType instance) =>
     <String, dynamic>{
       'value': instance.value
-          .map((k, e) => MapEntry(k.toString(), _$EnumTypeEnumMap[e])),
+          .map((k, e) => MapEntry(k.toString(), _$EnumTypeEnumMap[e]!)),
     };
 
 SimpleClassNullableOfBigIntToEnumType
-    _$SimpleClassNullableOfBigIntToEnumTypeFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfBigIntToEnumType(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(BigInt.parse(k), _$enumDecode(_$EnumTypeEnumMap, e)),
-    ),
-  );
-}
+    _$SimpleClassNullableOfBigIntToEnumTypeFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfBigIntToEnumType(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) =>
+                MapEntry(BigInt.parse(k), $enumDecode(_$EnumTypeEnumMap, e)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfBigIntToEnumTypeToJson(
         SimpleClassNullableOfBigIntToEnumType instance) =>
     <String, dynamic>{
       'value': instance.value
-          ?.map((k, e) => MapEntry(k.toString(), _$EnumTypeEnumMap[e])),
+          ?.map((k, e) => MapEntry(k.toString(), _$EnumTypeEnumMap[e]!)),
     };
 
 SimpleClassOfDateTimeToEnumType _$SimpleClassOfDateTimeToEnumTypeFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfDateTimeToEnumType(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(DateTime.parse(k), _$enumDecode(_$EnumTypeEnumMap, e)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfDateTimeToEnumType(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) =>
+            MapEntry(DateTime.parse(k), $enumDecode(_$EnumTypeEnumMap, e)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfDateTimeToEnumTypeToJson(
         SimpleClassOfDateTimeToEnumType instance) =>
     <String, dynamic>{
       'value': instance.value
-          .map((k, e) => MapEntry(k.toIso8601String(), _$EnumTypeEnumMap[e])),
+          .map((k, e) => MapEntry(k.toIso8601String(), _$EnumTypeEnumMap[e]!)),
     };
 
 SimpleClassNullableOfDateTimeToEnumType
     _$SimpleClassNullableOfDateTimeToEnumTypeFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfDateTimeToEnumType(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(DateTime.parse(k), _$enumDecode(_$EnumTypeEnumMap, e)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDateTimeToEnumType(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) =>
+                MapEntry(DateTime.parse(k), $enumDecode(_$EnumTypeEnumMap, e)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDateTimeToEnumTypeToJson(
         SimpleClassNullableOfDateTimeToEnumType instance) =>
     <String, dynamic>{
       'value': instance.value
-          ?.map((k, e) => MapEntry(k.toIso8601String(), _$EnumTypeEnumMap[e])),
+          ?.map((k, e) => MapEntry(k.toIso8601String(), _$EnumTypeEnumMap[e]!)),
     };
 
 SimpleClassOfDynamicToEnumType _$SimpleClassOfDynamicToEnumTypeFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfDynamicToEnumType(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(k, _$enumDecode(_$EnumTypeEnumMap, e)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfDynamicToEnumType(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(k, $enumDecode(_$EnumTypeEnumMap, e)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfDynamicToEnumTypeToJson(
         SimpleClassOfDynamicToEnumType instance) =>
     <String, dynamic>{
-      'value': instance.value.map((k, e) => MapEntry(k, _$EnumTypeEnumMap[e])),
+      'value': instance.value.map((k, e) => MapEntry(k, _$EnumTypeEnumMap[e]!)),
     };
 
 SimpleClassNullableOfDynamicToEnumType
     _$SimpleClassNullableOfDynamicToEnumTypeFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfDynamicToEnumType(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, _$enumDecode(_$EnumTypeEnumMap, e)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDynamicToEnumType(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, $enumDecode(_$EnumTypeEnumMap, e)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDynamicToEnumTypeToJson(
         SimpleClassNullableOfDynamicToEnumType instance) =>
     <String, dynamic>{
-      'value': instance.value?.map((k, e) => MapEntry(k, _$EnumTypeEnumMap[e])),
+      'value':
+          instance.value?.map((k, e) => MapEntry(k, _$EnumTypeEnumMap[e]!)),
     };
 
 SimpleClassOfEnumTypeToEnumType _$SimpleClassOfEnumTypeToEnumTypeFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfEnumTypeToEnumType(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k),
-          _$enumDecode(_$EnumTypeEnumMap, e)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfEnumTypeToEnumType(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k),
+            $enumDecode(_$EnumTypeEnumMap, e)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfEnumTypeToEnumTypeToJson(
         SimpleClassOfEnumTypeToEnumType instance) =>
     <String, dynamic>{
-      'value': instance.value
-          .map((k, e) => MapEntry(_$EnumTypeEnumMap[k], _$EnumTypeEnumMap[e])),
+      'value': instance.value.map(
+          (k, e) => MapEntry(_$EnumTypeEnumMap[k]!, _$EnumTypeEnumMap[e]!)),
     };
 
 SimpleClassNullableOfEnumTypeToEnumType
     _$SimpleClassNullableOfEnumTypeToEnumTypeFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfEnumTypeToEnumType(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k),
-          _$enumDecode(_$EnumTypeEnumMap, e)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfEnumTypeToEnumType(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k),
+                $enumDecode(_$EnumTypeEnumMap, e)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfEnumTypeToEnumTypeToJson(
         SimpleClassNullableOfEnumTypeToEnumType instance) =>
     <String, dynamic>{
-      'value': instance.value
-          ?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], _$EnumTypeEnumMap[e])),
+      'value': instance.value?.map(
+          (k, e) => MapEntry(_$EnumTypeEnumMap[k]!, _$EnumTypeEnumMap[e]!)),
     };
 
 SimpleClassOfIntToEnumType _$SimpleClassOfIntToEnumTypeFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfIntToEnumType(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(int.parse(k), _$enumDecode(_$EnumTypeEnumMap, e)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfIntToEnumType(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(int.parse(k), $enumDecode(_$EnumTypeEnumMap, e)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfIntToEnumTypeToJson(
         SimpleClassOfIntToEnumType instance) =>
     <String, dynamic>{
       'value': instance.value
-          .map((k, e) => MapEntry(k.toString(), _$EnumTypeEnumMap[e])),
+          .map((k, e) => MapEntry(k.toString(), _$EnumTypeEnumMap[e]!)),
     };
 
 SimpleClassNullableOfIntToEnumType _$SimpleClassNullableOfIntToEnumTypeFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfIntToEnumType(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(int.parse(k), _$enumDecode(_$EnumTypeEnumMap, e)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfIntToEnumType(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(int.parse(k), $enumDecode(_$EnumTypeEnumMap, e)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfIntToEnumTypeToJson(
         SimpleClassNullableOfIntToEnumType instance) =>
     <String, dynamic>{
       'value': instance.value
-          ?.map((k, e) => MapEntry(k.toString(), _$EnumTypeEnumMap[e])),
+          ?.map((k, e) => MapEntry(k.toString(), _$EnumTypeEnumMap[e]!)),
     };
 
 SimpleClassOfObjectToEnumType _$SimpleClassOfObjectToEnumTypeFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfObjectToEnumType(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(k, _$enumDecode(_$EnumTypeEnumMap, e)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfObjectToEnumType(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(k, $enumDecode(_$EnumTypeEnumMap, e)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfObjectToEnumTypeToJson(
         SimpleClassOfObjectToEnumType instance) =>
     <String, dynamic>{
-      'value': instance.value.map((k, e) => MapEntry(k, _$EnumTypeEnumMap[e])),
+      'value': instance.value.map((k, e) => MapEntry(k, _$EnumTypeEnumMap[e]!)),
     };
 
 SimpleClassNullableOfObjectToEnumType
-    _$SimpleClassNullableOfObjectToEnumTypeFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfObjectToEnumType(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, _$enumDecode(_$EnumTypeEnumMap, e)),
-    ),
-  );
-}
+    _$SimpleClassNullableOfObjectToEnumTypeFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfObjectToEnumType(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, $enumDecode(_$EnumTypeEnumMap, e)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfObjectToEnumTypeToJson(
         SimpleClassNullableOfObjectToEnumType instance) =>
     <String, dynamic>{
-      'value': instance.value?.map((k, e) => MapEntry(k, _$EnumTypeEnumMap[e])),
+      'value':
+          instance.value?.map((k, e) => MapEntry(k, _$EnumTypeEnumMap[e]!)),
     };
 
 SimpleClassOfStringToEnumType _$SimpleClassOfStringToEnumTypeFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfStringToEnumType(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(k, _$enumDecode(_$EnumTypeEnumMap, e)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfStringToEnumType(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(k, $enumDecode(_$EnumTypeEnumMap, e)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfStringToEnumTypeToJson(
         SimpleClassOfStringToEnumType instance) =>
     <String, dynamic>{
-      'value': instance.value.map((k, e) => MapEntry(k, _$EnumTypeEnumMap[e])),
+      'value': instance.value.map((k, e) => MapEntry(k, _$EnumTypeEnumMap[e]!)),
     };
 
 SimpleClassNullableOfStringToEnumType
-    _$SimpleClassNullableOfStringToEnumTypeFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfStringToEnumType(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, _$enumDecode(_$EnumTypeEnumMap, e)),
-    ),
-  );
-}
+    _$SimpleClassNullableOfStringToEnumTypeFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfStringToEnumType(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, $enumDecode(_$EnumTypeEnumMap, e)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfStringToEnumTypeToJson(
         SimpleClassNullableOfStringToEnumType instance) =>
     <String, dynamic>{
-      'value': instance.value?.map((k, e) => MapEntry(k, _$EnumTypeEnumMap[e])),
+      'value':
+          instance.value?.map((k, e) => MapEntry(k, _$EnumTypeEnumMap[e]!)),
     };
 
 SimpleClassOfUriToEnumType _$SimpleClassOfUriToEnumTypeFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfUriToEnumType(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(Uri.parse(k), _$enumDecode(_$EnumTypeEnumMap, e)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfUriToEnumType(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(Uri.parse(k), $enumDecode(_$EnumTypeEnumMap, e)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfUriToEnumTypeToJson(
         SimpleClassOfUriToEnumType instance) =>
     <String, dynamic>{
       'value': instance.value
-          .map((k, e) => MapEntry(k.toString(), _$EnumTypeEnumMap[e])),
+          .map((k, e) => MapEntry(k.toString(), _$EnumTypeEnumMap[e]!)),
     };
 
 SimpleClassNullableOfUriToEnumType _$SimpleClassNullableOfUriToEnumTypeFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfUriToEnumType(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(Uri.parse(k), _$enumDecode(_$EnumTypeEnumMap, e)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfUriToEnumType(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(Uri.parse(k), $enumDecode(_$EnumTypeEnumMap, e)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfUriToEnumTypeToJson(
         SimpleClassNullableOfUriToEnumType instance) =>
     <String, dynamic>{
       'value': instance.value
-          ?.map((k, e) => MapEntry(k.toString(), _$EnumTypeEnumMap[e])),
+          ?.map((k, e) => MapEntry(k.toString(), _$EnumTypeEnumMap[e]!)),
     };
 
 SimpleClassOfBigIntToEnumTypeNullable
-    _$SimpleClassOfBigIntToEnumTypeNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfBigIntToEnumTypeNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) =>
-          MapEntry(BigInt.parse(k), _$enumDecodeNullable(_$EnumTypeEnumMap, e)),
-    ),
-  );
-}
+    _$SimpleClassOfBigIntToEnumTypeNullableFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfBigIntToEnumTypeNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(
+                BigInt.parse(k), $enumDecodeNullable(_$EnumTypeEnumMap, e)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfBigIntToEnumTypeNullableToJson(
         SimpleClassOfBigIntToEnumTypeNullable instance) =>
@@ -3102,27 +2944,15 @@ Map<String, dynamic> _$SimpleClassOfBigIntToEnumTypeNullableToJson(
           .map((k, e) => MapEntry(k.toString(), _$EnumTypeEnumMap[e])),
     };
 
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
-}
-
 SimpleClassNullableOfBigIntToEnumTypeNullable
     _$SimpleClassNullableOfBigIntToEnumTypeNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfBigIntToEnumTypeNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) =>
-          MapEntry(BigInt.parse(k), _$enumDecodeNullable(_$EnumTypeEnumMap, e)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfBigIntToEnumTypeNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(
+                BigInt.parse(k), $enumDecodeNullable(_$EnumTypeEnumMap, e)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfBigIntToEnumTypeNullableToJson(
         SimpleClassNullableOfBigIntToEnumTypeNullable instance) =>
@@ -3133,14 +2963,13 @@ Map<String, dynamic> _$SimpleClassNullableOfBigIntToEnumTypeNullableToJson(
 
 SimpleClassOfDateTimeToEnumTypeNullable
     _$SimpleClassOfDateTimeToEnumTypeNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassOfDateTimeToEnumTypeNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(
-          DateTime.parse(k), _$enumDecodeNullable(_$EnumTypeEnumMap, e)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassOfDateTimeToEnumTypeNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(
+                DateTime.parse(k), $enumDecodeNullable(_$EnumTypeEnumMap, e)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfDateTimeToEnumTypeNullableToJson(
         SimpleClassOfDateTimeToEnumTypeNullable instance) =>
@@ -3151,14 +2980,13 @@ Map<String, dynamic> _$SimpleClassOfDateTimeToEnumTypeNullableToJson(
 
 SimpleClassNullableOfDateTimeToEnumTypeNullable
     _$SimpleClassNullableOfDateTimeToEnumTypeNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfDateTimeToEnumTypeNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(
-          DateTime.parse(k), _$enumDecodeNullable(_$EnumTypeEnumMap, e)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDateTimeToEnumTypeNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(
+                DateTime.parse(k), $enumDecodeNullable(_$EnumTypeEnumMap, e)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDateTimeToEnumTypeNullableToJson(
         SimpleClassNullableOfDateTimeToEnumTypeNullable instance) =>
@@ -3169,13 +2997,12 @@ Map<String, dynamic> _$SimpleClassNullableOfDateTimeToEnumTypeNullableToJson(
 
 SimpleClassOfDynamicToEnumTypeNullable
     _$SimpleClassOfDynamicToEnumTypeNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassOfDynamicToEnumTypeNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(k, _$enumDecodeNullable(_$EnumTypeEnumMap, e)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassOfDynamicToEnumTypeNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(k, $enumDecodeNullable(_$EnumTypeEnumMap, e)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfDynamicToEnumTypeNullableToJson(
         SimpleClassOfDynamicToEnumTypeNullable instance) =>
@@ -3185,13 +3012,12 @@ Map<String, dynamic> _$SimpleClassOfDynamicToEnumTypeNullableToJson(
 
 SimpleClassNullableOfDynamicToEnumTypeNullable
     _$SimpleClassNullableOfDynamicToEnumTypeNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfDynamicToEnumTypeNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, _$enumDecodeNullable(_$EnumTypeEnumMap, e)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDynamicToEnumTypeNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, $enumDecodeNullable(_$EnumTypeEnumMap, e)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDynamicToEnumTypeNullableToJson(
         SimpleClassNullableOfDynamicToEnumTypeNullable instance) =>
@@ -3201,49 +3027,46 @@ Map<String, dynamic> _$SimpleClassNullableOfDynamicToEnumTypeNullableToJson(
 
 SimpleClassOfEnumTypeToEnumTypeNullable
     _$SimpleClassOfEnumTypeToEnumTypeNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassOfEnumTypeToEnumTypeNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k),
-          _$enumDecodeNullable(_$EnumTypeEnumMap, e)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassOfEnumTypeToEnumTypeNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k),
+                $enumDecodeNullable(_$EnumTypeEnumMap, e)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfEnumTypeToEnumTypeNullableToJson(
         SimpleClassOfEnumTypeToEnumTypeNullable instance) =>
     <String, dynamic>{
       'value': instance.value
-          .map((k, e) => MapEntry(_$EnumTypeEnumMap[k], _$EnumTypeEnumMap[e])),
+          .map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, _$EnumTypeEnumMap[e])),
     };
 
 SimpleClassNullableOfEnumTypeToEnumTypeNullable
     _$SimpleClassNullableOfEnumTypeToEnumTypeNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfEnumTypeToEnumTypeNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k),
-          _$enumDecodeNullable(_$EnumTypeEnumMap, e)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfEnumTypeToEnumTypeNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k),
+                $enumDecodeNullable(_$EnumTypeEnumMap, e)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfEnumTypeToEnumTypeNullableToJson(
         SimpleClassNullableOfEnumTypeToEnumTypeNullable instance) =>
     <String, dynamic>{
-      'value': instance.value
-          ?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], _$EnumTypeEnumMap[e])),
+      'value': instance.value?.map(
+          (k, e) => MapEntry(_$EnumTypeEnumMap[k]!, _$EnumTypeEnumMap[e])),
     };
 
 SimpleClassOfIntToEnumTypeNullable _$SimpleClassOfIntToEnumTypeNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfIntToEnumTypeNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) =>
-          MapEntry(int.parse(k), _$enumDecodeNullable(_$EnumTypeEnumMap, e)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfIntToEnumTypeNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) =>
+            MapEntry(int.parse(k), $enumDecodeNullable(_$EnumTypeEnumMap, e)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfIntToEnumTypeNullableToJson(
         SimpleClassOfIntToEnumTypeNullable instance) =>
@@ -3254,14 +3077,13 @@ Map<String, dynamic> _$SimpleClassOfIntToEnumTypeNullableToJson(
 
 SimpleClassNullableOfIntToEnumTypeNullable
     _$SimpleClassNullableOfIntToEnumTypeNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfIntToEnumTypeNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) =>
-          MapEntry(int.parse(k), _$enumDecodeNullable(_$EnumTypeEnumMap, e)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfIntToEnumTypeNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(
+                int.parse(k), $enumDecodeNullable(_$EnumTypeEnumMap, e)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfIntToEnumTypeNullableToJson(
         SimpleClassNullableOfIntToEnumTypeNullable instance) =>
@@ -3271,13 +3093,13 @@ Map<String, dynamic> _$SimpleClassNullableOfIntToEnumTypeNullableToJson(
     };
 
 SimpleClassOfObjectToEnumTypeNullable
-    _$SimpleClassOfObjectToEnumTypeNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfObjectToEnumTypeNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(k, _$enumDecodeNullable(_$EnumTypeEnumMap, e)),
-    ),
-  );
-}
+    _$SimpleClassOfObjectToEnumTypeNullableFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfObjectToEnumTypeNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(k, $enumDecodeNullable(_$EnumTypeEnumMap, e)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfObjectToEnumTypeNullableToJson(
         SimpleClassOfObjectToEnumTypeNullable instance) =>
@@ -3287,13 +3109,12 @@ Map<String, dynamic> _$SimpleClassOfObjectToEnumTypeNullableToJson(
 
 SimpleClassNullableOfObjectToEnumTypeNullable
     _$SimpleClassNullableOfObjectToEnumTypeNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfObjectToEnumTypeNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, _$enumDecodeNullable(_$EnumTypeEnumMap, e)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfObjectToEnumTypeNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, $enumDecodeNullable(_$EnumTypeEnumMap, e)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfObjectToEnumTypeNullableToJson(
         SimpleClassNullableOfObjectToEnumTypeNullable instance) =>
@@ -3302,13 +3123,13 @@ Map<String, dynamic> _$SimpleClassNullableOfObjectToEnumTypeNullableToJson(
     };
 
 SimpleClassOfStringToEnumTypeNullable
-    _$SimpleClassOfStringToEnumTypeNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfStringToEnumTypeNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(k, _$enumDecodeNullable(_$EnumTypeEnumMap, e)),
-    ),
-  );
-}
+    _$SimpleClassOfStringToEnumTypeNullableFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfStringToEnumTypeNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(k, $enumDecodeNullable(_$EnumTypeEnumMap, e)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfStringToEnumTypeNullableToJson(
         SimpleClassOfStringToEnumTypeNullable instance) =>
@@ -3318,13 +3139,12 @@ Map<String, dynamic> _$SimpleClassOfStringToEnumTypeNullableToJson(
 
 SimpleClassNullableOfStringToEnumTypeNullable
     _$SimpleClassNullableOfStringToEnumTypeNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfStringToEnumTypeNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, _$enumDecodeNullable(_$EnumTypeEnumMap, e)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfStringToEnumTypeNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, $enumDecodeNullable(_$EnumTypeEnumMap, e)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfStringToEnumTypeNullableToJson(
         SimpleClassNullableOfStringToEnumTypeNullable instance) =>
@@ -3333,14 +3153,13 @@ Map<String, dynamic> _$SimpleClassNullableOfStringToEnumTypeNullableToJson(
     };
 
 SimpleClassOfUriToEnumTypeNullable _$SimpleClassOfUriToEnumTypeNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfUriToEnumTypeNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) =>
-          MapEntry(Uri.parse(k), _$enumDecodeNullable(_$EnumTypeEnumMap, e)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfUriToEnumTypeNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) =>
+            MapEntry(Uri.parse(k), $enumDecodeNullable(_$EnumTypeEnumMap, e)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfUriToEnumTypeNullableToJson(
         SimpleClassOfUriToEnumTypeNullable instance) =>
@@ -3351,14 +3170,13 @@ Map<String, dynamic> _$SimpleClassOfUriToEnumTypeNullableToJson(
 
 SimpleClassNullableOfUriToEnumTypeNullable
     _$SimpleClassNullableOfUriToEnumTypeNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfUriToEnumTypeNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) =>
-          MapEntry(Uri.parse(k), _$enumDecodeNullable(_$EnumTypeEnumMap, e)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfUriToEnumTypeNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(
+                Uri.parse(k), $enumDecodeNullable(_$EnumTypeEnumMap, e)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfUriToEnumTypeNullableToJson(
         SimpleClassNullableOfUriToEnumTypeNullable instance) =>
@@ -3367,14 +3185,773 @@ Map<String, dynamic> _$SimpleClassNullableOfUriToEnumTypeNullableToJson(
           ?.map((k, e) => MapEntry(k.toString(), _$EnumTypeEnumMap[e])),
     };
 
+SimpleClassOfBigIntToFromJsonDynamicParam
+    _$SimpleClassOfBigIntToFromJsonDynamicParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfBigIntToFromJsonDynamicParam(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) =>
+                MapEntry(BigInt.parse(k), FromJsonDynamicParam.fromJson(e)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassOfBigIntToFromJsonDynamicParamToJson(
+        SimpleClassOfBigIntToFromJsonDynamicParam instance) =>
+    <String, dynamic>{
+      'value': instance.value.map((k, e) => MapEntry(k.toString(), e)),
+    };
+
+SimpleClassNullableOfBigIntToFromJsonDynamicParam
+    _$SimpleClassNullableOfBigIntToFromJsonDynamicParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfBigIntToFromJsonDynamicParam(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) =>
+                MapEntry(BigInt.parse(k), FromJsonDynamicParam.fromJson(e)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassNullableOfBigIntToFromJsonDynamicParamToJson(
+        SimpleClassNullableOfBigIntToFromJsonDynamicParam instance) =>
+    <String, dynamic>{
+      'value': instance.value?.map((k, e) => MapEntry(k.toString(), e)),
+    };
+
+SimpleClassOfDateTimeToFromJsonDynamicParam
+    _$SimpleClassOfDateTimeToFromJsonDynamicParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfDateTimeToFromJsonDynamicParam(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) =>
+                MapEntry(DateTime.parse(k), FromJsonDynamicParam.fromJson(e)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassOfDateTimeToFromJsonDynamicParamToJson(
+        SimpleClassOfDateTimeToFromJsonDynamicParam instance) =>
+    <String, dynamic>{
+      'value': instance.value.map((k, e) => MapEntry(k.toIso8601String(), e)),
+    };
+
+SimpleClassNullableOfDateTimeToFromJsonDynamicParam
+    _$SimpleClassNullableOfDateTimeToFromJsonDynamicParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDateTimeToFromJsonDynamicParam(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) =>
+                MapEntry(DateTime.parse(k), FromJsonDynamicParam.fromJson(e)),
+          ),
+        );
+
+Map<String, dynamic>
+    _$SimpleClassNullableOfDateTimeToFromJsonDynamicParamToJson(
+            SimpleClassNullableOfDateTimeToFromJsonDynamicParam instance) =>
+        <String, dynamic>{
+          'value':
+              instance.value?.map((k, e) => MapEntry(k.toIso8601String(), e)),
+        };
+
+SimpleClassOfDynamicToFromJsonDynamicParam
+    _$SimpleClassOfDynamicToFromJsonDynamicParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfDynamicToFromJsonDynamicParam(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(k, FromJsonDynamicParam.fromJson(e)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassOfDynamicToFromJsonDynamicParamToJson(
+        SimpleClassOfDynamicToFromJsonDynamicParam instance) =>
+    <String, dynamic>{
+      'value': instance.value,
+    };
+
+SimpleClassNullableOfDynamicToFromJsonDynamicParam
+    _$SimpleClassNullableOfDynamicToFromJsonDynamicParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDynamicToFromJsonDynamicParam(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, FromJsonDynamicParam.fromJson(e)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassNullableOfDynamicToFromJsonDynamicParamToJson(
+        SimpleClassNullableOfDynamicToFromJsonDynamicParam instance) =>
+    <String, dynamic>{
+      'value': instance.value,
+    };
+
+SimpleClassOfEnumTypeToFromJsonDynamicParam
+    _$SimpleClassOfEnumTypeToFromJsonDynamicParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfEnumTypeToFromJsonDynamicParam(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k),
+                FromJsonDynamicParam.fromJson(e)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassOfEnumTypeToFromJsonDynamicParamToJson(
+        SimpleClassOfEnumTypeToFromJsonDynamicParam instance) =>
+    <String, dynamic>{
+      'value': instance.value.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e)),
+    };
+
+SimpleClassNullableOfEnumTypeToFromJsonDynamicParam
+    _$SimpleClassNullableOfEnumTypeToFromJsonDynamicParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfEnumTypeToFromJsonDynamicParam(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k),
+                FromJsonDynamicParam.fromJson(e)),
+          ),
+        );
+
+Map<String, dynamic>
+    _$SimpleClassNullableOfEnumTypeToFromJsonDynamicParamToJson(
+            SimpleClassNullableOfEnumTypeToFromJsonDynamicParam instance) =>
+        <String, dynamic>{
+          'value':
+              instance.value?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e)),
+        };
+
+SimpleClassOfIntToFromJsonDynamicParam
+    _$SimpleClassOfIntToFromJsonDynamicParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfIntToFromJsonDynamicParam(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(int.parse(k), FromJsonDynamicParam.fromJson(e)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassOfIntToFromJsonDynamicParamToJson(
+        SimpleClassOfIntToFromJsonDynamicParam instance) =>
+    <String, dynamic>{
+      'value': instance.value.map((k, e) => MapEntry(k.toString(), e)),
+    };
+
+SimpleClassNullableOfIntToFromJsonDynamicParam
+    _$SimpleClassNullableOfIntToFromJsonDynamicParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfIntToFromJsonDynamicParam(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(int.parse(k), FromJsonDynamicParam.fromJson(e)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassNullableOfIntToFromJsonDynamicParamToJson(
+        SimpleClassNullableOfIntToFromJsonDynamicParam instance) =>
+    <String, dynamic>{
+      'value': instance.value?.map((k, e) => MapEntry(k.toString(), e)),
+    };
+
+SimpleClassOfObjectToFromJsonDynamicParam
+    _$SimpleClassOfObjectToFromJsonDynamicParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfObjectToFromJsonDynamicParam(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(k, FromJsonDynamicParam.fromJson(e)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassOfObjectToFromJsonDynamicParamToJson(
+        SimpleClassOfObjectToFromJsonDynamicParam instance) =>
+    <String, dynamic>{
+      'value': instance.value,
+    };
+
+SimpleClassNullableOfObjectToFromJsonDynamicParam
+    _$SimpleClassNullableOfObjectToFromJsonDynamicParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfObjectToFromJsonDynamicParam(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, FromJsonDynamicParam.fromJson(e)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassNullableOfObjectToFromJsonDynamicParamToJson(
+        SimpleClassNullableOfObjectToFromJsonDynamicParam instance) =>
+    <String, dynamic>{
+      'value': instance.value,
+    };
+
+SimpleClassOfStringToFromJsonDynamicParam
+    _$SimpleClassOfStringToFromJsonDynamicParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfStringToFromJsonDynamicParam(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(k, FromJsonDynamicParam.fromJson(e)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassOfStringToFromJsonDynamicParamToJson(
+        SimpleClassOfStringToFromJsonDynamicParam instance) =>
+    <String, dynamic>{
+      'value': instance.value,
+    };
+
+SimpleClassNullableOfStringToFromJsonDynamicParam
+    _$SimpleClassNullableOfStringToFromJsonDynamicParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfStringToFromJsonDynamicParam(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, FromJsonDynamicParam.fromJson(e)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassNullableOfStringToFromJsonDynamicParamToJson(
+        SimpleClassNullableOfStringToFromJsonDynamicParam instance) =>
+    <String, dynamic>{
+      'value': instance.value,
+    };
+
+SimpleClassOfUriToFromJsonDynamicParam
+    _$SimpleClassOfUriToFromJsonDynamicParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfUriToFromJsonDynamicParam(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(Uri.parse(k), FromJsonDynamicParam.fromJson(e)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassOfUriToFromJsonDynamicParamToJson(
+        SimpleClassOfUriToFromJsonDynamicParam instance) =>
+    <String, dynamic>{
+      'value': instance.value.map((k, e) => MapEntry(k.toString(), e)),
+    };
+
+SimpleClassNullableOfUriToFromJsonDynamicParam
+    _$SimpleClassNullableOfUriToFromJsonDynamicParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfUriToFromJsonDynamicParam(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(Uri.parse(k), FromJsonDynamicParam.fromJson(e)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassNullableOfUriToFromJsonDynamicParamToJson(
+        SimpleClassNullableOfUriToFromJsonDynamicParam instance) =>
+    <String, dynamic>{
+      'value': instance.value?.map((k, e) => MapEntry(k.toString(), e)),
+    };
+
+SimpleClassOfBigIntToFromJsonNullableObjectParam
+    _$SimpleClassOfBigIntToFromJsonNullableObjectParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfBigIntToFromJsonNullableObjectParam(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(
+                BigInt.parse(k), FromJsonNullableObjectParam.fromJson(e)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassOfBigIntToFromJsonNullableObjectParamToJson(
+        SimpleClassOfBigIntToFromJsonNullableObjectParam instance) =>
+    <String, dynamic>{
+      'value': instance.value.map((k, e) => MapEntry(k.toString(), e)),
+    };
+
+SimpleClassNullableOfBigIntToFromJsonNullableObjectParam
+    _$SimpleClassNullableOfBigIntToFromJsonNullableObjectParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfBigIntToFromJsonNullableObjectParam(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(
+                BigInt.parse(k), FromJsonNullableObjectParam.fromJson(e)),
+          ),
+        );
+
+Map<String,
+    dynamic> _$SimpleClassNullableOfBigIntToFromJsonNullableObjectParamToJson(
+        SimpleClassNullableOfBigIntToFromJsonNullableObjectParam instance) =>
+    <String, dynamic>{
+      'value': instance.value?.map((k, e) => MapEntry(k.toString(), e)),
+    };
+
+SimpleClassOfDateTimeToFromJsonNullableObjectParam
+    _$SimpleClassOfDateTimeToFromJsonNullableObjectParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfDateTimeToFromJsonNullableObjectParam(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(
+                DateTime.parse(k), FromJsonNullableObjectParam.fromJson(e)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassOfDateTimeToFromJsonNullableObjectParamToJson(
+        SimpleClassOfDateTimeToFromJsonNullableObjectParam instance) =>
+    <String, dynamic>{
+      'value': instance.value.map((k, e) => MapEntry(k.toIso8601String(), e)),
+    };
+
+SimpleClassNullableOfDateTimeToFromJsonNullableObjectParam
+    _$SimpleClassNullableOfDateTimeToFromJsonNullableObjectParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDateTimeToFromJsonNullableObjectParam(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(
+                DateTime.parse(k), FromJsonNullableObjectParam.fromJson(e)),
+          ),
+        );
+
+Map<String,
+    dynamic> _$SimpleClassNullableOfDateTimeToFromJsonNullableObjectParamToJson(
+        SimpleClassNullableOfDateTimeToFromJsonNullableObjectParam instance) =>
+    <String, dynamic>{
+      'value': instance.value?.map((k, e) => MapEntry(k.toIso8601String(), e)),
+    };
+
+SimpleClassOfDynamicToFromJsonNullableObjectParam
+    _$SimpleClassOfDynamicToFromJsonNullableObjectParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfDynamicToFromJsonNullableObjectParam(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(k, FromJsonNullableObjectParam.fromJson(e)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassOfDynamicToFromJsonNullableObjectParamToJson(
+        SimpleClassOfDynamicToFromJsonNullableObjectParam instance) =>
+    <String, dynamic>{
+      'value': instance.value,
+    };
+
+SimpleClassNullableOfDynamicToFromJsonNullableObjectParam
+    _$SimpleClassNullableOfDynamicToFromJsonNullableObjectParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDynamicToFromJsonNullableObjectParam(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, FromJsonNullableObjectParam.fromJson(e)),
+          ),
+        );
+
+Map<String,
+    dynamic> _$SimpleClassNullableOfDynamicToFromJsonNullableObjectParamToJson(
+        SimpleClassNullableOfDynamicToFromJsonNullableObjectParam instance) =>
+    <String, dynamic>{
+      'value': instance.value,
+    };
+
+SimpleClassOfEnumTypeToFromJsonNullableObjectParam
+    _$SimpleClassOfEnumTypeToFromJsonNullableObjectParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfEnumTypeToFromJsonNullableObjectParam(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k),
+                FromJsonNullableObjectParam.fromJson(e)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassOfEnumTypeToFromJsonNullableObjectParamToJson(
+        SimpleClassOfEnumTypeToFromJsonNullableObjectParam instance) =>
+    <String, dynamic>{
+      'value': instance.value.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e)),
+    };
+
+SimpleClassNullableOfEnumTypeToFromJsonNullableObjectParam
+    _$SimpleClassNullableOfEnumTypeToFromJsonNullableObjectParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfEnumTypeToFromJsonNullableObjectParam(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k),
+                FromJsonNullableObjectParam.fromJson(e)),
+          ),
+        );
+
+Map<String,
+    dynamic> _$SimpleClassNullableOfEnumTypeToFromJsonNullableObjectParamToJson(
+        SimpleClassNullableOfEnumTypeToFromJsonNullableObjectParam instance) =>
+    <String, dynamic>{
+      'value':
+          instance.value?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e)),
+    };
+
+SimpleClassOfIntToFromJsonNullableObjectParam
+    _$SimpleClassOfIntToFromJsonNullableObjectParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfIntToFromJsonNullableObjectParam(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) =>
+                MapEntry(int.parse(k), FromJsonNullableObjectParam.fromJson(e)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassOfIntToFromJsonNullableObjectParamToJson(
+        SimpleClassOfIntToFromJsonNullableObjectParam instance) =>
+    <String, dynamic>{
+      'value': instance.value.map((k, e) => MapEntry(k.toString(), e)),
+    };
+
+SimpleClassNullableOfIntToFromJsonNullableObjectParam
+    _$SimpleClassNullableOfIntToFromJsonNullableObjectParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfIntToFromJsonNullableObjectParam(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) =>
+                MapEntry(int.parse(k), FromJsonNullableObjectParam.fromJson(e)),
+          ),
+        );
+
+Map<String, dynamic>
+    _$SimpleClassNullableOfIntToFromJsonNullableObjectParamToJson(
+            SimpleClassNullableOfIntToFromJsonNullableObjectParam instance) =>
+        <String, dynamic>{
+          'value': instance.value?.map((k, e) => MapEntry(k.toString(), e)),
+        };
+
+SimpleClassOfObjectToFromJsonNullableObjectParam
+    _$SimpleClassOfObjectToFromJsonNullableObjectParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfObjectToFromJsonNullableObjectParam(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(k, FromJsonNullableObjectParam.fromJson(e)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassOfObjectToFromJsonNullableObjectParamToJson(
+        SimpleClassOfObjectToFromJsonNullableObjectParam instance) =>
+    <String, dynamic>{
+      'value': instance.value,
+    };
+
+SimpleClassNullableOfObjectToFromJsonNullableObjectParam
+    _$SimpleClassNullableOfObjectToFromJsonNullableObjectParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfObjectToFromJsonNullableObjectParam(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, FromJsonNullableObjectParam.fromJson(e)),
+          ),
+        );
+
+Map<String,
+    dynamic> _$SimpleClassNullableOfObjectToFromJsonNullableObjectParamToJson(
+        SimpleClassNullableOfObjectToFromJsonNullableObjectParam instance) =>
+    <String, dynamic>{
+      'value': instance.value,
+    };
+
+SimpleClassOfStringToFromJsonNullableObjectParam
+    _$SimpleClassOfStringToFromJsonNullableObjectParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfStringToFromJsonNullableObjectParam(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(k, FromJsonNullableObjectParam.fromJson(e)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassOfStringToFromJsonNullableObjectParamToJson(
+        SimpleClassOfStringToFromJsonNullableObjectParam instance) =>
+    <String, dynamic>{
+      'value': instance.value,
+    };
+
+SimpleClassNullableOfStringToFromJsonNullableObjectParam
+    _$SimpleClassNullableOfStringToFromJsonNullableObjectParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfStringToFromJsonNullableObjectParam(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, FromJsonNullableObjectParam.fromJson(e)),
+          ),
+        );
+
+Map<String,
+    dynamic> _$SimpleClassNullableOfStringToFromJsonNullableObjectParamToJson(
+        SimpleClassNullableOfStringToFromJsonNullableObjectParam instance) =>
+    <String, dynamic>{
+      'value': instance.value,
+    };
+
+SimpleClassOfUriToFromJsonNullableObjectParam
+    _$SimpleClassOfUriToFromJsonNullableObjectParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfUriToFromJsonNullableObjectParam(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) =>
+                MapEntry(Uri.parse(k), FromJsonNullableObjectParam.fromJson(e)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassOfUriToFromJsonNullableObjectParamToJson(
+        SimpleClassOfUriToFromJsonNullableObjectParam instance) =>
+    <String, dynamic>{
+      'value': instance.value.map((k, e) => MapEntry(k.toString(), e)),
+    };
+
+SimpleClassNullableOfUriToFromJsonNullableObjectParam
+    _$SimpleClassNullableOfUriToFromJsonNullableObjectParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfUriToFromJsonNullableObjectParam(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) =>
+                MapEntry(Uri.parse(k), FromJsonNullableObjectParam.fromJson(e)),
+          ),
+        );
+
+Map<String, dynamic>
+    _$SimpleClassNullableOfUriToFromJsonNullableObjectParamToJson(
+            SimpleClassNullableOfUriToFromJsonNullableObjectParam instance) =>
+        <String, dynamic>{
+          'value': instance.value?.map((k, e) => MapEntry(k.toString(), e)),
+        };
+
+SimpleClassOfBigIntToFromJsonObjectParam
+    _$SimpleClassOfBigIntToFromJsonObjectParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfBigIntToFromJsonObjectParam(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(
+                BigInt.parse(k), FromJsonObjectParam.fromJson(e as Object)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassOfBigIntToFromJsonObjectParamToJson(
+        SimpleClassOfBigIntToFromJsonObjectParam instance) =>
+    <String, dynamic>{
+      'value': instance.value.map((k, e) => MapEntry(k.toString(), e)),
+    };
+
+SimpleClassNullableOfBigIntToFromJsonObjectParam
+    _$SimpleClassNullableOfBigIntToFromJsonObjectParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfBigIntToFromJsonObjectParam(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(
+                BigInt.parse(k), FromJsonObjectParam.fromJson(e as Object)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassNullableOfBigIntToFromJsonObjectParamToJson(
+        SimpleClassNullableOfBigIntToFromJsonObjectParam instance) =>
+    <String, dynamic>{
+      'value': instance.value?.map((k, e) => MapEntry(k.toString(), e)),
+    };
+
+SimpleClassOfDateTimeToFromJsonObjectParam
+    _$SimpleClassOfDateTimeToFromJsonObjectParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfDateTimeToFromJsonObjectParam(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(
+                DateTime.parse(k), FromJsonObjectParam.fromJson(e as Object)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassOfDateTimeToFromJsonObjectParamToJson(
+        SimpleClassOfDateTimeToFromJsonObjectParam instance) =>
+    <String, dynamic>{
+      'value': instance.value.map((k, e) => MapEntry(k.toIso8601String(), e)),
+    };
+
+SimpleClassNullableOfDateTimeToFromJsonObjectParam
+    _$SimpleClassNullableOfDateTimeToFromJsonObjectParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDateTimeToFromJsonObjectParam(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(
+                DateTime.parse(k), FromJsonObjectParam.fromJson(e as Object)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassNullableOfDateTimeToFromJsonObjectParamToJson(
+        SimpleClassNullableOfDateTimeToFromJsonObjectParam instance) =>
+    <String, dynamic>{
+      'value': instance.value?.map((k, e) => MapEntry(k.toIso8601String(), e)),
+    };
+
+SimpleClassOfDynamicToFromJsonObjectParam
+    _$SimpleClassOfDynamicToFromJsonObjectParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfDynamicToFromJsonObjectParam(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(k, FromJsonObjectParam.fromJson(e as Object)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassOfDynamicToFromJsonObjectParamToJson(
+        SimpleClassOfDynamicToFromJsonObjectParam instance) =>
+    <String, dynamic>{
+      'value': instance.value,
+    };
+
+SimpleClassNullableOfDynamicToFromJsonObjectParam
+    _$SimpleClassNullableOfDynamicToFromJsonObjectParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDynamicToFromJsonObjectParam(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, FromJsonObjectParam.fromJson(e as Object)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassNullableOfDynamicToFromJsonObjectParamToJson(
+        SimpleClassNullableOfDynamicToFromJsonObjectParam instance) =>
+    <String, dynamic>{
+      'value': instance.value,
+    };
+
+SimpleClassOfEnumTypeToFromJsonObjectParam
+    _$SimpleClassOfEnumTypeToFromJsonObjectParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfEnumTypeToFromJsonObjectParam(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k),
+                FromJsonObjectParam.fromJson(e as Object)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassOfEnumTypeToFromJsonObjectParamToJson(
+        SimpleClassOfEnumTypeToFromJsonObjectParam instance) =>
+    <String, dynamic>{
+      'value': instance.value.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e)),
+    };
+
+SimpleClassNullableOfEnumTypeToFromJsonObjectParam
+    _$SimpleClassNullableOfEnumTypeToFromJsonObjectParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfEnumTypeToFromJsonObjectParam(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k),
+                FromJsonObjectParam.fromJson(e as Object)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassNullableOfEnumTypeToFromJsonObjectParamToJson(
+        SimpleClassNullableOfEnumTypeToFromJsonObjectParam instance) =>
+    <String, dynamic>{
+      'value':
+          instance.value?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e)),
+    };
+
+SimpleClassOfIntToFromJsonObjectParam
+    _$SimpleClassOfIntToFromJsonObjectParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfIntToFromJsonObjectParam(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(
+                int.parse(k), FromJsonObjectParam.fromJson(e as Object)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassOfIntToFromJsonObjectParamToJson(
+        SimpleClassOfIntToFromJsonObjectParam instance) =>
+    <String, dynamic>{
+      'value': instance.value.map((k, e) => MapEntry(k.toString(), e)),
+    };
+
+SimpleClassNullableOfIntToFromJsonObjectParam
+    _$SimpleClassNullableOfIntToFromJsonObjectParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfIntToFromJsonObjectParam(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(
+                int.parse(k), FromJsonObjectParam.fromJson(e as Object)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassNullableOfIntToFromJsonObjectParamToJson(
+        SimpleClassNullableOfIntToFromJsonObjectParam instance) =>
+    <String, dynamic>{
+      'value': instance.value?.map((k, e) => MapEntry(k.toString(), e)),
+    };
+
+SimpleClassOfObjectToFromJsonObjectParam
+    _$SimpleClassOfObjectToFromJsonObjectParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfObjectToFromJsonObjectParam(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(k, FromJsonObjectParam.fromJson(e as Object)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassOfObjectToFromJsonObjectParamToJson(
+        SimpleClassOfObjectToFromJsonObjectParam instance) =>
+    <String, dynamic>{
+      'value': instance.value,
+    };
+
+SimpleClassNullableOfObjectToFromJsonObjectParam
+    _$SimpleClassNullableOfObjectToFromJsonObjectParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfObjectToFromJsonObjectParam(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, FromJsonObjectParam.fromJson(e as Object)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassNullableOfObjectToFromJsonObjectParamToJson(
+        SimpleClassNullableOfObjectToFromJsonObjectParam instance) =>
+    <String, dynamic>{
+      'value': instance.value,
+    };
+
+SimpleClassOfStringToFromJsonObjectParam
+    _$SimpleClassOfStringToFromJsonObjectParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfStringToFromJsonObjectParam(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(k, FromJsonObjectParam.fromJson(e as Object)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassOfStringToFromJsonObjectParamToJson(
+        SimpleClassOfStringToFromJsonObjectParam instance) =>
+    <String, dynamic>{
+      'value': instance.value,
+    };
+
+SimpleClassNullableOfStringToFromJsonObjectParam
+    _$SimpleClassNullableOfStringToFromJsonObjectParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfStringToFromJsonObjectParam(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, FromJsonObjectParam.fromJson(e as Object)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassNullableOfStringToFromJsonObjectParamToJson(
+        SimpleClassNullableOfStringToFromJsonObjectParam instance) =>
+    <String, dynamic>{
+      'value': instance.value,
+    };
+
+SimpleClassOfUriToFromJsonObjectParam
+    _$SimpleClassOfUriToFromJsonObjectParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfUriToFromJsonObjectParam(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(
+                Uri.parse(k), FromJsonObjectParam.fromJson(e as Object)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassOfUriToFromJsonObjectParamToJson(
+        SimpleClassOfUriToFromJsonObjectParam instance) =>
+    <String, dynamic>{
+      'value': instance.value.map((k, e) => MapEntry(k.toString(), e)),
+    };
+
+SimpleClassNullableOfUriToFromJsonObjectParam
+    _$SimpleClassNullableOfUriToFromJsonObjectParamFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfUriToFromJsonObjectParam(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(
+                Uri.parse(k), FromJsonObjectParam.fromJson(e as Object)),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassNullableOfUriToFromJsonObjectParamToJson(
+        SimpleClassNullableOfUriToFromJsonObjectParam instance) =>
+    <String, dynamic>{
+      'value': instance.value?.map((k, e) => MapEntry(k.toString(), e)),
+    };
+
 SimpleClassOfBigIntToInt _$SimpleClassOfBigIntToIntFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfBigIntToInt(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(BigInt.parse(k), e as int),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfBigIntToInt(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(BigInt.parse(k), (e as num).toInt()),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfBigIntToIntToJson(
         SimpleClassOfBigIntToInt instance) =>
@@ -3383,13 +3960,12 @@ Map<String, dynamic> _$SimpleClassOfBigIntToIntToJson(
     };
 
 SimpleClassNullableOfBigIntToInt _$SimpleClassNullableOfBigIntToIntFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfBigIntToInt(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(BigInt.parse(k), e as int),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfBigIntToInt(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(BigInt.parse(k), (e as num).toInt()),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfBigIntToIntToJson(
         SimpleClassNullableOfBigIntToInt instance) =>
@@ -3398,13 +3974,12 @@ Map<String, dynamic> _$SimpleClassNullableOfBigIntToIntToJson(
     };
 
 SimpleClassOfDateTimeToInt _$SimpleClassOfDateTimeToIntFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfDateTimeToInt(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(DateTime.parse(k), e as int),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfDateTimeToInt(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(DateTime.parse(k), (e as num).toInt()),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfDateTimeToIntToJson(
         SimpleClassOfDateTimeToInt instance) =>
@@ -3413,13 +3988,12 @@ Map<String, dynamic> _$SimpleClassOfDateTimeToIntToJson(
     };
 
 SimpleClassNullableOfDateTimeToInt _$SimpleClassNullableOfDateTimeToIntFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfDateTimeToInt(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(DateTime.parse(k), e as int),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfDateTimeToInt(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(DateTime.parse(k), (e as num).toInt()),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfDateTimeToIntToJson(
         SimpleClassNullableOfDateTimeToInt instance) =>
@@ -3428,11 +4002,10 @@ Map<String, dynamic> _$SimpleClassNullableOfDateTimeToIntToJson(
     };
 
 SimpleClassOfDynamicToInt _$SimpleClassOfDynamicToIntFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfDynamicToInt(
-    Map<String, int>.from(json['value'] as Map),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfDynamicToInt(
+      Map<String, int>.from(json['value'] as Map),
+    );
 
 Map<String, dynamic> _$SimpleClassOfDynamicToIntToJson(
         SimpleClassOfDynamicToInt instance) =>
@@ -3441,13 +4014,12 @@ Map<String, dynamic> _$SimpleClassOfDynamicToIntToJson(
     };
 
 SimpleClassNullableOfDynamicToInt _$SimpleClassNullableOfDynamicToIntFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfDynamicToInt(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e as int),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfDynamicToInt(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(k, (e as num).toInt()),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfDynamicToIntToJson(
         SimpleClassNullableOfDynamicToInt instance) =>
@@ -3456,43 +4028,43 @@ Map<String, dynamic> _$SimpleClassNullableOfDynamicToIntToJson(
     };
 
 SimpleClassOfEnumTypeToInt _$SimpleClassOfEnumTypeToIntFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfEnumTypeToInt(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k), e as int),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfEnumTypeToInt(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) =>
+            MapEntry($enumDecode(_$EnumTypeEnumMap, k), (e as num).toInt()),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfEnumTypeToIntToJson(
         SimpleClassOfEnumTypeToInt instance) =>
     <String, dynamic>{
-      'value': instance.value.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e)),
+      'value': instance.value.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e)),
     };
 
 SimpleClassNullableOfEnumTypeToInt _$SimpleClassNullableOfEnumTypeToIntFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfEnumTypeToInt(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k), e as int),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfEnumTypeToInt(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) =>
+            MapEntry($enumDecode(_$EnumTypeEnumMap, k), (e as num).toInt()),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfEnumTypeToIntToJson(
         SimpleClassNullableOfEnumTypeToInt instance) =>
     <String, dynamic>{
-      'value': instance.value?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e)),
+      'value':
+          instance.value?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e)),
     };
 
 SimpleClassOfIntToInt _$SimpleClassOfIntToIntFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfIntToInt(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(int.parse(k), e as int),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfIntToInt(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(int.parse(k), (e as num).toInt()),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfIntToIntToJson(
         SimpleClassOfIntToInt instance) =>
@@ -3501,13 +4073,12 @@ Map<String, dynamic> _$SimpleClassOfIntToIntToJson(
     };
 
 SimpleClassNullableOfIntToInt _$SimpleClassNullableOfIntToIntFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfIntToInt(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(int.parse(k), e as int),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfIntToInt(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(int.parse(k), (e as num).toInt()),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfIntToIntToJson(
         SimpleClassNullableOfIntToInt instance) =>
@@ -3516,11 +4087,10 @@ Map<String, dynamic> _$SimpleClassNullableOfIntToIntToJson(
     };
 
 SimpleClassOfObjectToInt _$SimpleClassOfObjectToIntFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfObjectToInt(
-    Map<String, int>.from(json['value'] as Map),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfObjectToInt(
+      Map<String, int>.from(json['value'] as Map),
+    );
 
 Map<String, dynamic> _$SimpleClassOfObjectToIntToJson(
         SimpleClassOfObjectToInt instance) =>
@@ -3529,13 +4099,12 @@ Map<String, dynamic> _$SimpleClassOfObjectToIntToJson(
     };
 
 SimpleClassNullableOfObjectToInt _$SimpleClassNullableOfObjectToIntFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfObjectToInt(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e as int),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfObjectToInt(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(k, (e as num).toInt()),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfObjectToIntToJson(
         SimpleClassNullableOfObjectToInt instance) =>
@@ -3544,11 +4113,10 @@ Map<String, dynamic> _$SimpleClassNullableOfObjectToIntToJson(
     };
 
 SimpleClassOfStringToInt _$SimpleClassOfStringToIntFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfStringToInt(
-    Map<String, int>.from(json['value'] as Map),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfStringToInt(
+      Map<String, int>.from(json['value'] as Map),
+    );
 
 Map<String, dynamic> _$SimpleClassOfStringToIntToJson(
         SimpleClassOfStringToInt instance) =>
@@ -3557,13 +4125,12 @@ Map<String, dynamic> _$SimpleClassOfStringToIntToJson(
     };
 
 SimpleClassNullableOfStringToInt _$SimpleClassNullableOfStringToIntFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfStringToInt(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e as int),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfStringToInt(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(k, (e as num).toInt()),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfStringToIntToJson(
         SimpleClassNullableOfStringToInt instance) =>
@@ -3572,13 +4139,12 @@ Map<String, dynamic> _$SimpleClassNullableOfStringToIntToJson(
     };
 
 SimpleClassOfUriToInt _$SimpleClassOfUriToIntFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfUriToInt(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(Uri.parse(k), e as int),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfUriToInt(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(Uri.parse(k), (e as num).toInt()),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfUriToIntToJson(
         SimpleClassOfUriToInt instance) =>
@@ -3587,13 +4153,12 @@ Map<String, dynamic> _$SimpleClassOfUriToIntToJson(
     };
 
 SimpleClassNullableOfUriToInt _$SimpleClassNullableOfUriToIntFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfUriToInt(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(Uri.parse(k), e as int),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfUriToInt(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(Uri.parse(k), (e as num).toInt()),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfUriToIntToJson(
         SimpleClassNullableOfUriToInt instance) =>
@@ -3602,13 +4167,12 @@ Map<String, dynamic> _$SimpleClassNullableOfUriToIntToJson(
     };
 
 SimpleClassOfBigIntToIntNullable _$SimpleClassOfBigIntToIntNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfBigIntToIntNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(BigInt.parse(k), e as int?),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfBigIntToIntNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(BigInt.parse(k), (e as num?)?.toInt()),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfBigIntToIntNullableToJson(
         SimpleClassOfBigIntToIntNullable instance) =>
@@ -3618,13 +4182,12 @@ Map<String, dynamic> _$SimpleClassOfBigIntToIntNullableToJson(
 
 SimpleClassNullableOfBigIntToIntNullable
     _$SimpleClassNullableOfBigIntToIntNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfBigIntToIntNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(BigInt.parse(k), e as int?),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfBigIntToIntNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(BigInt.parse(k), (e as num?)?.toInt()),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfBigIntToIntNullableToJson(
         SimpleClassNullableOfBigIntToIntNullable instance) =>
@@ -3633,13 +4196,12 @@ Map<String, dynamic> _$SimpleClassNullableOfBigIntToIntNullableToJson(
     };
 
 SimpleClassOfDateTimeToIntNullable _$SimpleClassOfDateTimeToIntNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfDateTimeToIntNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(DateTime.parse(k), e as int?),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfDateTimeToIntNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(DateTime.parse(k), (e as num?)?.toInt()),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfDateTimeToIntNullableToJson(
         SimpleClassOfDateTimeToIntNullable instance) =>
@@ -3649,13 +4211,12 @@ Map<String, dynamic> _$SimpleClassOfDateTimeToIntNullableToJson(
 
 SimpleClassNullableOfDateTimeToIntNullable
     _$SimpleClassNullableOfDateTimeToIntNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfDateTimeToIntNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(DateTime.parse(k), e as int?),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDateTimeToIntNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(DateTime.parse(k), (e as num?)?.toInt()),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDateTimeToIntNullableToJson(
         SimpleClassNullableOfDateTimeToIntNullable instance) =>
@@ -3664,11 +4225,10 @@ Map<String, dynamic> _$SimpleClassNullableOfDateTimeToIntNullableToJson(
     };
 
 SimpleClassOfDynamicToIntNullable _$SimpleClassOfDynamicToIntNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfDynamicToIntNullable(
-    Map<String, int>.from(json['value'] as Map),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfDynamicToIntNullable(
+      Map<String, int?>.from(json['value'] as Map),
+    );
 
 Map<String, dynamic> _$SimpleClassOfDynamicToIntNullableToJson(
         SimpleClassOfDynamicToIntNullable instance) =>
@@ -3678,13 +4238,12 @@ Map<String, dynamic> _$SimpleClassOfDynamicToIntNullableToJson(
 
 SimpleClassNullableOfDynamicToIntNullable
     _$SimpleClassNullableOfDynamicToIntNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfDynamicToIntNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e as int?),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDynamicToIntNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, (e as num?)?.toInt()),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDynamicToIntNullableToJson(
         SimpleClassNullableOfDynamicToIntNullable instance) =>
@@ -3693,44 +4252,44 @@ Map<String, dynamic> _$SimpleClassNullableOfDynamicToIntNullableToJson(
     };
 
 SimpleClassOfEnumTypeToIntNullable _$SimpleClassOfEnumTypeToIntNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfEnumTypeToIntNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k), e as int?),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfEnumTypeToIntNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) =>
+            MapEntry($enumDecode(_$EnumTypeEnumMap, k), (e as num?)?.toInt()),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfEnumTypeToIntNullableToJson(
         SimpleClassOfEnumTypeToIntNullable instance) =>
     <String, dynamic>{
-      'value': instance.value.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e)),
+      'value': instance.value.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e)),
     };
 
 SimpleClassNullableOfEnumTypeToIntNullable
     _$SimpleClassNullableOfEnumTypeToIntNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfEnumTypeToIntNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k), e as int?),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfEnumTypeToIntNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(
+                $enumDecode(_$EnumTypeEnumMap, k), (e as num?)?.toInt()),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfEnumTypeToIntNullableToJson(
         SimpleClassNullableOfEnumTypeToIntNullable instance) =>
     <String, dynamic>{
-      'value': instance.value?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e)),
+      'value':
+          instance.value?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e)),
     };
 
 SimpleClassOfIntToIntNullable _$SimpleClassOfIntToIntNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfIntToIntNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(int.parse(k), e as int?),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfIntToIntNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(int.parse(k), (e as num?)?.toInt()),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfIntToIntNullableToJson(
         SimpleClassOfIntToIntNullable instance) =>
@@ -3739,13 +4298,13 @@ Map<String, dynamic> _$SimpleClassOfIntToIntNullableToJson(
     };
 
 SimpleClassNullableOfIntToIntNullable
-    _$SimpleClassNullableOfIntToIntNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfIntToIntNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(int.parse(k), e as int?),
-    ),
-  );
-}
+    _$SimpleClassNullableOfIntToIntNullableFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfIntToIntNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(int.parse(k), (e as num?)?.toInt()),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfIntToIntNullableToJson(
         SimpleClassNullableOfIntToIntNullable instance) =>
@@ -3754,11 +4313,10 @@ Map<String, dynamic> _$SimpleClassNullableOfIntToIntNullableToJson(
     };
 
 SimpleClassOfObjectToIntNullable _$SimpleClassOfObjectToIntNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfObjectToIntNullable(
-    Map<String, int>.from(json['value'] as Map),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfObjectToIntNullable(
+      Map<String, int?>.from(json['value'] as Map),
+    );
 
 Map<String, dynamic> _$SimpleClassOfObjectToIntNullableToJson(
         SimpleClassOfObjectToIntNullable instance) =>
@@ -3768,13 +4326,12 @@ Map<String, dynamic> _$SimpleClassOfObjectToIntNullableToJson(
 
 SimpleClassNullableOfObjectToIntNullable
     _$SimpleClassNullableOfObjectToIntNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfObjectToIntNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e as int?),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfObjectToIntNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, (e as num?)?.toInt()),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfObjectToIntNullableToJson(
         SimpleClassNullableOfObjectToIntNullable instance) =>
@@ -3783,11 +4340,10 @@ Map<String, dynamic> _$SimpleClassNullableOfObjectToIntNullableToJson(
     };
 
 SimpleClassOfStringToIntNullable _$SimpleClassOfStringToIntNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfStringToIntNullable(
-    Map<String, int>.from(json['value'] as Map),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfStringToIntNullable(
+      Map<String, int?>.from(json['value'] as Map),
+    );
 
 Map<String, dynamic> _$SimpleClassOfStringToIntNullableToJson(
         SimpleClassOfStringToIntNullable instance) =>
@@ -3797,13 +4353,12 @@ Map<String, dynamic> _$SimpleClassOfStringToIntNullableToJson(
 
 SimpleClassNullableOfStringToIntNullable
     _$SimpleClassNullableOfStringToIntNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfStringToIntNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e as int?),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfStringToIntNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, (e as num?)?.toInt()),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfStringToIntNullableToJson(
         SimpleClassNullableOfStringToIntNullable instance) =>
@@ -3812,13 +4367,12 @@ Map<String, dynamic> _$SimpleClassNullableOfStringToIntNullableToJson(
     };
 
 SimpleClassOfUriToIntNullable _$SimpleClassOfUriToIntNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfUriToIntNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(Uri.parse(k), e as int?),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfUriToIntNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(Uri.parse(k), (e as num?)?.toInt()),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfUriToIntNullableToJson(
         SimpleClassOfUriToIntNullable instance) =>
@@ -3827,13 +4381,13 @@ Map<String, dynamic> _$SimpleClassOfUriToIntNullableToJson(
     };
 
 SimpleClassNullableOfUriToIntNullable
-    _$SimpleClassNullableOfUriToIntNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfUriToIntNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(Uri.parse(k), e as int?),
-    ),
-  );
-}
+    _$SimpleClassNullableOfUriToIntNullableFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfUriToIntNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(Uri.parse(k), (e as num?)?.toInt()),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfUriToIntNullableToJson(
         SimpleClassNullableOfUriToIntNullable instance) =>
@@ -3842,13 +4396,12 @@ Map<String, dynamic> _$SimpleClassNullableOfUriToIntNullableToJson(
     };
 
 SimpleClassOfBigIntToNum _$SimpleClassOfBigIntToNumFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfBigIntToNum(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(BigInt.parse(k), e as num),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfBigIntToNum(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(BigInt.parse(k), e as num),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfBigIntToNumToJson(
         SimpleClassOfBigIntToNum instance) =>
@@ -3857,13 +4410,12 @@ Map<String, dynamic> _$SimpleClassOfBigIntToNumToJson(
     };
 
 SimpleClassNullableOfBigIntToNum _$SimpleClassNullableOfBigIntToNumFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfBigIntToNum(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(BigInt.parse(k), e as num),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfBigIntToNum(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(BigInt.parse(k), e as num),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfBigIntToNumToJson(
         SimpleClassNullableOfBigIntToNum instance) =>
@@ -3872,13 +4424,12 @@ Map<String, dynamic> _$SimpleClassNullableOfBigIntToNumToJson(
     };
 
 SimpleClassOfDateTimeToNum _$SimpleClassOfDateTimeToNumFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfDateTimeToNum(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(DateTime.parse(k), e as num),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfDateTimeToNum(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(DateTime.parse(k), e as num),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfDateTimeToNumToJson(
         SimpleClassOfDateTimeToNum instance) =>
@@ -3887,13 +4438,12 @@ Map<String, dynamic> _$SimpleClassOfDateTimeToNumToJson(
     };
 
 SimpleClassNullableOfDateTimeToNum _$SimpleClassNullableOfDateTimeToNumFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfDateTimeToNum(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(DateTime.parse(k), e as num),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfDateTimeToNum(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(DateTime.parse(k), e as num),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfDateTimeToNumToJson(
         SimpleClassNullableOfDateTimeToNum instance) =>
@@ -3902,11 +4452,10 @@ Map<String, dynamic> _$SimpleClassNullableOfDateTimeToNumToJson(
     };
 
 SimpleClassOfDynamicToNum _$SimpleClassOfDynamicToNumFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfDynamicToNum(
-    Map<String, num>.from(json['value'] as Map),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfDynamicToNum(
+      Map<String, num>.from(json['value'] as Map),
+    );
 
 Map<String, dynamic> _$SimpleClassOfDynamicToNumToJson(
         SimpleClassOfDynamicToNum instance) =>
@@ -3915,13 +4464,12 @@ Map<String, dynamic> _$SimpleClassOfDynamicToNumToJson(
     };
 
 SimpleClassNullableOfDynamicToNum _$SimpleClassNullableOfDynamicToNumFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfDynamicToNum(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e as num),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfDynamicToNum(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(k, e as num),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfDynamicToNumToJson(
         SimpleClassNullableOfDynamicToNum instance) =>
@@ -3930,43 +4478,41 @@ Map<String, dynamic> _$SimpleClassNullableOfDynamicToNumToJson(
     };
 
 SimpleClassOfEnumTypeToNum _$SimpleClassOfEnumTypeToNumFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfEnumTypeToNum(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k), e as num),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfEnumTypeToNum(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k), e as num),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfEnumTypeToNumToJson(
         SimpleClassOfEnumTypeToNum instance) =>
     <String, dynamic>{
-      'value': instance.value.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e)),
+      'value': instance.value.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e)),
     };
 
 SimpleClassNullableOfEnumTypeToNum _$SimpleClassNullableOfEnumTypeToNumFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfEnumTypeToNum(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k), e as num),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfEnumTypeToNum(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k), e as num),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfEnumTypeToNumToJson(
         SimpleClassNullableOfEnumTypeToNum instance) =>
     <String, dynamic>{
-      'value': instance.value?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e)),
+      'value':
+          instance.value?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e)),
     };
 
 SimpleClassOfIntToNum _$SimpleClassOfIntToNumFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfIntToNum(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(int.parse(k), e as num),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfIntToNum(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(int.parse(k), e as num),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfIntToNumToJson(
         SimpleClassOfIntToNum instance) =>
@@ -3975,13 +4521,12 @@ Map<String, dynamic> _$SimpleClassOfIntToNumToJson(
     };
 
 SimpleClassNullableOfIntToNum _$SimpleClassNullableOfIntToNumFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfIntToNum(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(int.parse(k), e as num),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfIntToNum(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(int.parse(k), e as num),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfIntToNumToJson(
         SimpleClassNullableOfIntToNum instance) =>
@@ -3990,11 +4535,10 @@ Map<String, dynamic> _$SimpleClassNullableOfIntToNumToJson(
     };
 
 SimpleClassOfObjectToNum _$SimpleClassOfObjectToNumFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfObjectToNum(
-    Map<String, num>.from(json['value'] as Map),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfObjectToNum(
+      Map<String, num>.from(json['value'] as Map),
+    );
 
 Map<String, dynamic> _$SimpleClassOfObjectToNumToJson(
         SimpleClassOfObjectToNum instance) =>
@@ -4003,13 +4547,12 @@ Map<String, dynamic> _$SimpleClassOfObjectToNumToJson(
     };
 
 SimpleClassNullableOfObjectToNum _$SimpleClassNullableOfObjectToNumFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfObjectToNum(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e as num),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfObjectToNum(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(k, e as num),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfObjectToNumToJson(
         SimpleClassNullableOfObjectToNum instance) =>
@@ -4018,11 +4561,10 @@ Map<String, dynamic> _$SimpleClassNullableOfObjectToNumToJson(
     };
 
 SimpleClassOfStringToNum _$SimpleClassOfStringToNumFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfStringToNum(
-    Map<String, num>.from(json['value'] as Map),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfStringToNum(
+      Map<String, num>.from(json['value'] as Map),
+    );
 
 Map<String, dynamic> _$SimpleClassOfStringToNumToJson(
         SimpleClassOfStringToNum instance) =>
@@ -4031,13 +4573,12 @@ Map<String, dynamic> _$SimpleClassOfStringToNumToJson(
     };
 
 SimpleClassNullableOfStringToNum _$SimpleClassNullableOfStringToNumFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfStringToNum(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e as num),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfStringToNum(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(k, e as num),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfStringToNumToJson(
         SimpleClassNullableOfStringToNum instance) =>
@@ -4046,13 +4587,12 @@ Map<String, dynamic> _$SimpleClassNullableOfStringToNumToJson(
     };
 
 SimpleClassOfUriToNum _$SimpleClassOfUriToNumFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfUriToNum(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(Uri.parse(k), e as num),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfUriToNum(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(Uri.parse(k), e as num),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfUriToNumToJson(
         SimpleClassOfUriToNum instance) =>
@@ -4061,13 +4601,12 @@ Map<String, dynamic> _$SimpleClassOfUriToNumToJson(
     };
 
 SimpleClassNullableOfUriToNum _$SimpleClassNullableOfUriToNumFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfUriToNum(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(Uri.parse(k), e as num),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfUriToNum(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(Uri.parse(k), e as num),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfUriToNumToJson(
         SimpleClassNullableOfUriToNum instance) =>
@@ -4076,13 +4615,12 @@ Map<String, dynamic> _$SimpleClassNullableOfUriToNumToJson(
     };
 
 SimpleClassOfBigIntToNumNullable _$SimpleClassOfBigIntToNumNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfBigIntToNumNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(BigInt.parse(k), e as num?),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfBigIntToNumNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(BigInt.parse(k), e as num?),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfBigIntToNumNullableToJson(
         SimpleClassOfBigIntToNumNullable instance) =>
@@ -4092,13 +4630,12 @@ Map<String, dynamic> _$SimpleClassOfBigIntToNumNullableToJson(
 
 SimpleClassNullableOfBigIntToNumNullable
     _$SimpleClassNullableOfBigIntToNumNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfBigIntToNumNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(BigInt.parse(k), e as num?),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfBigIntToNumNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(BigInt.parse(k), e as num?),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfBigIntToNumNullableToJson(
         SimpleClassNullableOfBigIntToNumNullable instance) =>
@@ -4107,13 +4644,12 @@ Map<String, dynamic> _$SimpleClassNullableOfBigIntToNumNullableToJson(
     };
 
 SimpleClassOfDateTimeToNumNullable _$SimpleClassOfDateTimeToNumNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfDateTimeToNumNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(DateTime.parse(k), e as num?),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfDateTimeToNumNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(DateTime.parse(k), e as num?),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfDateTimeToNumNullableToJson(
         SimpleClassOfDateTimeToNumNullable instance) =>
@@ -4123,13 +4659,12 @@ Map<String, dynamic> _$SimpleClassOfDateTimeToNumNullableToJson(
 
 SimpleClassNullableOfDateTimeToNumNullable
     _$SimpleClassNullableOfDateTimeToNumNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfDateTimeToNumNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(DateTime.parse(k), e as num?),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDateTimeToNumNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(DateTime.parse(k), e as num?),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDateTimeToNumNullableToJson(
         SimpleClassNullableOfDateTimeToNumNullable instance) =>
@@ -4138,11 +4673,10 @@ Map<String, dynamic> _$SimpleClassNullableOfDateTimeToNumNullableToJson(
     };
 
 SimpleClassOfDynamicToNumNullable _$SimpleClassOfDynamicToNumNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfDynamicToNumNullable(
-    Map<String, num>.from(json['value'] as Map),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfDynamicToNumNullable(
+      Map<String, num?>.from(json['value'] as Map),
+    );
 
 Map<String, dynamic> _$SimpleClassOfDynamicToNumNullableToJson(
         SimpleClassOfDynamicToNumNullable instance) =>
@@ -4152,13 +4686,12 @@ Map<String, dynamic> _$SimpleClassOfDynamicToNumNullableToJson(
 
 SimpleClassNullableOfDynamicToNumNullable
     _$SimpleClassNullableOfDynamicToNumNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfDynamicToNumNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e as num?),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDynamicToNumNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, e as num?),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDynamicToNumNullableToJson(
         SimpleClassNullableOfDynamicToNumNullable instance) =>
@@ -4167,44 +4700,42 @@ Map<String, dynamic> _$SimpleClassNullableOfDynamicToNumNullableToJson(
     };
 
 SimpleClassOfEnumTypeToNumNullable _$SimpleClassOfEnumTypeToNumNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfEnumTypeToNumNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k), e as num?),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfEnumTypeToNumNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k), e as num?),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfEnumTypeToNumNullableToJson(
         SimpleClassOfEnumTypeToNumNullable instance) =>
     <String, dynamic>{
-      'value': instance.value.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e)),
+      'value': instance.value.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e)),
     };
 
 SimpleClassNullableOfEnumTypeToNumNullable
     _$SimpleClassNullableOfEnumTypeToNumNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfEnumTypeToNumNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k), e as num?),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfEnumTypeToNumNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k), e as num?),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfEnumTypeToNumNullableToJson(
         SimpleClassNullableOfEnumTypeToNumNullable instance) =>
     <String, dynamic>{
-      'value': instance.value?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e)),
+      'value':
+          instance.value?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e)),
     };
 
 SimpleClassOfIntToNumNullable _$SimpleClassOfIntToNumNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfIntToNumNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(int.parse(k), e as num?),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfIntToNumNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(int.parse(k), e as num?),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfIntToNumNullableToJson(
         SimpleClassOfIntToNumNullable instance) =>
@@ -4213,13 +4744,13 @@ Map<String, dynamic> _$SimpleClassOfIntToNumNullableToJson(
     };
 
 SimpleClassNullableOfIntToNumNullable
-    _$SimpleClassNullableOfIntToNumNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfIntToNumNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(int.parse(k), e as num?),
-    ),
-  );
-}
+    _$SimpleClassNullableOfIntToNumNullableFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfIntToNumNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(int.parse(k), e as num?),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfIntToNumNullableToJson(
         SimpleClassNullableOfIntToNumNullable instance) =>
@@ -4228,11 +4759,10 @@ Map<String, dynamic> _$SimpleClassNullableOfIntToNumNullableToJson(
     };
 
 SimpleClassOfObjectToNumNullable _$SimpleClassOfObjectToNumNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfObjectToNumNullable(
-    Map<String, num>.from(json['value'] as Map),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfObjectToNumNullable(
+      Map<String, num?>.from(json['value'] as Map),
+    );
 
 Map<String, dynamic> _$SimpleClassOfObjectToNumNullableToJson(
         SimpleClassOfObjectToNumNullable instance) =>
@@ -4242,13 +4772,12 @@ Map<String, dynamic> _$SimpleClassOfObjectToNumNullableToJson(
 
 SimpleClassNullableOfObjectToNumNullable
     _$SimpleClassNullableOfObjectToNumNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfObjectToNumNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e as num?),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfObjectToNumNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, e as num?),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfObjectToNumNullableToJson(
         SimpleClassNullableOfObjectToNumNullable instance) =>
@@ -4257,11 +4786,10 @@ Map<String, dynamic> _$SimpleClassNullableOfObjectToNumNullableToJson(
     };
 
 SimpleClassOfStringToNumNullable _$SimpleClassOfStringToNumNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfStringToNumNullable(
-    Map<String, num>.from(json['value'] as Map),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfStringToNumNullable(
+      Map<String, num?>.from(json['value'] as Map),
+    );
 
 Map<String, dynamic> _$SimpleClassOfStringToNumNullableToJson(
         SimpleClassOfStringToNumNullable instance) =>
@@ -4271,13 +4799,12 @@ Map<String, dynamic> _$SimpleClassOfStringToNumNullableToJson(
 
 SimpleClassNullableOfStringToNumNullable
     _$SimpleClassNullableOfStringToNumNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfStringToNumNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e as num?),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfStringToNumNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, e as num?),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfStringToNumNullableToJson(
         SimpleClassNullableOfStringToNumNullable instance) =>
@@ -4286,13 +4813,12 @@ Map<String, dynamic> _$SimpleClassNullableOfStringToNumNullableToJson(
     };
 
 SimpleClassOfUriToNumNullable _$SimpleClassOfUriToNumNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfUriToNumNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(Uri.parse(k), e as num?),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfUriToNumNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(Uri.parse(k), e as num?),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfUriToNumNullableToJson(
         SimpleClassOfUriToNumNullable instance) =>
@@ -4301,13 +4827,13 @@ Map<String, dynamic> _$SimpleClassOfUriToNumNullableToJson(
     };
 
 SimpleClassNullableOfUriToNumNullable
-    _$SimpleClassNullableOfUriToNumNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfUriToNumNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(Uri.parse(k), e as num?),
-    ),
-  );
-}
+    _$SimpleClassNullableOfUriToNumNullableFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfUriToNumNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(Uri.parse(k), e as num?),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfUriToNumNullableToJson(
         SimpleClassNullableOfUriToNumNullable instance) =>
@@ -4316,13 +4842,12 @@ Map<String, dynamic> _$SimpleClassNullableOfUriToNumNullableToJson(
     };
 
 SimpleClassOfBigIntToObject _$SimpleClassOfBigIntToObjectFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfBigIntToObject(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(BigInt.parse(k), e as Object),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfBigIntToObject(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(BigInt.parse(k), e as Object),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfBigIntToObjectToJson(
         SimpleClassOfBigIntToObject instance) =>
@@ -4331,13 +4856,12 @@ Map<String, dynamic> _$SimpleClassOfBigIntToObjectToJson(
     };
 
 SimpleClassNullableOfBigIntToObject
-    _$SimpleClassNullableOfBigIntToObjectFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfBigIntToObject(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(BigInt.parse(k), e as Object),
-    ),
-  );
-}
+    _$SimpleClassNullableOfBigIntToObjectFromJson(Map<String, dynamic> json) =>
+        SimpleClassNullableOfBigIntToObject(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(BigInt.parse(k), e as Object),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfBigIntToObjectToJson(
         SimpleClassNullableOfBigIntToObject instance) =>
@@ -4346,13 +4870,12 @@ Map<String, dynamic> _$SimpleClassNullableOfBigIntToObjectToJson(
     };
 
 SimpleClassOfDateTimeToObject _$SimpleClassOfDateTimeToObjectFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfDateTimeToObject(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(DateTime.parse(k), e as Object),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfDateTimeToObject(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(DateTime.parse(k), e as Object),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfDateTimeToObjectToJson(
         SimpleClassOfDateTimeToObject instance) =>
@@ -4361,13 +4884,13 @@ Map<String, dynamic> _$SimpleClassOfDateTimeToObjectToJson(
     };
 
 SimpleClassNullableOfDateTimeToObject
-    _$SimpleClassNullableOfDateTimeToObjectFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfDateTimeToObject(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(DateTime.parse(k), e as Object),
-    ),
-  );
-}
+    _$SimpleClassNullableOfDateTimeToObjectFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDateTimeToObject(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(DateTime.parse(k), e as Object),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDateTimeToObjectToJson(
         SimpleClassNullableOfDateTimeToObject instance) =>
@@ -4376,13 +4899,12 @@ Map<String, dynamic> _$SimpleClassNullableOfDateTimeToObjectToJson(
     };
 
 SimpleClassOfDynamicToObject _$SimpleClassOfDynamicToObjectFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfDynamicToObject(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(k, e as Object),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfDynamicToObject(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(k, e as Object),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfDynamicToObjectToJson(
         SimpleClassOfDynamicToObject instance) =>
@@ -4391,13 +4913,12 @@ Map<String, dynamic> _$SimpleClassOfDynamicToObjectToJson(
     };
 
 SimpleClassNullableOfDynamicToObject
-    _$SimpleClassNullableOfDynamicToObjectFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfDynamicToObject(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e as Object),
-    ),
-  );
-}
+    _$SimpleClassNullableOfDynamicToObjectFromJson(Map<String, dynamic> json) =>
+        SimpleClassNullableOfDynamicToObject(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, e as Object),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDynamicToObjectToJson(
         SimpleClassNullableOfDynamicToObject instance) =>
@@ -4406,43 +4927,42 @@ Map<String, dynamic> _$SimpleClassNullableOfDynamicToObjectToJson(
     };
 
 SimpleClassOfEnumTypeToObject _$SimpleClassOfEnumTypeToObjectFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfEnumTypeToObject(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k), e as Object),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfEnumTypeToObject(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k), e as Object),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfEnumTypeToObjectToJson(
         SimpleClassOfEnumTypeToObject instance) =>
     <String, dynamic>{
-      'value': instance.value.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e)),
+      'value': instance.value.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e)),
     };
 
 SimpleClassNullableOfEnumTypeToObject
-    _$SimpleClassNullableOfEnumTypeToObjectFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfEnumTypeToObject(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k), e as Object),
-    ),
-  );
-}
+    _$SimpleClassNullableOfEnumTypeToObjectFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfEnumTypeToObject(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k), e as Object),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfEnumTypeToObjectToJson(
         SimpleClassNullableOfEnumTypeToObject instance) =>
     <String, dynamic>{
-      'value': instance.value?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e)),
+      'value':
+          instance.value?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e)),
     };
 
 SimpleClassOfIntToObject _$SimpleClassOfIntToObjectFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfIntToObject(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(int.parse(k), e as Object),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfIntToObject(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(int.parse(k), e as Object),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfIntToObjectToJson(
         SimpleClassOfIntToObject instance) =>
@@ -4451,13 +4971,12 @@ Map<String, dynamic> _$SimpleClassOfIntToObjectToJson(
     };
 
 SimpleClassNullableOfIntToObject _$SimpleClassNullableOfIntToObjectFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfIntToObject(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(int.parse(k), e as Object),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfIntToObject(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(int.parse(k), e as Object),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfIntToObjectToJson(
         SimpleClassNullableOfIntToObject instance) =>
@@ -4466,13 +4985,12 @@ Map<String, dynamic> _$SimpleClassNullableOfIntToObjectToJson(
     };
 
 SimpleClassOfObjectToObject _$SimpleClassOfObjectToObjectFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfObjectToObject(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(k, e as Object),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfObjectToObject(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(k, e as Object),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfObjectToObjectToJson(
         SimpleClassOfObjectToObject instance) =>
@@ -4481,13 +4999,12 @@ Map<String, dynamic> _$SimpleClassOfObjectToObjectToJson(
     };
 
 SimpleClassNullableOfObjectToObject
-    _$SimpleClassNullableOfObjectToObjectFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfObjectToObject(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e as Object),
-    ),
-  );
-}
+    _$SimpleClassNullableOfObjectToObjectFromJson(Map<String, dynamic> json) =>
+        SimpleClassNullableOfObjectToObject(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, e as Object),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfObjectToObjectToJson(
         SimpleClassNullableOfObjectToObject instance) =>
@@ -4496,13 +5013,12 @@ Map<String, dynamic> _$SimpleClassNullableOfObjectToObjectToJson(
     };
 
 SimpleClassOfStringToObject _$SimpleClassOfStringToObjectFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfStringToObject(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(k, e as Object),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfStringToObject(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(k, e as Object),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfStringToObjectToJson(
         SimpleClassOfStringToObject instance) =>
@@ -4511,13 +5027,12 @@ Map<String, dynamic> _$SimpleClassOfStringToObjectToJson(
     };
 
 SimpleClassNullableOfStringToObject
-    _$SimpleClassNullableOfStringToObjectFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfStringToObject(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e as Object),
-    ),
-  );
-}
+    _$SimpleClassNullableOfStringToObjectFromJson(Map<String, dynamic> json) =>
+        SimpleClassNullableOfStringToObject(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, e as Object),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfStringToObjectToJson(
         SimpleClassNullableOfStringToObject instance) =>
@@ -4526,13 +5041,12 @@ Map<String, dynamic> _$SimpleClassNullableOfStringToObjectToJson(
     };
 
 SimpleClassOfUriToObject _$SimpleClassOfUriToObjectFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfUriToObject(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(Uri.parse(k), e as Object),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfUriToObject(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(Uri.parse(k), e as Object),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfUriToObjectToJson(
         SimpleClassOfUriToObject instance) =>
@@ -4541,13 +5055,12 @@ Map<String, dynamic> _$SimpleClassOfUriToObjectToJson(
     };
 
 SimpleClassNullableOfUriToObject _$SimpleClassNullableOfUriToObjectFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfUriToObject(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(Uri.parse(k), e as Object),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfUriToObject(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(Uri.parse(k), e as Object),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfUriToObjectToJson(
         SimpleClassNullableOfUriToObject instance) =>
@@ -4556,13 +5069,12 @@ Map<String, dynamic> _$SimpleClassNullableOfUriToObjectToJson(
     };
 
 SimpleClassOfBigIntToObjectNullable
-    _$SimpleClassOfBigIntToObjectNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfBigIntToObjectNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(BigInt.parse(k), e),
-    ),
-  );
-}
+    _$SimpleClassOfBigIntToObjectNullableFromJson(Map<String, dynamic> json) =>
+        SimpleClassOfBigIntToObjectNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(BigInt.parse(k), e),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfBigIntToObjectNullableToJson(
         SimpleClassOfBigIntToObjectNullable instance) =>
@@ -4572,13 +5084,12 @@ Map<String, dynamic> _$SimpleClassOfBigIntToObjectNullableToJson(
 
 SimpleClassNullableOfBigIntToObjectNullable
     _$SimpleClassNullableOfBigIntToObjectNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfBigIntToObjectNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(BigInt.parse(k), e),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfBigIntToObjectNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(BigInt.parse(k), e),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfBigIntToObjectNullableToJson(
         SimpleClassNullableOfBigIntToObjectNullable instance) =>
@@ -4587,13 +5098,13 @@ Map<String, dynamic> _$SimpleClassNullableOfBigIntToObjectNullableToJson(
     };
 
 SimpleClassOfDateTimeToObjectNullable
-    _$SimpleClassOfDateTimeToObjectNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfDateTimeToObjectNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(DateTime.parse(k), e),
-    ),
-  );
-}
+    _$SimpleClassOfDateTimeToObjectNullableFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfDateTimeToObjectNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(DateTime.parse(k), e),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfDateTimeToObjectNullableToJson(
         SimpleClassOfDateTimeToObjectNullable instance) =>
@@ -4603,13 +5114,12 @@ Map<String, dynamic> _$SimpleClassOfDateTimeToObjectNullableToJson(
 
 SimpleClassNullableOfDateTimeToObjectNullable
     _$SimpleClassNullableOfDateTimeToObjectNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfDateTimeToObjectNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(DateTime.parse(k), e),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDateTimeToObjectNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(DateTime.parse(k), e),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDateTimeToObjectNullableToJson(
         SimpleClassNullableOfDateTimeToObjectNullable instance) =>
@@ -4618,11 +5128,10 @@ Map<String, dynamic> _$SimpleClassNullableOfDateTimeToObjectNullableToJson(
     };
 
 SimpleClassOfDynamicToObjectNullable
-    _$SimpleClassOfDynamicToObjectNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfDynamicToObjectNullable(
-    json['value'] as Map<String, dynamic>,
-  );
-}
+    _$SimpleClassOfDynamicToObjectNullableFromJson(Map<String, dynamic> json) =>
+        SimpleClassOfDynamicToObjectNullable(
+          json['value'] as Map<String, dynamic>,
+        );
 
 Map<String, dynamic> _$SimpleClassOfDynamicToObjectNullableToJson(
         SimpleClassOfDynamicToObjectNullable instance) =>
@@ -4632,11 +5141,10 @@ Map<String, dynamic> _$SimpleClassOfDynamicToObjectNullableToJson(
 
 SimpleClassNullableOfDynamicToObjectNullable
     _$SimpleClassNullableOfDynamicToObjectNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfDynamicToObjectNullable(
-    json['value'] as Map<String, dynamic>?,
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDynamicToObjectNullable(
+          json['value'] as Map<String, dynamic>?,
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDynamicToObjectNullableToJson(
         SimpleClassNullableOfDynamicToObjectNullable instance) =>
@@ -4645,44 +5153,43 @@ Map<String, dynamic> _$SimpleClassNullableOfDynamicToObjectNullableToJson(
     };
 
 SimpleClassOfEnumTypeToObjectNullable
-    _$SimpleClassOfEnumTypeToObjectNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfEnumTypeToObjectNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k), e),
-    ),
-  );
-}
+    _$SimpleClassOfEnumTypeToObjectNullableFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfEnumTypeToObjectNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k), e),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfEnumTypeToObjectNullableToJson(
         SimpleClassOfEnumTypeToObjectNullable instance) =>
     <String, dynamic>{
-      'value': instance.value.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e)),
+      'value': instance.value.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e)),
     };
 
 SimpleClassNullableOfEnumTypeToObjectNullable
     _$SimpleClassNullableOfEnumTypeToObjectNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfEnumTypeToObjectNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k), e),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfEnumTypeToObjectNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k), e),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfEnumTypeToObjectNullableToJson(
         SimpleClassNullableOfEnumTypeToObjectNullable instance) =>
     <String, dynamic>{
-      'value': instance.value?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e)),
+      'value':
+          instance.value?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e)),
     };
 
 SimpleClassOfIntToObjectNullable _$SimpleClassOfIntToObjectNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfIntToObjectNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(int.parse(k), e),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfIntToObjectNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(int.parse(k), e),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfIntToObjectNullableToJson(
         SimpleClassOfIntToObjectNullable instance) =>
@@ -4692,13 +5199,12 @@ Map<String, dynamic> _$SimpleClassOfIntToObjectNullableToJson(
 
 SimpleClassNullableOfIntToObjectNullable
     _$SimpleClassNullableOfIntToObjectNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfIntToObjectNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(int.parse(k), e),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfIntToObjectNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(int.parse(k), e),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfIntToObjectNullableToJson(
         SimpleClassNullableOfIntToObjectNullable instance) =>
@@ -4707,11 +5213,10 @@ Map<String, dynamic> _$SimpleClassNullableOfIntToObjectNullableToJson(
     };
 
 SimpleClassOfObjectToObjectNullable
-    _$SimpleClassOfObjectToObjectNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfObjectToObjectNullable(
-    json['value'] as Map<String, dynamic>,
-  );
-}
+    _$SimpleClassOfObjectToObjectNullableFromJson(Map<String, dynamic> json) =>
+        SimpleClassOfObjectToObjectNullable(
+          json['value'] as Map<String, dynamic>,
+        );
 
 Map<String, dynamic> _$SimpleClassOfObjectToObjectNullableToJson(
         SimpleClassOfObjectToObjectNullable instance) =>
@@ -4721,11 +5226,10 @@ Map<String, dynamic> _$SimpleClassOfObjectToObjectNullableToJson(
 
 SimpleClassNullableOfObjectToObjectNullable
     _$SimpleClassNullableOfObjectToObjectNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfObjectToObjectNullable(
-    json['value'] as Map<String, dynamic>?,
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfObjectToObjectNullable(
+          json['value'] as Map<String, dynamic>?,
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfObjectToObjectNullableToJson(
         SimpleClassNullableOfObjectToObjectNullable instance) =>
@@ -4734,11 +5238,10 @@ Map<String, dynamic> _$SimpleClassNullableOfObjectToObjectNullableToJson(
     };
 
 SimpleClassOfStringToObjectNullable
-    _$SimpleClassOfStringToObjectNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfStringToObjectNullable(
-    json['value'] as Map<String, dynamic>,
-  );
-}
+    _$SimpleClassOfStringToObjectNullableFromJson(Map<String, dynamic> json) =>
+        SimpleClassOfStringToObjectNullable(
+          json['value'] as Map<String, dynamic>,
+        );
 
 Map<String, dynamic> _$SimpleClassOfStringToObjectNullableToJson(
         SimpleClassOfStringToObjectNullable instance) =>
@@ -4748,11 +5251,10 @@ Map<String, dynamic> _$SimpleClassOfStringToObjectNullableToJson(
 
 SimpleClassNullableOfStringToObjectNullable
     _$SimpleClassNullableOfStringToObjectNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfStringToObjectNullable(
-    json['value'] as Map<String, dynamic>?,
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfStringToObjectNullable(
+          json['value'] as Map<String, dynamic>?,
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfStringToObjectNullableToJson(
         SimpleClassNullableOfStringToObjectNullable instance) =>
@@ -4761,13 +5263,12 @@ Map<String, dynamic> _$SimpleClassNullableOfStringToObjectNullableToJson(
     };
 
 SimpleClassOfUriToObjectNullable _$SimpleClassOfUriToObjectNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfUriToObjectNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(Uri.parse(k), e),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfUriToObjectNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(Uri.parse(k), e),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfUriToObjectNullableToJson(
         SimpleClassOfUriToObjectNullable instance) =>
@@ -4777,13 +5278,12 @@ Map<String, dynamic> _$SimpleClassOfUriToObjectNullableToJson(
 
 SimpleClassNullableOfUriToObjectNullable
     _$SimpleClassNullableOfUriToObjectNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfUriToObjectNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(Uri.parse(k), e),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfUriToObjectNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(Uri.parse(k), e),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfUriToObjectNullableToJson(
         SimpleClassNullableOfUriToObjectNullable instance) =>
@@ -4791,14 +5291,463 @@ Map<String, dynamic> _$SimpleClassNullableOfUriToObjectNullableToJson(
       'value': instance.value?.map((k, e) => MapEntry(k.toString(), e)),
     };
 
+SimpleClassOfBigIntToRecord _$SimpleClassOfBigIntToRecordFromJson(
+        Map<String, dynamic> json) =>
+    SimpleClassOfBigIntToRecord(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(
+            BigInt.parse(k),
+            _$recordConvert(
+              e,
+              ($jsonValue) => (
+                ($jsonValue[r'$1'] as num).toInt(),
+                $jsonValue[r'$2'] as String,
+                truth: $jsonValue['truth'] as bool,
+              ),
+            )),
+      ),
+    );
+
+Map<String, dynamic> _$SimpleClassOfBigIntToRecordToJson(
+        SimpleClassOfBigIntToRecord instance) =>
+    <String, dynamic>{
+      'value':
+          instance.value.map((k, e) => MapEntry(k.toString(), <String, dynamic>{
+                r'$1': e.$1,
+                r'$2': e.$2,
+                'truth': e.truth,
+              })),
+    };
+
+$Rec _$recordConvert<$Rec>(
+  Object? value,
+  $Rec Function(Map) convert,
+) =>
+    convert(value as Map<String, dynamic>);
+
+SimpleClassNullableOfBigIntToRecord
+    _$SimpleClassNullableOfBigIntToRecordFromJson(Map<String, dynamic> json) =>
+        SimpleClassNullableOfBigIntToRecord(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(
+                BigInt.parse(k),
+                _$recordConvert(
+                  e,
+                  ($jsonValue) => (
+                    ($jsonValue[r'$1'] as num).toInt(),
+                    $jsonValue[r'$2'] as String,
+                    truth: $jsonValue['truth'] as bool,
+                  ),
+                )),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassNullableOfBigIntToRecordToJson(
+        SimpleClassNullableOfBigIntToRecord instance) =>
+    <String, dynamic>{
+      'value': instance.value
+          ?.map((k, e) => MapEntry(k.toString(), <String, dynamic>{
+                r'$1': e.$1,
+                r'$2': e.$2,
+                'truth': e.truth,
+              })),
+    };
+
+SimpleClassOfDateTimeToRecord _$SimpleClassOfDateTimeToRecordFromJson(
+        Map<String, dynamic> json) =>
+    SimpleClassOfDateTimeToRecord(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(
+            DateTime.parse(k),
+            _$recordConvert(
+              e,
+              ($jsonValue) => (
+                ($jsonValue[r'$1'] as num).toInt(),
+                $jsonValue[r'$2'] as String,
+                truth: $jsonValue['truth'] as bool,
+              ),
+            )),
+      ),
+    );
+
+Map<String, dynamic> _$SimpleClassOfDateTimeToRecordToJson(
+        SimpleClassOfDateTimeToRecord instance) =>
+    <String, dynamic>{
+      'value': instance.value
+          .map((k, e) => MapEntry(k.toIso8601String(), <String, dynamic>{
+                r'$1': e.$1,
+                r'$2': e.$2,
+                'truth': e.truth,
+              })),
+    };
+
+SimpleClassNullableOfDateTimeToRecord
+    _$SimpleClassNullableOfDateTimeToRecordFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDateTimeToRecord(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(
+                DateTime.parse(k),
+                _$recordConvert(
+                  e,
+                  ($jsonValue) => (
+                    ($jsonValue[r'$1'] as num).toInt(),
+                    $jsonValue[r'$2'] as String,
+                    truth: $jsonValue['truth'] as bool,
+                  ),
+                )),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassNullableOfDateTimeToRecordToJson(
+        SimpleClassNullableOfDateTimeToRecord instance) =>
+    <String, dynamic>{
+      'value': instance.value
+          ?.map((k, e) => MapEntry(k.toIso8601String(), <String, dynamic>{
+                r'$1': e.$1,
+                r'$2': e.$2,
+                'truth': e.truth,
+              })),
+    };
+
+SimpleClassOfDynamicToRecord _$SimpleClassOfDynamicToRecordFromJson(
+        Map<String, dynamic> json) =>
+    SimpleClassOfDynamicToRecord(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(
+            k,
+            _$recordConvert(
+              e,
+              ($jsonValue) => (
+                ($jsonValue[r'$1'] as num).toInt(),
+                $jsonValue[r'$2'] as String,
+                truth: $jsonValue['truth'] as bool,
+              ),
+            )),
+      ),
+    );
+
+Map<String, dynamic> _$SimpleClassOfDynamicToRecordToJson(
+        SimpleClassOfDynamicToRecord instance) =>
+    <String, dynamic>{
+      'value': instance.value.map((k, e) => MapEntry(k, <String, dynamic>{
+            r'$1': e.$1,
+            r'$2': e.$2,
+            'truth': e.truth,
+          })),
+    };
+
+SimpleClassNullableOfDynamicToRecord
+    _$SimpleClassNullableOfDynamicToRecordFromJson(Map<String, dynamic> json) =>
+        SimpleClassNullableOfDynamicToRecord(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(
+                k,
+                _$recordConvert(
+                  e,
+                  ($jsonValue) => (
+                    ($jsonValue[r'$1'] as num).toInt(),
+                    $jsonValue[r'$2'] as String,
+                    truth: $jsonValue['truth'] as bool,
+                  ),
+                )),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassNullableOfDynamicToRecordToJson(
+        SimpleClassNullableOfDynamicToRecord instance) =>
+    <String, dynamic>{
+      'value': instance.value?.map((k, e) => MapEntry(k, <String, dynamic>{
+            r'$1': e.$1,
+            r'$2': e.$2,
+            'truth': e.truth,
+          })),
+    };
+
+SimpleClassOfEnumTypeToRecord _$SimpleClassOfEnumTypeToRecordFromJson(
+        Map<String, dynamic> json) =>
+    SimpleClassOfEnumTypeToRecord(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(
+            $enumDecode(_$EnumTypeEnumMap, k),
+            _$recordConvert(
+              e,
+              ($jsonValue) => (
+                ($jsonValue[r'$1'] as num).toInt(),
+                $jsonValue[r'$2'] as String,
+                truth: $jsonValue['truth'] as bool,
+              ),
+            )),
+      ),
+    );
+
+Map<String, dynamic> _$SimpleClassOfEnumTypeToRecordToJson(
+        SimpleClassOfEnumTypeToRecord instance) =>
+    <String, dynamic>{
+      'value': instance.value
+          .map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, <String, dynamic>{
+                r'$1': e.$1,
+                r'$2': e.$2,
+                'truth': e.truth,
+              })),
+    };
+
+SimpleClassNullableOfEnumTypeToRecord
+    _$SimpleClassNullableOfEnumTypeToRecordFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfEnumTypeToRecord(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(
+                $enumDecode(_$EnumTypeEnumMap, k),
+                _$recordConvert(
+                  e,
+                  ($jsonValue) => (
+                    ($jsonValue[r'$1'] as num).toInt(),
+                    $jsonValue[r'$2'] as String,
+                    truth: $jsonValue['truth'] as bool,
+                  ),
+                )),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassNullableOfEnumTypeToRecordToJson(
+        SimpleClassNullableOfEnumTypeToRecord instance) =>
+    <String, dynamic>{
+      'value': instance.value
+          ?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, <String, dynamic>{
+                r'$1': e.$1,
+                r'$2': e.$2,
+                'truth': e.truth,
+              })),
+    };
+
+SimpleClassOfIntToRecord _$SimpleClassOfIntToRecordFromJson(
+        Map<String, dynamic> json) =>
+    SimpleClassOfIntToRecord(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(
+            int.parse(k),
+            _$recordConvert(
+              e,
+              ($jsonValue) => (
+                ($jsonValue[r'$1'] as num).toInt(),
+                $jsonValue[r'$2'] as String,
+                truth: $jsonValue['truth'] as bool,
+              ),
+            )),
+      ),
+    );
+
+Map<String, dynamic> _$SimpleClassOfIntToRecordToJson(
+        SimpleClassOfIntToRecord instance) =>
+    <String, dynamic>{
+      'value':
+          instance.value.map((k, e) => MapEntry(k.toString(), <String, dynamic>{
+                r'$1': e.$1,
+                r'$2': e.$2,
+                'truth': e.truth,
+              })),
+    };
+
+SimpleClassNullableOfIntToRecord _$SimpleClassNullableOfIntToRecordFromJson(
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfIntToRecord(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(
+            int.parse(k),
+            _$recordConvert(
+              e,
+              ($jsonValue) => (
+                ($jsonValue[r'$1'] as num).toInt(),
+                $jsonValue[r'$2'] as String,
+                truth: $jsonValue['truth'] as bool,
+              ),
+            )),
+      ),
+    );
+
+Map<String, dynamic> _$SimpleClassNullableOfIntToRecordToJson(
+        SimpleClassNullableOfIntToRecord instance) =>
+    <String, dynamic>{
+      'value': instance.value
+          ?.map((k, e) => MapEntry(k.toString(), <String, dynamic>{
+                r'$1': e.$1,
+                r'$2': e.$2,
+                'truth': e.truth,
+              })),
+    };
+
+SimpleClassOfObjectToRecord _$SimpleClassOfObjectToRecordFromJson(
+        Map<String, dynamic> json) =>
+    SimpleClassOfObjectToRecord(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(
+            k,
+            _$recordConvert(
+              e,
+              ($jsonValue) => (
+                ($jsonValue[r'$1'] as num).toInt(),
+                $jsonValue[r'$2'] as String,
+                truth: $jsonValue['truth'] as bool,
+              ),
+            )),
+      ),
+    );
+
+Map<String, dynamic> _$SimpleClassOfObjectToRecordToJson(
+        SimpleClassOfObjectToRecord instance) =>
+    <String, dynamic>{
+      'value': instance.value.map((k, e) => MapEntry(k, <String, dynamic>{
+            r'$1': e.$1,
+            r'$2': e.$2,
+            'truth': e.truth,
+          })),
+    };
+
+SimpleClassNullableOfObjectToRecord
+    _$SimpleClassNullableOfObjectToRecordFromJson(Map<String, dynamic> json) =>
+        SimpleClassNullableOfObjectToRecord(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(
+                k,
+                _$recordConvert(
+                  e,
+                  ($jsonValue) => (
+                    ($jsonValue[r'$1'] as num).toInt(),
+                    $jsonValue[r'$2'] as String,
+                    truth: $jsonValue['truth'] as bool,
+                  ),
+                )),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassNullableOfObjectToRecordToJson(
+        SimpleClassNullableOfObjectToRecord instance) =>
+    <String, dynamic>{
+      'value': instance.value?.map((k, e) => MapEntry(k, <String, dynamic>{
+            r'$1': e.$1,
+            r'$2': e.$2,
+            'truth': e.truth,
+          })),
+    };
+
+SimpleClassOfStringToRecord _$SimpleClassOfStringToRecordFromJson(
+        Map<String, dynamic> json) =>
+    SimpleClassOfStringToRecord(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(
+            k,
+            _$recordConvert(
+              e,
+              ($jsonValue) => (
+                ($jsonValue[r'$1'] as num).toInt(),
+                $jsonValue[r'$2'] as String,
+                truth: $jsonValue['truth'] as bool,
+              ),
+            )),
+      ),
+    );
+
+Map<String, dynamic> _$SimpleClassOfStringToRecordToJson(
+        SimpleClassOfStringToRecord instance) =>
+    <String, dynamic>{
+      'value': instance.value.map((k, e) => MapEntry(k, <String, dynamic>{
+            r'$1': e.$1,
+            r'$2': e.$2,
+            'truth': e.truth,
+          })),
+    };
+
+SimpleClassNullableOfStringToRecord
+    _$SimpleClassNullableOfStringToRecordFromJson(Map<String, dynamic> json) =>
+        SimpleClassNullableOfStringToRecord(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(
+                k,
+                _$recordConvert(
+                  e,
+                  ($jsonValue) => (
+                    ($jsonValue[r'$1'] as num).toInt(),
+                    $jsonValue[r'$2'] as String,
+                    truth: $jsonValue['truth'] as bool,
+                  ),
+                )),
+          ),
+        );
+
+Map<String, dynamic> _$SimpleClassNullableOfStringToRecordToJson(
+        SimpleClassNullableOfStringToRecord instance) =>
+    <String, dynamic>{
+      'value': instance.value?.map((k, e) => MapEntry(k, <String, dynamic>{
+            r'$1': e.$1,
+            r'$2': e.$2,
+            'truth': e.truth,
+          })),
+    };
+
+SimpleClassOfUriToRecord _$SimpleClassOfUriToRecordFromJson(
+        Map<String, dynamic> json) =>
+    SimpleClassOfUriToRecord(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(
+            Uri.parse(k),
+            _$recordConvert(
+              e,
+              ($jsonValue) => (
+                ($jsonValue[r'$1'] as num).toInt(),
+                $jsonValue[r'$2'] as String,
+                truth: $jsonValue['truth'] as bool,
+              ),
+            )),
+      ),
+    );
+
+Map<String, dynamic> _$SimpleClassOfUriToRecordToJson(
+        SimpleClassOfUriToRecord instance) =>
+    <String, dynamic>{
+      'value':
+          instance.value.map((k, e) => MapEntry(k.toString(), <String, dynamic>{
+                r'$1': e.$1,
+                r'$2': e.$2,
+                'truth': e.truth,
+              })),
+    };
+
+SimpleClassNullableOfUriToRecord _$SimpleClassNullableOfUriToRecordFromJson(
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfUriToRecord(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(
+            Uri.parse(k),
+            _$recordConvert(
+              e,
+              ($jsonValue) => (
+                ($jsonValue[r'$1'] as num).toInt(),
+                $jsonValue[r'$2'] as String,
+                truth: $jsonValue['truth'] as bool,
+              ),
+            )),
+      ),
+    );
+
+Map<String, dynamic> _$SimpleClassNullableOfUriToRecordToJson(
+        SimpleClassNullableOfUriToRecord instance) =>
+    <String, dynamic>{
+      'value': instance.value
+          ?.map((k, e) => MapEntry(k.toString(), <String, dynamic>{
+                r'$1': e.$1,
+                r'$2': e.$2,
+                'truth': e.truth,
+              })),
+    };
+
 SimpleClassOfBigIntToString _$SimpleClassOfBigIntToStringFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfBigIntToString(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(BigInt.parse(k), e as String),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfBigIntToString(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(BigInt.parse(k), e as String),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfBigIntToStringToJson(
         SimpleClassOfBigIntToString instance) =>
@@ -4807,13 +5756,12 @@ Map<String, dynamic> _$SimpleClassOfBigIntToStringToJson(
     };
 
 SimpleClassNullableOfBigIntToString
-    _$SimpleClassNullableOfBigIntToStringFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfBigIntToString(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(BigInt.parse(k), e as String),
-    ),
-  );
-}
+    _$SimpleClassNullableOfBigIntToStringFromJson(Map<String, dynamic> json) =>
+        SimpleClassNullableOfBigIntToString(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(BigInt.parse(k), e as String),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfBigIntToStringToJson(
         SimpleClassNullableOfBigIntToString instance) =>
@@ -4822,13 +5770,12 @@ Map<String, dynamic> _$SimpleClassNullableOfBigIntToStringToJson(
     };
 
 SimpleClassOfDateTimeToString _$SimpleClassOfDateTimeToStringFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfDateTimeToString(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(DateTime.parse(k), e as String),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfDateTimeToString(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(DateTime.parse(k), e as String),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfDateTimeToStringToJson(
         SimpleClassOfDateTimeToString instance) =>
@@ -4837,13 +5784,13 @@ Map<String, dynamic> _$SimpleClassOfDateTimeToStringToJson(
     };
 
 SimpleClassNullableOfDateTimeToString
-    _$SimpleClassNullableOfDateTimeToStringFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfDateTimeToString(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(DateTime.parse(k), e as String),
-    ),
-  );
-}
+    _$SimpleClassNullableOfDateTimeToStringFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDateTimeToString(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(DateTime.parse(k), e as String),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDateTimeToStringToJson(
         SimpleClassNullableOfDateTimeToString instance) =>
@@ -4852,11 +5799,10 @@ Map<String, dynamic> _$SimpleClassNullableOfDateTimeToStringToJson(
     };
 
 SimpleClassOfDynamicToString _$SimpleClassOfDynamicToStringFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfDynamicToString(
-    Map<String, String>.from(json['value'] as Map),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfDynamicToString(
+      Map<String, String>.from(json['value'] as Map),
+    );
 
 Map<String, dynamic> _$SimpleClassOfDynamicToStringToJson(
         SimpleClassOfDynamicToString instance) =>
@@ -4865,13 +5811,12 @@ Map<String, dynamic> _$SimpleClassOfDynamicToStringToJson(
     };
 
 SimpleClassNullableOfDynamicToString
-    _$SimpleClassNullableOfDynamicToStringFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfDynamicToString(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e as String),
-    ),
-  );
-}
+    _$SimpleClassNullableOfDynamicToStringFromJson(Map<String, dynamic> json) =>
+        SimpleClassNullableOfDynamicToString(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, e as String),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDynamicToStringToJson(
         SimpleClassNullableOfDynamicToString instance) =>
@@ -4880,43 +5825,42 @@ Map<String, dynamic> _$SimpleClassNullableOfDynamicToStringToJson(
     };
 
 SimpleClassOfEnumTypeToString _$SimpleClassOfEnumTypeToStringFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfEnumTypeToString(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k), e as String),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfEnumTypeToString(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k), e as String),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfEnumTypeToStringToJson(
         SimpleClassOfEnumTypeToString instance) =>
     <String, dynamic>{
-      'value': instance.value.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e)),
+      'value': instance.value.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e)),
     };
 
 SimpleClassNullableOfEnumTypeToString
-    _$SimpleClassNullableOfEnumTypeToStringFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfEnumTypeToString(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k), e as String),
-    ),
-  );
-}
+    _$SimpleClassNullableOfEnumTypeToStringFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfEnumTypeToString(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k), e as String),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfEnumTypeToStringToJson(
         SimpleClassNullableOfEnumTypeToString instance) =>
     <String, dynamic>{
-      'value': instance.value?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e)),
+      'value':
+          instance.value?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e)),
     };
 
 SimpleClassOfIntToString _$SimpleClassOfIntToStringFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfIntToString(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(int.parse(k), e as String),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfIntToString(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(int.parse(k), e as String),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfIntToStringToJson(
         SimpleClassOfIntToString instance) =>
@@ -4925,13 +5869,12 @@ Map<String, dynamic> _$SimpleClassOfIntToStringToJson(
     };
 
 SimpleClassNullableOfIntToString _$SimpleClassNullableOfIntToStringFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfIntToString(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(int.parse(k), e as String),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfIntToString(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(int.parse(k), e as String),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfIntToStringToJson(
         SimpleClassNullableOfIntToString instance) =>
@@ -4940,11 +5883,10 @@ Map<String, dynamic> _$SimpleClassNullableOfIntToStringToJson(
     };
 
 SimpleClassOfObjectToString _$SimpleClassOfObjectToStringFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfObjectToString(
-    Map<String, String>.from(json['value'] as Map),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfObjectToString(
+      Map<String, String>.from(json['value'] as Map),
+    );
 
 Map<String, dynamic> _$SimpleClassOfObjectToStringToJson(
         SimpleClassOfObjectToString instance) =>
@@ -4953,13 +5895,12 @@ Map<String, dynamic> _$SimpleClassOfObjectToStringToJson(
     };
 
 SimpleClassNullableOfObjectToString
-    _$SimpleClassNullableOfObjectToStringFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfObjectToString(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e as String),
-    ),
-  );
-}
+    _$SimpleClassNullableOfObjectToStringFromJson(Map<String, dynamic> json) =>
+        SimpleClassNullableOfObjectToString(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, e as String),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfObjectToStringToJson(
         SimpleClassNullableOfObjectToString instance) =>
@@ -4968,11 +5909,10 @@ Map<String, dynamic> _$SimpleClassNullableOfObjectToStringToJson(
     };
 
 SimpleClassOfStringToString _$SimpleClassOfStringToStringFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfStringToString(
-    Map<String, String>.from(json['value'] as Map),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfStringToString(
+      Map<String, String>.from(json['value'] as Map),
+    );
 
 Map<String, dynamic> _$SimpleClassOfStringToStringToJson(
         SimpleClassOfStringToString instance) =>
@@ -4981,13 +5921,12 @@ Map<String, dynamic> _$SimpleClassOfStringToStringToJson(
     };
 
 SimpleClassNullableOfStringToString
-    _$SimpleClassNullableOfStringToStringFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfStringToString(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e as String),
-    ),
-  );
-}
+    _$SimpleClassNullableOfStringToStringFromJson(Map<String, dynamic> json) =>
+        SimpleClassNullableOfStringToString(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, e as String),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfStringToStringToJson(
         SimpleClassNullableOfStringToString instance) =>
@@ -4996,13 +5935,12 @@ Map<String, dynamic> _$SimpleClassNullableOfStringToStringToJson(
     };
 
 SimpleClassOfUriToString _$SimpleClassOfUriToStringFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfUriToString(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(Uri.parse(k), e as String),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfUriToString(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(Uri.parse(k), e as String),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfUriToStringToJson(
         SimpleClassOfUriToString instance) =>
@@ -5011,13 +5949,12 @@ Map<String, dynamic> _$SimpleClassOfUriToStringToJson(
     };
 
 SimpleClassNullableOfUriToString _$SimpleClassNullableOfUriToStringFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfUriToString(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(Uri.parse(k), e as String),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfUriToString(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(Uri.parse(k), e as String),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfUriToStringToJson(
         SimpleClassNullableOfUriToString instance) =>
@@ -5026,13 +5963,12 @@ Map<String, dynamic> _$SimpleClassNullableOfUriToStringToJson(
     };
 
 SimpleClassOfBigIntToStringNullable
-    _$SimpleClassOfBigIntToStringNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfBigIntToStringNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(BigInt.parse(k), e as String?),
-    ),
-  );
-}
+    _$SimpleClassOfBigIntToStringNullableFromJson(Map<String, dynamic> json) =>
+        SimpleClassOfBigIntToStringNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(BigInt.parse(k), e as String?),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfBigIntToStringNullableToJson(
         SimpleClassOfBigIntToStringNullable instance) =>
@@ -5042,13 +5978,12 @@ Map<String, dynamic> _$SimpleClassOfBigIntToStringNullableToJson(
 
 SimpleClassNullableOfBigIntToStringNullable
     _$SimpleClassNullableOfBigIntToStringNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfBigIntToStringNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(BigInt.parse(k), e as String?),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfBigIntToStringNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(BigInt.parse(k), e as String?),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfBigIntToStringNullableToJson(
         SimpleClassNullableOfBigIntToStringNullable instance) =>
@@ -5057,13 +5992,13 @@ Map<String, dynamic> _$SimpleClassNullableOfBigIntToStringNullableToJson(
     };
 
 SimpleClassOfDateTimeToStringNullable
-    _$SimpleClassOfDateTimeToStringNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfDateTimeToStringNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(DateTime.parse(k), e as String?),
-    ),
-  );
-}
+    _$SimpleClassOfDateTimeToStringNullableFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfDateTimeToStringNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry(DateTime.parse(k), e as String?),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfDateTimeToStringNullableToJson(
         SimpleClassOfDateTimeToStringNullable instance) =>
@@ -5073,13 +6008,12 @@ Map<String, dynamic> _$SimpleClassOfDateTimeToStringNullableToJson(
 
 SimpleClassNullableOfDateTimeToStringNullable
     _$SimpleClassNullableOfDateTimeToStringNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfDateTimeToStringNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(DateTime.parse(k), e as String?),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDateTimeToStringNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(DateTime.parse(k), e as String?),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDateTimeToStringNullableToJson(
         SimpleClassNullableOfDateTimeToStringNullable instance) =>
@@ -5088,11 +6022,10 @@ Map<String, dynamic> _$SimpleClassNullableOfDateTimeToStringNullableToJson(
     };
 
 SimpleClassOfDynamicToStringNullable
-    _$SimpleClassOfDynamicToStringNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfDynamicToStringNullable(
-    Map<String, String>.from(json['value'] as Map),
-  );
-}
+    _$SimpleClassOfDynamicToStringNullableFromJson(Map<String, dynamic> json) =>
+        SimpleClassOfDynamicToStringNullable(
+          Map<String, String?>.from(json['value'] as Map),
+        );
 
 Map<String, dynamic> _$SimpleClassOfDynamicToStringNullableToJson(
         SimpleClassOfDynamicToStringNullable instance) =>
@@ -5102,13 +6035,12 @@ Map<String, dynamic> _$SimpleClassOfDynamicToStringNullableToJson(
 
 SimpleClassNullableOfDynamicToStringNullable
     _$SimpleClassNullableOfDynamicToStringNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfDynamicToStringNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e as String?),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDynamicToStringNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, e as String?),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDynamicToStringNullableToJson(
         SimpleClassNullableOfDynamicToStringNullable instance) =>
@@ -5117,44 +6049,43 @@ Map<String, dynamic> _$SimpleClassNullableOfDynamicToStringNullableToJson(
     };
 
 SimpleClassOfEnumTypeToStringNullable
-    _$SimpleClassOfEnumTypeToStringNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfEnumTypeToStringNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k), e as String?),
-    ),
-  );
-}
+    _$SimpleClassOfEnumTypeToStringNullableFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassOfEnumTypeToStringNullable(
+          (json['value'] as Map<String, dynamic>).map(
+            (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k), e as String?),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassOfEnumTypeToStringNullableToJson(
         SimpleClassOfEnumTypeToStringNullable instance) =>
     <String, dynamic>{
-      'value': instance.value.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e)),
+      'value': instance.value.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e)),
     };
 
 SimpleClassNullableOfEnumTypeToStringNullable
     _$SimpleClassNullableOfEnumTypeToStringNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfEnumTypeToStringNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k), e as String?),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfEnumTypeToStringNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k), e as String?),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfEnumTypeToStringNullableToJson(
         SimpleClassNullableOfEnumTypeToStringNullable instance) =>
     <String, dynamic>{
-      'value': instance.value?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e)),
+      'value':
+          instance.value?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e)),
     };
 
 SimpleClassOfIntToStringNullable _$SimpleClassOfIntToStringNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfIntToStringNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(int.parse(k), e as String?),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfIntToStringNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(int.parse(k), e as String?),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfIntToStringNullableToJson(
         SimpleClassOfIntToStringNullable instance) =>
@@ -5164,13 +6095,12 @@ Map<String, dynamic> _$SimpleClassOfIntToStringNullableToJson(
 
 SimpleClassNullableOfIntToStringNullable
     _$SimpleClassNullableOfIntToStringNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfIntToStringNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(int.parse(k), e as String?),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfIntToStringNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(int.parse(k), e as String?),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfIntToStringNullableToJson(
         SimpleClassNullableOfIntToStringNullable instance) =>
@@ -5179,11 +6109,10 @@ Map<String, dynamic> _$SimpleClassNullableOfIntToStringNullableToJson(
     };
 
 SimpleClassOfObjectToStringNullable
-    _$SimpleClassOfObjectToStringNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfObjectToStringNullable(
-    Map<String, String>.from(json['value'] as Map),
-  );
-}
+    _$SimpleClassOfObjectToStringNullableFromJson(Map<String, dynamic> json) =>
+        SimpleClassOfObjectToStringNullable(
+          Map<String, String?>.from(json['value'] as Map),
+        );
 
 Map<String, dynamic> _$SimpleClassOfObjectToStringNullableToJson(
         SimpleClassOfObjectToStringNullable instance) =>
@@ -5193,13 +6122,12 @@ Map<String, dynamic> _$SimpleClassOfObjectToStringNullableToJson(
 
 SimpleClassNullableOfObjectToStringNullable
     _$SimpleClassNullableOfObjectToStringNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfObjectToStringNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e as String?),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfObjectToStringNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, e as String?),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfObjectToStringNullableToJson(
         SimpleClassNullableOfObjectToStringNullable instance) =>
@@ -5208,11 +6136,10 @@ Map<String, dynamic> _$SimpleClassNullableOfObjectToStringNullableToJson(
     };
 
 SimpleClassOfStringToStringNullable
-    _$SimpleClassOfStringToStringNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassOfStringToStringNullable(
-    Map<String, String>.from(json['value'] as Map),
-  );
-}
+    _$SimpleClassOfStringToStringNullableFromJson(Map<String, dynamic> json) =>
+        SimpleClassOfStringToStringNullable(
+          Map<String, String?>.from(json['value'] as Map),
+        );
 
 Map<String, dynamic> _$SimpleClassOfStringToStringNullableToJson(
         SimpleClassOfStringToStringNullable instance) =>
@@ -5222,13 +6149,12 @@ Map<String, dynamic> _$SimpleClassOfStringToStringNullableToJson(
 
 SimpleClassNullableOfStringToStringNullable
     _$SimpleClassNullableOfStringToStringNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfStringToStringNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e as String?),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfStringToStringNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, e as String?),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfStringToStringNullableToJson(
         SimpleClassNullableOfStringToStringNullable instance) =>
@@ -5237,13 +6163,12 @@ Map<String, dynamic> _$SimpleClassNullableOfStringToStringNullableToJson(
     };
 
 SimpleClassOfUriToStringNullable _$SimpleClassOfUriToStringNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfUriToStringNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(Uri.parse(k), e as String?),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfUriToStringNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(Uri.parse(k), e as String?),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfUriToStringNullableToJson(
         SimpleClassOfUriToStringNullable instance) =>
@@ -5253,13 +6178,12 @@ Map<String, dynamic> _$SimpleClassOfUriToStringNullableToJson(
 
 SimpleClassNullableOfUriToStringNullable
     _$SimpleClassNullableOfUriToStringNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfUriToStringNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(Uri.parse(k), e as String?),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfUriToStringNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(Uri.parse(k), e as String?),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfUriToStringNullableToJson(
         SimpleClassNullableOfUriToStringNullable instance) =>
@@ -5268,13 +6192,12 @@ Map<String, dynamic> _$SimpleClassNullableOfUriToStringNullableToJson(
     };
 
 SimpleClassOfBigIntToUri _$SimpleClassOfBigIntToUriFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfBigIntToUri(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(BigInt.parse(k), Uri.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfBigIntToUri(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(BigInt.parse(k), Uri.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfBigIntToUriToJson(
         SimpleClassOfBigIntToUri instance) =>
@@ -5284,13 +6207,12 @@ Map<String, dynamic> _$SimpleClassOfBigIntToUriToJson(
     };
 
 SimpleClassNullableOfBigIntToUri _$SimpleClassNullableOfBigIntToUriFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfBigIntToUri(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(BigInt.parse(k), Uri.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfBigIntToUri(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(BigInt.parse(k), Uri.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfBigIntToUriToJson(
         SimpleClassNullableOfBigIntToUri instance) =>
@@ -5300,13 +6222,12 @@ Map<String, dynamic> _$SimpleClassNullableOfBigIntToUriToJson(
     };
 
 SimpleClassOfDateTimeToUri _$SimpleClassOfDateTimeToUriFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfDateTimeToUri(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(DateTime.parse(k), Uri.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfDateTimeToUri(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(DateTime.parse(k), Uri.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfDateTimeToUriToJson(
         SimpleClassOfDateTimeToUri instance) =>
@@ -5316,13 +6237,12 @@ Map<String, dynamic> _$SimpleClassOfDateTimeToUriToJson(
     };
 
 SimpleClassNullableOfDateTimeToUri _$SimpleClassNullableOfDateTimeToUriFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfDateTimeToUri(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(DateTime.parse(k), Uri.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfDateTimeToUri(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(DateTime.parse(k), Uri.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfDateTimeToUriToJson(
         SimpleClassNullableOfDateTimeToUri instance) =>
@@ -5332,13 +6252,12 @@ Map<String, dynamic> _$SimpleClassNullableOfDateTimeToUriToJson(
     };
 
 SimpleClassOfDynamicToUri _$SimpleClassOfDynamicToUriFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfDynamicToUri(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(k, Uri.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfDynamicToUri(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(k, Uri.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfDynamicToUriToJson(
         SimpleClassOfDynamicToUri instance) =>
@@ -5347,13 +6266,12 @@ Map<String, dynamic> _$SimpleClassOfDynamicToUriToJson(
     };
 
 SimpleClassNullableOfDynamicToUri _$SimpleClassNullableOfDynamicToUriFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfDynamicToUri(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, Uri.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfDynamicToUri(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(k, Uri.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfDynamicToUriToJson(
         SimpleClassNullableOfDynamicToUri instance) =>
@@ -5362,47 +6280,44 @@ Map<String, dynamic> _$SimpleClassNullableOfDynamicToUriToJson(
     };
 
 SimpleClassOfEnumTypeToUri _$SimpleClassOfEnumTypeToUriFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfEnumTypeToUri(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) =>
-          MapEntry(_$enumDecode(_$EnumTypeEnumMap, k), Uri.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfEnumTypeToUri(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) =>
+            MapEntry($enumDecode(_$EnumTypeEnumMap, k), Uri.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfEnumTypeToUriToJson(
         SimpleClassOfEnumTypeToUri instance) =>
     <String, dynamic>{
       'value': instance.value
-          .map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e.toString())),
+          .map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e.toString())),
     };
 
 SimpleClassNullableOfEnumTypeToUri _$SimpleClassNullableOfEnumTypeToUriFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfEnumTypeToUri(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) =>
-          MapEntry(_$enumDecode(_$EnumTypeEnumMap, k), Uri.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfEnumTypeToUri(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) =>
+            MapEntry($enumDecode(_$EnumTypeEnumMap, k), Uri.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfEnumTypeToUriToJson(
         SimpleClassNullableOfEnumTypeToUri instance) =>
     <String, dynamic>{
       'value': instance.value
-          ?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e.toString())),
+          ?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e.toString())),
     };
 
 SimpleClassOfIntToUri _$SimpleClassOfIntToUriFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfIntToUri(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(int.parse(k), Uri.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfIntToUri(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(int.parse(k), Uri.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfIntToUriToJson(
         SimpleClassOfIntToUri instance) =>
@@ -5412,13 +6327,12 @@ Map<String, dynamic> _$SimpleClassOfIntToUriToJson(
     };
 
 SimpleClassNullableOfIntToUri _$SimpleClassNullableOfIntToUriFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfIntToUri(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(int.parse(k), Uri.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfIntToUri(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(int.parse(k), Uri.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfIntToUriToJson(
         SimpleClassNullableOfIntToUri instance) =>
@@ -5428,13 +6342,12 @@ Map<String, dynamic> _$SimpleClassNullableOfIntToUriToJson(
     };
 
 SimpleClassOfObjectToUri _$SimpleClassOfObjectToUriFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfObjectToUri(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(k, Uri.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfObjectToUri(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(k, Uri.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfObjectToUriToJson(
         SimpleClassOfObjectToUri instance) =>
@@ -5443,13 +6356,12 @@ Map<String, dynamic> _$SimpleClassOfObjectToUriToJson(
     };
 
 SimpleClassNullableOfObjectToUri _$SimpleClassNullableOfObjectToUriFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfObjectToUri(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, Uri.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfObjectToUri(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(k, Uri.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfObjectToUriToJson(
         SimpleClassNullableOfObjectToUri instance) =>
@@ -5458,13 +6370,12 @@ Map<String, dynamic> _$SimpleClassNullableOfObjectToUriToJson(
     };
 
 SimpleClassOfStringToUri _$SimpleClassOfStringToUriFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfStringToUri(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(k, Uri.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfStringToUri(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(k, Uri.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfStringToUriToJson(
         SimpleClassOfStringToUri instance) =>
@@ -5473,13 +6384,12 @@ Map<String, dynamic> _$SimpleClassOfStringToUriToJson(
     };
 
 SimpleClassNullableOfStringToUri _$SimpleClassNullableOfStringToUriFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfStringToUri(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, Uri.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfStringToUri(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(k, Uri.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfStringToUriToJson(
         SimpleClassNullableOfStringToUri instance) =>
@@ -5488,13 +6398,12 @@ Map<String, dynamic> _$SimpleClassNullableOfStringToUriToJson(
     };
 
 SimpleClassOfUriToUri _$SimpleClassOfUriToUriFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfUriToUri(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(Uri.parse(k), Uri.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfUriToUri(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(Uri.parse(k), Uri.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfUriToUriToJson(
         SimpleClassOfUriToUri instance) =>
@@ -5504,13 +6413,12 @@ Map<String, dynamic> _$SimpleClassOfUriToUriToJson(
     };
 
 SimpleClassNullableOfUriToUri _$SimpleClassNullableOfUriToUriFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassNullableOfUriToUri(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(Uri.parse(k), Uri.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassNullableOfUriToUri(
+      (json['value'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(Uri.parse(k), Uri.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassNullableOfUriToUriToJson(
         SimpleClassNullableOfUriToUri instance) =>
@@ -5520,14 +6428,13 @@ Map<String, dynamic> _$SimpleClassNullableOfUriToUriToJson(
     };
 
 SimpleClassOfBigIntToUriNullable _$SimpleClassOfBigIntToUriNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfBigIntToUriNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) =>
-          MapEntry(BigInt.parse(k), e == null ? null : Uri.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfBigIntToUriNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(
+            BigInt.parse(k), e == null ? null : Uri.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfBigIntToUriNullableToJson(
         SimpleClassOfBigIntToUriNullable instance) =>
@@ -5538,14 +6445,13 @@ Map<String, dynamic> _$SimpleClassOfBigIntToUriNullableToJson(
 
 SimpleClassNullableOfBigIntToUriNullable
     _$SimpleClassNullableOfBigIntToUriNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfBigIntToUriNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) =>
-          MapEntry(BigInt.parse(k), e == null ? null : Uri.parse(e as String)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfBigIntToUriNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(
+                BigInt.parse(k), e == null ? null : Uri.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfBigIntToUriNullableToJson(
         SimpleClassNullableOfBigIntToUriNullable instance) =>
@@ -5555,14 +6461,13 @@ Map<String, dynamic> _$SimpleClassNullableOfBigIntToUriNullableToJson(
     };
 
 SimpleClassOfDateTimeToUriNullable _$SimpleClassOfDateTimeToUriNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfDateTimeToUriNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(
-          DateTime.parse(k), e == null ? null : Uri.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfDateTimeToUriNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(
+            DateTime.parse(k), e == null ? null : Uri.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfDateTimeToUriNullableToJson(
         SimpleClassOfDateTimeToUriNullable instance) =>
@@ -5573,14 +6478,13 @@ Map<String, dynamic> _$SimpleClassOfDateTimeToUriNullableToJson(
 
 SimpleClassNullableOfDateTimeToUriNullable
     _$SimpleClassNullableOfDateTimeToUriNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfDateTimeToUriNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(
-          DateTime.parse(k), e == null ? null : Uri.parse(e as String)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDateTimeToUriNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(
+                DateTime.parse(k), e == null ? null : Uri.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDateTimeToUriNullableToJson(
         SimpleClassNullableOfDateTimeToUriNullable instance) =>
@@ -5590,13 +6494,12 @@ Map<String, dynamic> _$SimpleClassNullableOfDateTimeToUriNullableToJson(
     };
 
 SimpleClassOfDynamicToUriNullable _$SimpleClassOfDynamicToUriNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfDynamicToUriNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(k, e == null ? null : Uri.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfDynamicToUriNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(k, e == null ? null : Uri.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfDynamicToUriNullableToJson(
         SimpleClassOfDynamicToUriNullable instance) =>
@@ -5606,13 +6509,12 @@ Map<String, dynamic> _$SimpleClassOfDynamicToUriNullableToJson(
 
 SimpleClassNullableOfDynamicToUriNullable
     _$SimpleClassNullableOfDynamicToUriNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfDynamicToUriNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e == null ? null : Uri.parse(e as String)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfDynamicToUriNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, e == null ? null : Uri.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfDynamicToUriNullableToJson(
         SimpleClassNullableOfDynamicToUriNullable instance) =>
@@ -5621,49 +6523,46 @@ Map<String, dynamic> _$SimpleClassNullableOfDynamicToUriNullableToJson(
     };
 
 SimpleClassOfEnumTypeToUriNullable _$SimpleClassOfEnumTypeToUriNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfEnumTypeToUriNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k),
-          e == null ? null : Uri.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfEnumTypeToUriNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k),
+            e == null ? null : Uri.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfEnumTypeToUriNullableToJson(
         SimpleClassOfEnumTypeToUriNullable instance) =>
     <String, dynamic>{
       'value': instance.value
-          .map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e?.toString())),
+          .map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e?.toString())),
     };
 
 SimpleClassNullableOfEnumTypeToUriNullable
     _$SimpleClassNullableOfEnumTypeToUriNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfEnumTypeToUriNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(_$enumDecode(_$EnumTypeEnumMap, k),
-          e == null ? null : Uri.parse(e as String)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfEnumTypeToUriNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry($enumDecode(_$EnumTypeEnumMap, k),
+                e == null ? null : Uri.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfEnumTypeToUriNullableToJson(
         SimpleClassNullableOfEnumTypeToUriNullable instance) =>
     <String, dynamic>{
       'value': instance.value
-          ?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k], e?.toString())),
+          ?.map((k, e) => MapEntry(_$EnumTypeEnumMap[k]!, e?.toString())),
     };
 
 SimpleClassOfIntToUriNullable _$SimpleClassOfIntToUriNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfIntToUriNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) =>
-          MapEntry(int.parse(k), e == null ? null : Uri.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfIntToUriNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) =>
+            MapEntry(int.parse(k), e == null ? null : Uri.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfIntToUriNullableToJson(
         SimpleClassOfIntToUriNullable instance) =>
@@ -5673,14 +6572,14 @@ Map<String, dynamic> _$SimpleClassOfIntToUriNullableToJson(
     };
 
 SimpleClassNullableOfIntToUriNullable
-    _$SimpleClassNullableOfIntToUriNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfIntToUriNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) =>
-          MapEntry(int.parse(k), e == null ? null : Uri.parse(e as String)),
-    ),
-  );
-}
+    _$SimpleClassNullableOfIntToUriNullableFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfIntToUriNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(
+                int.parse(k), e == null ? null : Uri.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfIntToUriNullableToJson(
         SimpleClassNullableOfIntToUriNullable instance) =>
@@ -5690,13 +6589,12 @@ Map<String, dynamic> _$SimpleClassNullableOfIntToUriNullableToJson(
     };
 
 SimpleClassOfObjectToUriNullable _$SimpleClassOfObjectToUriNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfObjectToUriNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(k, e == null ? null : Uri.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfObjectToUriNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(k, e == null ? null : Uri.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfObjectToUriNullableToJson(
         SimpleClassOfObjectToUriNullable instance) =>
@@ -5706,13 +6604,12 @@ Map<String, dynamic> _$SimpleClassOfObjectToUriNullableToJson(
 
 SimpleClassNullableOfObjectToUriNullable
     _$SimpleClassNullableOfObjectToUriNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfObjectToUriNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e == null ? null : Uri.parse(e as String)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfObjectToUriNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, e == null ? null : Uri.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfObjectToUriNullableToJson(
         SimpleClassNullableOfObjectToUriNullable instance) =>
@@ -5721,13 +6618,12 @@ Map<String, dynamic> _$SimpleClassNullableOfObjectToUriNullableToJson(
     };
 
 SimpleClassOfStringToUriNullable _$SimpleClassOfStringToUriNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfStringToUriNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) => MapEntry(k, e == null ? null : Uri.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfStringToUriNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) => MapEntry(k, e == null ? null : Uri.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfStringToUriNullableToJson(
         SimpleClassOfStringToUriNullable instance) =>
@@ -5737,13 +6633,12 @@ Map<String, dynamic> _$SimpleClassOfStringToUriNullableToJson(
 
 SimpleClassNullableOfStringToUriNullable
     _$SimpleClassNullableOfStringToUriNullableFromJson(
-        Map<String, dynamic> json) {
-  return SimpleClassNullableOfStringToUriNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) => MapEntry(k, e == null ? null : Uri.parse(e as String)),
-    ),
-  );
-}
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfStringToUriNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, e == null ? null : Uri.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfStringToUriNullableToJson(
         SimpleClassNullableOfStringToUriNullable instance) =>
@@ -5752,14 +6647,13 @@ Map<String, dynamic> _$SimpleClassNullableOfStringToUriNullableToJson(
     };
 
 SimpleClassOfUriToUriNullable _$SimpleClassOfUriToUriNullableFromJson(
-    Map<String, dynamic> json) {
-  return SimpleClassOfUriToUriNullable(
-    (json['value'] as Map<String, dynamic>).map(
-      (k, e) =>
-          MapEntry(Uri.parse(k), e == null ? null : Uri.parse(e as String)),
-    ),
-  );
-}
+        Map<String, dynamic> json) =>
+    SimpleClassOfUriToUriNullable(
+      (json['value'] as Map<String, dynamic>).map(
+        (k, e) =>
+            MapEntry(Uri.parse(k), e == null ? null : Uri.parse(e as String)),
+      ),
+    );
 
 Map<String, dynamic> _$SimpleClassOfUriToUriNullableToJson(
         SimpleClassOfUriToUriNullable instance) =>
@@ -5769,14 +6663,14 @@ Map<String, dynamic> _$SimpleClassOfUriToUriNullableToJson(
     };
 
 SimpleClassNullableOfUriToUriNullable
-    _$SimpleClassNullableOfUriToUriNullableFromJson(Map<String, dynamic> json) {
-  return SimpleClassNullableOfUriToUriNullable(
-    (json['value'] as Map<String, dynamic>?)?.map(
-      (k, e) =>
-          MapEntry(Uri.parse(k), e == null ? null : Uri.parse(e as String)),
-    ),
-  );
-}
+    _$SimpleClassNullableOfUriToUriNullableFromJson(
+            Map<String, dynamic> json) =>
+        SimpleClassNullableOfUriToUriNullable(
+          (json['value'] as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(
+                Uri.parse(k), e == null ? null : Uri.parse(e as String)),
+          ),
+        );
 
 Map<String, dynamic> _$SimpleClassNullableOfUriToUriNullableToJson(
         SimpleClassNullableOfUriToUriNullable instance) =>

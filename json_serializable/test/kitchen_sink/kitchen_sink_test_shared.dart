@@ -1,6 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:test/test.dart';
 
+import 'kitchen_sink_interface.dart' show trickyKeyName;
+
 const validValues = <String, dynamic>{
   'no-42': 0,
   'dateTime': '2018-05-10T14:20:58.927',
@@ -20,17 +22,30 @@ const validValues = <String, dynamic>{
   'objectList': [true],
   'intList': [42],
   'dateTimeList': ['2018-05-10T14:20:58.927'],
+  'nullableSimpleObjectList': [
+    {'value': 42},
+    null
+  ],
   'map': <String, dynamic>{'key': true},
   'stringStringMap': <String, dynamic>{'key': 'vaule'},
   'dynamicIntMap': <String, dynamic>{'key': 42},
   'objectDateTimeMap': <String, dynamic>{'key': '2018-05-10T14:20:58.927'},
+  'nullableSimpleObjectMap': <String, dynamic>{
+    'key': {'value': 42},
+    'null-key': null,
+  },
   'crazyComplex': [<String, dynamic>{}],
   generatedLocalVarName: <String, dynamic>{'key': true},
   _toJsonMapHelperName: true,
-  r'$string': 'string',
+  trickyKeyName: 'string',
   'simpleObject': {'value': 42},
   'strictKeysObject': {'value': 10, 'custom_field': 'cool'},
-  'validatedPropertyNo42': 0
+  'validatedPropertyNo42': 0,
+  'recordField': {
+    '\$1': 0,
+    '\$2': 'string',
+    'truth': true,
+  },
 };
 
 const invalidValueTypes = {
@@ -52,20 +67,23 @@ const invalidValueTypes = {
   'objectList': true,
   'intList': [true],
   'dateTimeList': [true],
+  'nullableSimpleObjectList': 42,
   'map': true,
   'stringStringMap': {'key': 42},
   'dynamicIntMap': {'key': 'value'},
   'objectDateTimeMap': {'key': 42},
+  'nullableSimpleObjectMap': <String, dynamic>{'key': 42},
   'crazyComplex': [true],
   generatedLocalVarName: {'key': 42},
   _toJsonMapHelperName: 42,
-  r'$string': true,
+  trickyKeyName: true,
   'simpleObject': 42,
   'strictKeysObject': {
     'value': 10,
     'invalid_key': true,
   },
-  'validatedPropertyNo42': true
+  'validatedPropertyNo42': true,
+  'recordField': true,
 };
 
 const disallowNullKeys = {
@@ -79,10 +97,12 @@ const disallowNullKeys = {
   'objectList',
   'intList',
   'dateTimeList',
+  'nullableSimpleObjectList',
   'map',
   'stringStringMap',
   'dynamicIntMap',
   'objectDateTimeMap',
+  'nullableSimpleObjectMap',
   'crazyComplex',
   generatedLocalVarName,
   'simpleObject',

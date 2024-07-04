@@ -2,19 +2,20 @@
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+// ignore_for_file: inference_failure_on_instance_creation
+
 part of '_json_serializable_test_input.dart';
 
 @ShouldGenerate(r'''
 JsonConverterNamedCtor<E> _$JsonConverterNamedCtorFromJson<E>(
-    Map<String, dynamic> json) {
-  return JsonConverterNamedCtor<E>()
-    ..value = const _DurationMillisecondConverter.named()
-        .fromJson(json['value'] as int)
-    ..genericValue =
-        _GenericConverter<E>.named().fromJson(json['genericValue'] as int)
-    ..keyAnnotationFirst =
-        JsonConverterNamedCtor._fromJson(json['keyAnnotationFirst'] as int);
-}
+        Map<String, dynamic> json) =>
+    JsonConverterNamedCtor<E>()
+      ..value = const _DurationMillisecondConverter.named()
+          .fromJson((json['value'] as num).toInt())
+      ..genericValue = _GenericConverter<E>.named()
+          .fromJson((json['genericValue'] as num).toInt())
+      ..keyAnnotationFirst = JsonConverterNamedCtor._fromJson(
+          (json['keyAnnotationFirst'] as num).toInt());
 
 Map<String, dynamic> _$JsonConverterNamedCtorToJson<E>(
         JsonConverterNamedCtor<E> instance) =>
@@ -45,17 +46,16 @@ class JsonConverterNamedCtor<E> {
 
 @ShouldGenerate(r'''
 JsonConvertOnField<E> _$JsonConvertOnFieldFromJson<E>(
-    Map<String, dynamic> json) {
-  return JsonConvertOnField<E>()
-    ..annotatedField = const _DurationMillisecondConverter()
-        .fromJson(json['annotatedField'] as int)
-    ..annotatedWithNamedCtor = const _DurationMillisecondConverter.named()
-        .fromJson(json['annotatedWithNamedCtor'] as int)
-    ..classAnnotatedWithField =
-        _durationConverter.fromJson(json['classAnnotatedWithField'] as int)
-    ..genericValue =
-        _GenericConverter<E>().fromJson(json['genericValue'] as int);
-}
+        Map<String, dynamic> json) =>
+    JsonConvertOnField<E>()
+      ..annotatedField = const _DurationMillisecondConverter()
+          .fromJson((json['annotatedField'] as num).toInt())
+      ..annotatedWithNamedCtor = const _DurationMillisecondConverter.named()
+          .fromJson((json['annotatedWithNamedCtor'] as num).toInt())
+      ..classAnnotatedWithField = _durationConverter
+          .fromJson((json['classAnnotatedWithField'] as num).toInt())
+      ..genericValue = _GenericConverter<E>()
+          .fromJson((json['genericValue'] as num).toInt());
 
 Map<String, dynamic> _$JsonConvertOnFieldToJson<E>(
         JsonConvertOnField<E> instance) =>
@@ -176,18 +176,39 @@ Map<String, dynamic> _$JsonConverterOnGetterToJson(
 class JsonConverterOnGetter {
   @JsonKey()
   @_NeedsConversionConverter()
-  _NeedsConversion get annotatedGetter => _NeedsConversion();
+  NeedsConversion get annotatedGetter => NeedsConversion();
 }
 
-class _NeedsConversion {}
+class NeedsConversion {}
 
-class _NeedsConversionConverter
-    implements JsonConverter<_NeedsConversion, int> {
+class _NeedsConversionConverter implements JsonConverter<NeedsConversion, int> {
   const _NeedsConversionConverter();
 
   @override
-  _NeedsConversion fromJson(int json) => _NeedsConversion();
+  NeedsConversion fromJson(int json) => NeedsConversion();
 
   @override
-  int toJson(_NeedsConversion object) => 0;
+  int toJson(NeedsConversion object) => 0;
+}
+
+@ShouldThrow(
+  '''
+Could not generate `fromJson` code for `value`.
+To support the type `NeedsConversion` you can:
+$converterOrKeyInstructions''',
+)
+@_NullableConverter()
+@JsonSerializable()
+class JsonConverterNullableToNonNullable {
+  late NeedsConversion value;
+}
+
+class _NullableConverter implements JsonConverter<NeedsConversion?, Object?> {
+  const _NullableConverter();
+
+  @override
+  NeedsConversion? fromJson(Object? json) => null;
+
+  @override
+  Object? toJson(NeedsConversion? object) => null;
 }

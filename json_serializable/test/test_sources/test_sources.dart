@@ -2,14 +2,22 @@ import 'package:json_annotation/json_annotation.dart';
 
 @JsonSerializable()
 class ConfigurationImplicitDefaults {
+  ConfigurationImplicitDefaults();
+  ConfigurationImplicitDefaults.something();
+
   int? field;
 }
 
+// #CHANGE WHEN UPDATING json_annotation
 @JsonSerializable(
   anyMap: false,
   checked: false,
+  constructor: '',
   createFactory: true,
   createToJson: true,
+  createFieldMap: false,
+  createJsonKeys: false,
+  createPerFieldToJson: false,
   disallowUnrecognizedKeys: false,
   explicitToJson: false,
   fieldRename: FieldRename.none,

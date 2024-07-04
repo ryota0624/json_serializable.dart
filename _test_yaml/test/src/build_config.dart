@@ -12,7 +12,7 @@ class Config {
   final Map<String, Builder> builders;
 
   // Verifying enum keys in map
-  Map<AutoApply, int>? weights;
+  Map<AutoApply, int?>? weights;
 
   Config({required this.builders});
 
@@ -29,7 +29,7 @@ class Config {
 class Builder {
   final String? target;
 
-  final String import;
+  final String? import;
 
   @JsonKey(name: 'is_optional')
   final bool? isOptional;
@@ -58,7 +58,7 @@ class Builder {
   final Map<String, List<String>>? buildExtensions;
 
   Builder({
-    required this.import,
+    this.import,
     this.target,
     this.isOptional,
     this.autoApply,
@@ -81,13 +81,12 @@ class Builder {
   Map<String, dynamic> toJson() => _$BuilderToJson(this);
 }
 
+@JsonEnum(fieldRename: FieldRename.snake)
 enum AutoApply {
   none,
   dependents,
-  @JsonValue('all_packages')
   allPackages,
-  @JsonValue('root_package')
-  rootPackage
+  rootPackage,
 }
 
 enum BuildTo { cache, source }

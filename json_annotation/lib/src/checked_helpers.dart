@@ -8,6 +8,37 @@ import 'allowed_keys_helpers.dart';
 /// `JsonSerializableGenerator.checked` is `true`.
 ///
 /// Should not be used directly.
+T $checkedCreate<T>(
+  String className,
+  Map map,
+  T Function(
+    S Function<S>(
+      String,
+      S Function(Object?), {
+      Object? Function(Map, String)? readValue,
+    }),
+  ) constructor, {
+  Map<String, String> fieldKeyMap = const {},
+}) {
+  Q checkedConvert<Q>(
+    String key,
+    Q Function(Object?) convertFunction, {
+    Object? Function(Map, String)? readValue,
+  }) =>
+      $checkedConvert<Q>(map, key, convertFunction, readValue: readValue);
+
+  return $checkedNew(
+    className,
+    map,
+    () => constructor(checkedConvert),
+    fieldKeyMap: fieldKeyMap,
+  );
+}
+
+/// Helper function used in generated code when
+/// `JsonSerializableGenerator.checked` is `true`.
+///
+/// Should not be used directly.
 T $checkedNew<T>(
   String className,
   Map map,
@@ -46,9 +77,14 @@ T $checkedNew<T>(
 /// `JsonSerializableGenerator.checked` is `true`.
 ///
 /// Should not be used directly.
-T $checkedConvert<T>(Map map, String key, T Function(dynamic) castFunc) {
+T $checkedConvert<T>(
+  Map map,
+  String key,
+  T Function(dynamic) castFunc, {
+  Object? Function(Map, String)? readValue,
+}) {
   try {
-    return castFunc(map[key]);
+    return castFunc(readValue == null ? map[key] : readValue(map, key));
   } on CheckedFromJsonException {
     rethrow;
   } catch (error, stack) {

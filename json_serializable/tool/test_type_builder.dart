@@ -6,15 +6,13 @@ import 'dart:async';
 
 import 'package:build/build.dart';
 import 'package:collection/collection.dart';
-import 'package:dart_style/dart_style.dart';
+import 'package:json_serializable/src/type_helpers/map_helper.dart';
 
 import 'shared.dart';
 import 'test_type_data.dart';
 
-final _formatter = DartFormatter();
-
 const _trivialTypesToTest = {
-  'BigInt': TestTypeData(
+  'BigInt': TestTypeData.defaultFunc(
     jsonExpression: "'12345'",
     altJsonExpression: "'67890'",
   ),
@@ -22,7 +20,7 @@ const _trivialTypesToTest = {
     defaultExpression: 'true',
     altJsonExpression: 'false',
   ),
-  'DateTime': TestTypeData(
+  'DateTime': TestTypeData.defaultFunc(
     jsonExpression: "'2020-01-01T00:00:00.000'",
     altJsonExpression: "'2018-01-01T00:00:00.000'",
   ),
@@ -55,22 +53,22 @@ const _trivialTypesToTest = {
     defaultExpression: "'a string'",
     altJsonExpression: "'another string'",
   ),
-  'Uri': TestTypeData(
+  'Uri': TestTypeData.defaultFunc(
     jsonExpression: "'https://example.com'",
     altJsonExpression: "'https://dart.dev'",
   ),
 };
 
-final _typesToTest = {
-  ..._trivialTypesToTest,
-  //
-  // Collection types
-  //
+Iterable<String> supportedTypes() => _allTypes.keys;
+
+Iterable<String> collectionTypes() => _collectionTypes.keys;
+
+final _collectionTypes = {
   'Map': TestTypeData(
     defaultExpression: "{'a': 1}",
     altJsonExpression: "{'b': 2}",
     genericArgs: _iterableGenericArgs
-        .expand((v) => _mapKeyTypes.map((k) => '$k,$v'))
+        .expand((v) => mapKeyTypes.map((k) => '$k,$v'))
         .toSet(),
   ),
   'List': TestTypeData(
@@ -89,23 +87,31 @@ final _typesToTest = {
     altJsonExpression: '[$_altCollectionExpressions]',
     genericArgs: _iterableGenericArgs,
   ),
+  recordType: TestTypeData(
+    altJsonExpression: '{}',
+    genericArgs: _iterableGenericArgs,
+  )
 };
 
-const _mapKeyTypes = {
-  'BigInt',
-  'DateTime',
-  'dynamic',
-  'EnumType',
-  'int',
-  'Object',
-  'String',
-  'Uri',
+final _allTypes = {
+  ..._trivialTypesToTest,
+  ..._collectionTypes,
 };
+
+final _typesToTest = Map.of(_allTypes)..remove(recordType);
+
+Iterable<String> get mapKeyTypes =>
+    allowedMapKeyTypes.map((e) => e == 'enum' ? customEnumType : e).toList()
+      ..sort(compareAsciiLowerCase);
 
 final _iterableGenericArgs = ([
   ..._trivialTypesToTest.keys,
   ..._trivialTypesToTest.keys.map((e) => '$e?'),
+  'FromJsonDynamicParam',
+  'FromJsonNullableObjectParam',
+  'FromJsonObjectParam',
   'dynamic',
+  recordType,
 ]..sort(compareAsciiLowerCase))
     .toSet();
 
@@ -123,21 +129,20 @@ class _TypeBuilder implements Builder {
 
     final sourceContent = await buildStep.readAsString(inputId);
 
-    for (var entry in _typesToTest.entries) {
+    for (var entry in _allTypes.entries) {
       final type = entry.key;
       final newId = buildStep.inputId.changeExtension(toTypeExtension(type));
 
       await buildStep.writeAsString(
         newId,
-        _formatter.format(entry.value.libContent(sourceContent, type)),
+        formatter.format(entry.value.libContent(sourceContent, type)),
       );
     }
   }
 
   @override
-  Map<String, List<String>> get buildExtensions => {
-        '.dart': _typesToTest.keys.map(toTypeExtension).toSet().toList()..sort()
-      };
+  Map<String, List<String>> get buildExtensions =>
+      {'.dart': _allTypes.keys.map(toTypeExtension).toSet().toList()..sort()};
 }
 
 Builder typeTestBuilder([_]) =>

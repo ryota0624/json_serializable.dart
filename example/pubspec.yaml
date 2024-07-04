@@ -2,20 +2,36 @@ name: example
 publish_to: none
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: ^3.0.0
 
 dependencies:
-  json_annotation: ^4.0.0
+  json_annotation: ^4.8.0
 
 dev_dependencies:
-  build_runner: ^1.0.0
+  # Used by tests. Not required to use `json_serializable`.
+  _json_serial_shared_test:
+    path: ../shared_test
+
+  # REQUIRED!
+  build_runner: ^2.3.3
 
   # Used by tests. Not required to use `json_serializable`.
-  build_verify: ^2.0.0
+  build_verify: ^3.0.0
 
-  json_serializable: ^4.0.0
+  # Not required to use `json_serializable`.
+  dart_flutter_team_lints: ^2.0.0
 
-  # Used by tests. Not required to use `json_serializable`.
+  # REQUIRED!
+  json_serializable: ^6.6.0
+
+  # Not required to use `json_serializable`.
   path: ^1.8.0
-  # Used by tests. Not required to use `json_serializable`.
   test: ^1.16.0
+
+# This section is used to verify changes to these packages. Do not include in
+# your code!
+dependency_overrides:
+  json_annotation:
+    path: ../json_annotation
+  json_serializable:
+    path: ../json_serializable

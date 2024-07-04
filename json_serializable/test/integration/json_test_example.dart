@@ -7,6 +7,7 @@ import 'dart:collection';
 
 import 'package:json_annotation/json_annotation.dart';
 
+import '../test_utils.dart';
 import 'json_test_common.dart';
 
 part 'json_test_example.g.dart';
@@ -44,7 +45,7 @@ class Person {
       deepEquals(houseMap, other.houseMap);
 }
 
-@JsonSerializable()
+@JsonSerializable(constructor: 'custom')
 class Order {
   /// Used to test that `disallowNullValues: true` forces `includeIfNull: false`
   @JsonKey(disallowNullValue: true)
@@ -67,7 +68,7 @@ class Order {
   )
   StatusCode? statusCode;
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   String get platformValue => platform!.description;
 
   set platformValue(String value) {
@@ -77,10 +78,10 @@ class Order {
   // Ignored getter without value set in ctor
   int get price => items!.fold(0, (total, item) => item.price! + total);
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   bool? shouldBeCached;
 
-  Order(this.category, [Iterable<Item>? items])
+  Order.custom(this.category, [Iterable<Item>? items])
       : items = UnmodifiableListView<Item>(
             List<Item>.unmodifiable(items ?? const <Item>[]));
 
@@ -104,7 +105,11 @@ class Item extends ItemCore {
   List<DateTime>? saleDates;
   List<int>? rates;
 
-  Item([int? price]) : super(price);
+  // Regression test for https://github.com/google/json_serializable.dart/issues/896
+  @JsonKey(fromJson: _fromJsonGeoPoint, toJson: _toJsonGeoPoint)
+  GeoPoint? geoPoint;
+
+  Item([super.price]);
 
   factory Item.fromJson(Map<String, dynamic> json) => _$ItemFromJson(json);
 
@@ -118,6 +123,27 @@ class Item extends ItemCore {
       deepEquals(saleDates, other.saleDates);
 }
 
+GeoPoint? _fromJsonGeoPoint(Map<String, dynamic>? json) {
+  if (json != null) {
+    return GeoPoint(json['latitude'], json['longitude']);
+  } else {
+    return null;
+  }
+}
+
+Map<String, dynamic>? _toJsonGeoPoint(GeoPoint? geoPoint) {
+  if (geoPoint == null) {
+    return null;
+  }
+  return {'latitude': geoPoint.latitude, 'longitude': geoPoint.longitude};
+}
+
+class GeoPoint {
+  final Object? latitude, longitude;
+
+  GeoPoint(this.latitude, this.longitude);
+}
+
 @JsonSerializable()
 class Numbers {
   List<int>? ints;
@@ -128,6 +154,9 @@ class Numbers {
 
   @JsonKey(fromJson: durationFromInt, toJson: durationToInt)
   Duration? duration;
+
+  @JsonKey(fromJson: stringFromDouble, toJson: stringToDouble)
+  String? doubleAsString;
 
   @JsonKey(fromJson: dateTimeFromEpochUs, toJson: dateTimeToEpochUs)
   DateTime? date;
@@ -191,4 +220,43 @@ class UnknownEnumValue {
 
   factory UnknownEnumValue.fromJson(Map<String, dynamic> json) =>
       _$UnknownEnumValueFromJson(json);
+}
+
+@JsonSerializable(constructor: '_')
+class PrivateConstructor {
+  static int _id = 0;
+
+  final int id;
+  final String value;
+
+  PrivateConstructor._(this.id, this.value);
+
+  PrivateConstructor(this.value) : id = _id++;
+
+  factory PrivateConstructor.fromJson(Map<String, dynamic> json) =>
+      _$PrivateConstructorFromJson(json);
+
+  Map<String, dynamic> toJson() => _$PrivateConstructorToJson(this);
+
+  @override
+  bool operator ==(Object other) =>
+      other is PrivateConstructor && id == other.id && value == other.value;
+}
+
+mixin RegressionTestIssue1210Mixin {
+  bool? get someProperty => null;
+
+  @override
+  int get hashCode => identityHashCode(this);
+}
+
+@JsonSerializable()
+class RegressionTestIssue1210 with RegressionTestIssue1210Mixin {
+  const RegressionTestIssue1210(this.field);
+
+  factory RegressionTestIssue1210.fromJson(Map<String, dynamic> json) =>
+      _$RegressionTestIssue1210FromJson(json);
+  final String field;
+
+  Map<String, dynamic> toJson() => _$RegressionTestIssue1210ToJson(this);
 }

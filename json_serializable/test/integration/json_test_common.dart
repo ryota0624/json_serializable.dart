@@ -4,9 +4,9 @@
 
 import 'dart:collection';
 
-import 'package:collection/collection.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+@JsonEnum(fieldRename: FieldRename.kebab)
 enum Category {
   top,
   bottom,
@@ -14,6 +14,7 @@ enum Category {
   charmed,
   up,
   down,
+  // NOTE: this should override the kebab bits below!
   @JsonValue('not_discovered_yet')
   notDiscoveredYet
 }
@@ -37,12 +38,15 @@ Duration? durationFromInt(int? ms) =>
 
 int? durationToInt(Duration? duration) => duration?.inMilliseconds;
 
+String? stringFromDouble(double? value) => value?.toString();
+
+double? stringToDouble(String? value) =>
+    value == null ? null : double.parse(value);
+
 DateTime? dateTimeFromEpochUs(int? us) =>
     us == null ? null : DateTime.fromMicrosecondsSinceEpoch(us);
 
 int? dateTimeToEpochUs(DateTime? dateTime) => dateTime?.microsecondsSinceEpoch;
-
-bool deepEquals(a, b) => const DeepCollectionEquality().equals(a, b);
 
 class Platform {
   final String description;
@@ -52,16 +56,11 @@ class Platform {
 
   const Platform._(this.description);
 
-  factory Platform.fromJson(String value) {
-    switch (value) {
-      case 'foo':
-        return foo;
-      case 'undefined':
-        return undefined;
-      default:
-        throw ArgumentError.value(value, 'value', 'Not a supported value.');
-    }
-  }
+  factory Platform.fromJson(String value) => switch (value) {
+        'foo' => foo,
+        'undefined' => undefined,
+        _ => throw ArgumentError.value(value, 'value', 'Not a supported value.')
+      };
 
   String toJson() => description;
 }

@@ -2,6 +2,8 @@
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+// ignore_for_file: inference_failure_on_instance_creation
+
 import 'package:json_annotation/json_annotation.dart';
 
 part 'json_converter_example.g.dart';
@@ -75,13 +77,11 @@ class _Converter<T> implements JsonConverter<T, Object?> {
     return json as T;
   }
 
+  // This will only work if `object` is a native JSON type:
+  //   num, String, bool, null, etc
+  // Or if it has a `toJson()` function`.
   @override
-  Object? toJson(T object) {
-    // This will only work if `object` is a native JSON type:
-    //   num, String, bool, null, etc
-    // Or if it has a `toJson()` function`.
-    return object;
-  }
+  Object? toJson(T object) => object;
 }
 
 @JsonSerializable()

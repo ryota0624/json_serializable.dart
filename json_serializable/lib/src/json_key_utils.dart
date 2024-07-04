@@ -5,18 +5,21 @@
 import 'package:analyzer/dart/constant/value.dart';
 import 'package:analyzer/dart/element/element.dart';
 import 'package:analyzer/dart/element/type.dart';
+import 'package:build/build.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:source_gen/source_gen.dart';
+import 'package:source_helper/source_helper.dart';
 
 import 'json_literal_generator.dart';
 import 'shared_checkers.dart';
 import 'type_helpers/config_types.dart';
 import 'utils.dart';
 
-final _jsonKeyExpando = Expando<KeyConfig>();
+final _jsonKeyExpando = Expando<Map<ClassConfig, KeyConfig>>();
 
 KeyConfig jsonKeyForField(FieldElement field, ClassConfig classAnnotation) =>
-    _jsonKeyExpando[field] ??= _from(field, classAnnotation);
+    (_jsonKeyExpando[field] ??= Map.identity())[classAnnotation] ??=
+        _from(field, classAnnotation);
 
 KeyConfig _from(FieldElement element, ClassConfig classAnnotation) {
   // If an annotation exists on `element` the source is a 'real' field.
@@ -24,11 +27,15 @@ KeyConfig _from(FieldElement element, ClassConfig classAnnotation) {
   // TODO: setters: github.com/google/json_serializable.dart/issues/24
   final obj = jsonKeyAnnotation(element);
 
+  final ctorParamDefault = classAnnotation.ctorParamDefaults[element.name];
+
   if (obj.isNull) {
     return _populateJsonKey(
       classAnnotation,
       element,
-      ignore: classAnnotation.ignoreUnannotated,
+      defaultValue: ctorParamDefault,
+      includeFromJson: classAnnotation.ignoreUnannotated ? false : null,
+      includeToJson: classAnnotation.ignoreUnannotated ? false : null,
     );
   }
 
@@ -36,6 +43,7 @@ KeyConfig _from(FieldElement element, ClassConfig classAnnotation) {
   /// an [InvalidGenerationSourceError] using [typeInformation] to describe
   /// the unsupported type.
   Object? literalForObject(
+    String fieldName,
     DartObject dartObject,
     Iterable<String> typeInformation,
   ) {
@@ -51,16 +59,20 @@ KeyConfig _from(FieldElement element, ClassConfig classAnnotation) {
     } else if (reader.isType) {
       badType = 'Type';
     } else if (dartObject.type is FunctionType) {
-      // TODO: Support calling function for the default value?
+      // Function types at the "root" are already handled. If they occur
+      // here, it's because the function is nested instead of a collection
+      // literal, which is NOT supported!
       badType = 'Function';
     } else if (!reader.isLiteral) {
-      badType = dartObject.type!.element!.name;
+      badType = dartObject.type!.element?.name;
     }
 
     if (badType != null) {
       badType = typeInformation.followedBy([badType]).join(' > ');
       throwUnsupported(
-          element, '`defaultValue` is `$badType`, it must be a literal.');
+        element,
+        '`$fieldName` is `$badType`, it must be a literal.',
+      );
     }
 
     if (reader.isDouble || reader.isInt || reader.isString || reader.isBool) {
@@ -70,7 +82,7 @@ KeyConfig _from(FieldElement element, ClassConfig classAnnotation) {
     if (reader.isList) {
       return [
         for (var e in reader.listValue)
-          literalForObject(e, [
+          literalForObject(fieldName, e, [
             ...typeInformation,
             'List',
           ])
@@ -80,7 +92,7 @@ KeyConfig _from(FieldElement element, ClassConfig classAnnotation) {
     if (reader.isSet) {
       return {
         for (var e in reader.setValue)
-          literalForObject(e, [
+          literalForObject(fieldName, e, [
             ...typeInformation,
             'Set',
           ])
@@ -94,8 +106,8 @@ KeyConfig _from(FieldElement element, ClassConfig classAnnotation) {
       ];
       return reader.mapValue.map(
         (k, v) => MapEntry(
-          literalForObject(k!, mapTypeInformation),
-          literalForObject(v!, mapTypeInformation),
+          literalForObject(fieldName, k!, mapTypeInformation),
+          literalForObject(fieldName, v!, mapTypeInformation),
         ),
       );
     }
@@ -115,16 +127,38 @@ KeyConfig _from(FieldElement element, ClassConfig classAnnotation) {
   /// If [mustBeEnum] is `true`, throws an [InvalidGenerationSourceError] if
   /// either the annotated field is not an `enum` or `List` or if the value in
   /// [fieldName] is not an `enum` value.
-  Object? _annotationValue(String fieldName, {bool mustBeEnum = false}) {
+  String? createAnnotationValue(String fieldName, {bool mustBeEnum = false}) {
     final annotationValue = obj.read(fieldName);
 
-    final enumFields = annotationValue.isNull
-        ? null
-        : iterateEnumFields(annotationValue.objectValue.type!);
+    if (annotationValue.isNull) {
+      return null;
+    }
+
+    final objectValue = annotationValue.objectValue;
+    final annotationType = objectValue.type!;
+
+    if (annotationType is FunctionType) {
+      // TODO: we could be a LOT more careful here, checking the return type
+      // and the number of parameters. BUT! If any of those things are wrong
+      // the generated code will be invalid, so skipping until we're bored
+      // later
+
+      final functionValue = objectValue.toFunctionValue()!;
+
+      final invokeConst =
+          functionValue is ConstructorElement && functionValue.isConst
+              ? 'const '
+              : '';
+
+      return '$invokeConst${functionValue.qualifiedName}()';
+    }
+
+    final enumFields = iterateEnumFields(annotationType);
+
     if (enumFields != null) {
       if (mustBeEnum) {
         late DartType targetEnumType;
-        if (isEnum(element.type)) {
+        if (element.type.isEnum) {
           targetEnumType = element.type;
         } else if (coreIterableTypeChecker.isAssignableFromType(element.type)) {
           targetEnumType = coreIterableGenericType(element.type);
@@ -135,29 +169,37 @@ KeyConfig _from(FieldElement element, ClassConfig classAnnotation) {
             'Iterable, List, or Set instances of an enum type.',
           );
         }
-        final annotatedEnumType = annotationValue.objectValue.type!;
-        if (!_interfaceTypesEqual(annotatedEnumType, targetEnumType)) {
+
+        if (_nullAsUnknownChecker.isExactlyType(annotationType)) {
+          return jsonKeyNullForUndefinedEnumValueFieldName;
+        } else if (!_interfaceTypesEqual(annotationType, targetEnumType)) {
           throwUnsupported(
             element,
             '`$fieldName` has type '
             '`${targetEnumType.getDisplayString(withNullability: false)}`, but '
             'the provided unknownEnumValue is of type '
-            '`${annotatedEnumType.getDisplayString(withNullability: false)}`.',
+            '`${annotationType.getDisplayString(withNullability: false)}`.',
           );
         }
+      }
+
+      if (_nullAsUnknownChecker.isExactlyType(annotationType)) {
+        throw InvalidGenerationSourceError(
+          '`$jsonKeyNullForUndefinedEnumValueFieldName` cannot be used with '
+          '`JsonKey.defaultValue`.',
+          element: element,
+        );
       }
 
       final enumValueNames =
           enumFields.map((p) => p.name).toList(growable: false);
 
-      final enumValueName = enumValueForDartObject<String>(
-          annotationValue.objectValue, enumValueNames, (n) => n);
+      final enumValueName =
+          enumValueForDartObject<String>(objectValue, enumValueNames, (n) => n);
 
-      return '${annotationValue.objectValue.type!.element!.name}.$enumValueName';
+      return '${annotationType.element!.name}.$enumValueName';
     } else {
-      final defaultValueLiteral = annotationValue.isNull
-          ? null
-          : literalForObject(annotationValue.objectValue, []);
+      final defaultValueLiteral = literalForObject(fieldName, objectValue, []);
       if (defaultValueLiteral == null) {
         return null;
       }
@@ -171,35 +213,87 @@ KeyConfig _from(FieldElement element, ClassConfig classAnnotation) {
     }
   }
 
+  final defaultValue = createAnnotationValue('defaultValue');
+  if (defaultValue != null && ctorParamDefault != null) {
+    if (defaultValue == ctorParamDefault) {
+      log.info(
+        'The default value `$defaultValue` for `${element.name}` is defined '
+        'twice in the constructor and in the `JsonKey.defaultValue`.',
+      );
+    } else {
+      log.warning(
+        'The constructor parameter for `${element.name}` has a default value '
+        '`$ctorParamDefault`, but the `JsonKey.defaultValue` value '
+        '`$defaultValue` will be used for missing or `null` values in JSON '
+        'decoding.',
+      );
+    }
+  }
+
+  String? readValueFunctionName;
+  final readValue = obj.read('readValue');
+  if (!readValue.isNull) {
+    readValueFunctionName =
+        readValue.objectValue.toFunctionValue()!.qualifiedName;
+  }
+
+  final ignore = obj.read('ignore').literalValue as bool?;
+  var includeFromJson = obj.read('includeFromJson').literalValue as bool?;
+  var includeToJson = obj.read('includeToJson').literalValue as bool?;
+
+  if (ignore != null) {
+    if (includeFromJson != null) {
+      throwUnsupported(
+        element,
+        'Cannot use both `ignore` and `includeFromJson` on the same field. '
+        'Since `ignore` is deprecated, you should only use `includeFromJson`.',
+      );
+    }
+    if (includeToJson != null) {
+      throwUnsupported(
+        element,
+        'Cannot use both `ignore` and `includeToJson` on the same field. '
+        'Since `ignore` is deprecated, you should only use `includeToJson`.',
+      );
+    }
+    assert(includeFromJson == null && includeToJson == null);
+    includeToJson = includeFromJson = !ignore;
+  }
+
   return _populateJsonKey(
     classAnnotation,
     element,
-    defaultValue: _annotationValue('defaultValue'),
+    defaultValue: defaultValue ?? ctorParamDefault,
     disallowNullValue: obj.read('disallowNullValue').literalValue as bool?,
-    ignore: obj.read('ignore').literalValue as bool?,
     includeIfNull: obj.read('includeIfNull').literalValue as bool?,
     name: obj.read('name').literalValue as String?,
+    readValueFunctionName: readValueFunctionName,
     required: obj.read('required').literalValue as bool?,
-    unknownEnumValue: _annotationValue('unknownEnumValue', mustBeEnum: true),
+    unknownEnumValue:
+        createAnnotationValue('unknownEnumValue', mustBeEnum: true),
+    includeToJson: includeToJson,
+    includeFromJson: includeFromJson,
   );
 }
 
 KeyConfig _populateJsonKey(
   ClassConfig classAnnotation,
   FieldElement element, {
-  Object? defaultValue,
+  required String? defaultValue,
   bool? disallowNullValue,
-  bool? ignore,
   bool? includeIfNull,
   String? name,
+  String? readValueFunctionName,
   bool? required,
-  Object? unknownEnumValue,
+  String? unknownEnumValue,
+  bool? includeToJson,
+  bool? includeFromJson,
 }) {
   if (disallowNullValue == true) {
     if (includeIfNull == true) {
       throwUnsupported(
           element,
-          'Cannot set both `disallowNullvalue` and `includeIfNull` to `true`. '
+          'Cannot set both `disallowNullValue` and `includeIfNull` to `true`. '
           'This leads to incompatible `toJson` and `fromJson` behavior.');
     }
   }
@@ -207,41 +301,15 @@ KeyConfig _populateJsonKey(
   return KeyConfig(
     defaultValue: defaultValue,
     disallowNullValue: disallowNullValue ?? false,
-    ignore: ignore ?? false,
     includeIfNull: _includeIfNull(
         includeIfNull, disallowNullValue, classAnnotation.includeIfNull),
-    name: _encodedFieldName(classAnnotation, name, element),
+    name: name ?? encodedFieldName(classAnnotation.fieldRename, element.name),
+    readValueFunctionName: readValueFunctionName,
     required: required ?? false,
     unknownEnumValue: unknownEnumValue,
+    includeFromJson: includeFromJson,
+    includeToJson: includeToJson,
   );
-}
-
-String _encodedFieldName(
-  JsonSerializable classAnnotation,
-  String? jsonKeyNameValue,
-  FieldElement fieldElement,
-) {
-  if (jsonKeyNameValue != null) {
-    return jsonKeyNameValue;
-  }
-
-  switch (classAnnotation.fieldRename) {
-    case FieldRename.none:
-      return fieldElement.name;
-    case FieldRename.snake:
-      return snakeCase(fieldElement.name);
-    case FieldRename.kebab:
-      return kebabCase(fieldElement.name);
-    case FieldRename.pascal:
-      return pascalCase(fieldElement.name);
-    default:
-      throw ArgumentError.value(
-        classAnnotation,
-        'classAnnotation',
-        'The provided `fieldRename` (${classAnnotation.fieldRename}) is not '
-            'supported.',
-      );
-  }
 }
 
 bool _includeIfNull(
@@ -263,3 +331,9 @@ bool _interfaceTypesEqual(DartType a, DartType b) {
   }
   return a == b;
 }
+
+const jsonKeyNullForUndefinedEnumValueFieldName =
+    'JsonKey.nullForUndefinedEnumValue';
+
+final _nullAsUnknownChecker =
+    TypeChecker.fromRuntime(JsonKey.nullForUndefinedEnumValue.runtimeType);

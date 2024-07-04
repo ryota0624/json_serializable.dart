@@ -3,6 +3,8 @@
 // BSD-style license that can be found in the LICENSE file.
 
 @TestOn('vm')
+library test;
+
 import 'dart:io';
 
 import 'package:build/build.dart';
@@ -76,8 +78,12 @@ void main() {
 
     final configMap = Map<String, dynamic>.from(yaml);
 
-    expect(configMap.keys, unorderedEquals(generatorConfigDefaultJson.keys),
-        reason: 'All supported keys are documented.');
+    expect(
+      configMap.keys,
+      unorderedEquals(generatorConfigDefaultJson.keys),
+      reason: 'All supported keys are documented. '
+          'Did you forget to change README.md?',
+    );
 
     expect(
       JsonSerializable.fromJson(configMap).toJson(),
@@ -111,10 +117,19 @@ void main() {
         final config = Map<String, dynamic>.from(generatorConfigDefaultJson);
         config[entry.key] = entry.value;
 
-        final lastLine = entry.key == 'field_rename'
-            ? '`42` is not one of the supported values: none, kebab, snake, '
-                'pascal'
-            : "type 'int' is not a subtype of type 'bool?' in type cast";
+        String lastLine;
+        lastLine = switch (entry.key) {
+          'field_rename' =>
+            '`42` is not one of the supported values: none, kebab, snake, '
+                'pascal, screamingSnake',
+          'constructor' =>
+            "type 'int' is not a subtype of type 'String?' in type "
+                'cast',
+          'create_to_json' =>
+            "type 'int' is not a subtype of type 'bool?' in type "
+                'cast',
+          _ => "type 'int' is not a subtype of type 'bool?' in type cast"
+        };
 
         final matcher = isA<StateError>().having(
           (v) => v.message,
@@ -131,10 +146,15 @@ $lastLine''',
   });
 }
 
+// #CHANGE WHEN UPDATING json_annotation
 const _invalidConfig = {
   'any_map': 42,
   'checked': 42,
+  'constructor': 42,
   'create_factory': 42,
+  'create_field_map': 42,
+  'create_json_keys': 42,
+  'create_per_field_to_json': 42,
   'create_to_json': 42,
   'disallow_unrecognized_keys': 42,
   'explicit_to_json': 42,

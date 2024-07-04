@@ -84,12 +84,3 @@ abstract class TypeHelper<T extends TypeHelperContext> {
     bool defaultProvided,
   );
 }
-
-Object commonNullPrefix(
-  bool nullable,
-  String expression,
-  Object unsafeExpression,
-) =>
-    nullable
-        ? '$expression == null ? null : $unsafeExpression'
-        : unsafeExpression;

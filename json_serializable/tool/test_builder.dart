@@ -6,12 +6,9 @@ import 'dart:async';
 import 'dart:collection';
 
 import 'package:build/build.dart';
-import 'package:dart_style/dart_style.dart';
 import 'package:path/path.dart' as p;
 
 import 'shared.dart';
-
-final _formatter = DartFormatter();
 
 Builder testBuilder([_]) => validate('_test_builder', const _TestBuilder());
 
@@ -24,8 +21,7 @@ class _TestBuilder implements Builder {
 
     final sourceContent = await buildStep.readAsString(buildStep.inputId);
 
-    final factories =
-        SplayTreeMap.from({'$_kitchenSinkBaseName.dart': 'normal'});
+    final factories = SplayTreeMap.of({'$_kitchenSinkBaseName.dart': 'normal'});
 
     for (var config in _fileConfigurationMap[baseName]!) {
       final extension = _configToExtension(config);
@@ -56,7 +52,7 @@ class _TestBuilder implements Builder {
 
       final content = Replacement.generate(sourceContent, replacements);
 
-      await buildStep.writeAsString(newId, _formatter.format(content));
+      await buildStep.writeAsString(newId, formatter.format(content));
     }
 
     if (baseName == _kitchenSinkBaseName) {
@@ -73,7 +69,7 @@ class _TestBuilder implements Builder {
         '];',
       ];
 
-      await buildStep.writeAsString(newId, _formatter.format(lines.join('\n')));
+      await buildStep.writeAsString(newId, formatter.format(lines.join('\n')));
     }
   }
 
@@ -162,7 +158,7 @@ List<String> get _fileConfigurations => _fileConfigurationMap.values
     .followedBy(['.factories.dart'])
     .toSet()
     .toList()
-      ..sort();
+  ..sort();
 
 const _kitchenSinkBaseName = 'kitchen_sink';
 

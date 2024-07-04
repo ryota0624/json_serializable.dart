@@ -2,15 +2,12 @@ part of '_json_serializable_test_input.dart';
 
 @ShouldGenerate(
   r'''
-JustSetter _$JustSetterFromJson(Map<String, dynamic> json) {
-  return JustSetter();
-}
+JustSetter _$JustSetterFromJson(Map<String, dynamic> json) => JustSetter();
 
 Map<String, dynamic> _$JustSetterToJson(JustSetter instance) =>
     <String, dynamic>{};
 ''',
   expectedLogItems: ['Setters are ignored: JustSetter.someSetter'],
-  configurations: ['default'],
 )
 @JsonSerializable()
 class JustSetter {
@@ -19,12 +16,10 @@ class JustSetter {
 
 @ShouldGenerate(
   r'''
-JustSetterNoToJson _$JustSetterNoToJsonFromJson(Map<String, dynamic> json) {
-  return JustSetterNoToJson();
-}
+JustSetterNoToJson _$JustSetterNoToJsonFromJson(Map<String, dynamic> json) =>
+    JustSetterNoToJson();
 ''',
   expectedLogItems: ['Setters are ignored: JustSetterNoToJson.someSetter'],
-  configurations: ['default'],
 )
 @JsonSerializable(createToJson: false)
 class JustSetterNoToJson {
@@ -38,7 +33,6 @@ Map<String, dynamic> _$JustSetterNoFromJsonToJson(
     <String, dynamic>{};
 ''',
   expectedLogItems: ['Setters are ignored: JustSetterNoFromJson.someSetter'],
-  configurations: ['default'],
 )
 @JsonSerializable(createFactory: false)
 class JustSetterNoFromJson {

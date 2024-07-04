@@ -66,13 +66,26 @@ class _Factory implements k.KitchenSinkFactory<String, dynamic> {
         [],
         BigInt.zero,
         {},
+        BigInt.zero,
+        {},
         TrivialNumber(0),
         {},
         DateTime.fromMillisecondsSinceEpoch(0),
+        TrivialString(''),
+        TrivialNumber(0),
+        {},
       );
 
   k.JsonConverterTestClass jsonConverterFromJson(Map<String, dynamic> json) =>
       JsonConverterTestClass.fromJson(json);
+}
+
+Object? _valueAccessor(Map json, String key) {
+  if (key == 'iterable') {
+    return json['iterable'] ?? json['theIterable'];
+  }
+
+  return json[key];
 }
 
 @JsonSerializable()
@@ -115,6 +128,7 @@ class KitchenSink implements k.KitchenSink {
 
   BigInt? bigInt;
 
+  @JsonKey(readValue: _valueAccessor)
   Iterable? get iterable => _iterable;
 
   Iterable<dynamic> get dynamicIterable => _dynamicIterable;
@@ -138,11 +152,13 @@ class KitchenSink implements k.KitchenSink {
   List<Object> objectList = _defaultList();
   List<int> intList = _defaultList();
   List<DateTime> dateTimeList = _defaultList();
+  List<SimpleObject?> nullableSimpleObjectList = _defaultList();
 
   Map map = _defaultMap();
   Map<String, String> stringStringMap = _defaultMap();
   Map<dynamic, int> dynamicIntMap = _defaultMap();
   Map<Object, DateTime> objectDateTimeMap = _defaultMap();
+  Map<String, SimpleObject?> nullableSimpleObjectMap = _defaultMap();
 
   List<Map<String, Map<String, List<List<DateTime>?>?>?>?> crazyComplex =
       _defaultList();
@@ -150,7 +166,7 @@ class KitchenSink implements k.KitchenSink {
   // Handle fields with names that collide with helper names
   Map<String, bool> val = _defaultMap();
   bool? writeNotNull;
-  @JsonKey(name: r'$string')
+  @JsonKey(name: k.trickyKeyName, readValue: _trickyValueAccessor)
   String? string;
 
   SimpleObject simpleObject = _defaultSimpleObject();
@@ -168,14 +184,27 @@ class KitchenSink implements k.KitchenSink {
     _validatedPropertyNo42 = value;
   }
 
+  k.RecordSample? recordField;
+
   bool operator ==(Object other) => k.sinkEquals(this, other);
+
+  static Object? _trickyValueAccessor(Map json, String key) {
+    if (key == k.trickyKeyName) {
+      return json[k.trickyKeyName] ?? json['STRING'];
+    }
+
+    return json[key];
+  }
 }
 
-@JsonSerializable()
+@JsonSerializable(converters: [
+  // referencing a top-level field should work
+  durationConverter,
+  // referencing via a const constructor should work
+  BigIntStringConverter(),
+])
 // referencing a top-level field should work
-@durationConverter
-// referencing via a const constructor should work
-@BigIntStringConverter()
+@trivialStringConverter
 @TrivialNumberConverter.instance
 @EpochDateTimeConverter()
 class JsonConverterTestClass implements k.JsonConverterTestClass {
@@ -184,9 +213,14 @@ class JsonConverterTestClass implements k.JsonConverterTestClass {
     this.durationList,
     this.bigInt,
     this.bigIntMap,
+    this.nullableBigInt,
+    this.nullableBigIntMap,
     this.numberSilly,
     this.numberSillySet,
     this.dateTime,
+    this.trivialString,
+    this.nullableNumberSilly,
+    this.nullableNumberSillySet,
   );
 
   factory JsonConverterTestClass.fromJson(Map<String, dynamic> json) =>
@@ -200,13 +234,22 @@ class JsonConverterTestClass implements k.JsonConverterTestClass {
   BigInt bigInt;
   Map<String, BigInt> bigIntMap;
 
+  BigInt? nullableBigInt;
+  Map<String, BigInt?> nullableBigIntMap;
+
   TrivialNumber numberSilly;
   Set<TrivialNumber> numberSillySet;
 
   DateTime? dateTime;
+
+  TrivialString? trivialString;
+
+  TrivialNumber? nullableNumberSilly;
+  Set<TrivialNumber?> nullableNumberSillySet;
 }
 
 @JsonSerializable()
+// ignore: inference_failure_on_instance_creation
 @GenericConverter()
 class JsonConverterGeneric<S, T, U> {
   S item;

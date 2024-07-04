@@ -7,7 +7,14 @@
 import 'package:json_annotation/json_annotation.dart';
 
 import 'default_value_interface.dart' as dvi hide Greek;
-import 'default_value_interface.dart' show Greek;
+import 'default_value_interface.dart'
+    show
+        ConstClass,
+        ConstClassConverter,
+        Greek,
+        constClassFromJson,
+        constClassToJson,
+        intDefaultValueFunction;
 
 part 'default_value.g_any_map__checked.g.dart';
 
@@ -56,8 +63,27 @@ class DefaultValue implements dvi.DefaultValue {
   })
   Map<String, List<String>> fieldMapListString;
 
+  Duration durationField;
+
   @JsonKey(defaultValue: Greek.beta)
   Greek fieldEnum;
+
+  ConstClass constClass;
+
+  @ConstClassConverter()
+  ConstClass valueFromConverter;
+
+  @JsonKey(fromJson: constClassFromJson, toJson: constClassToJson)
+  ConstClass valueFromFunction;
+
+  @JsonKey(defaultValue: intDefaultValueFunction)
+  int intDefaultValueFromFunction;
+
+  @JsonKey(defaultValue: ConstClass.new)
+  ConstClass valueFromDefaultValueDefaultConstructor;
+
+  @JsonKey(defaultValue: ConstClass.easy)
+  ConstClass valueFromDefaultValueNamedConstructor;
 
   DefaultValue(
     this.fieldBool,
@@ -71,8 +97,15 @@ class DefaultValue implements dvi.DefaultValue {
     this.fieldSetSimple,
     this.fieldMapSimple,
     this.fieldMapListString,
-    this.fieldEnum,
-  );
+    this.fieldEnum, {
+    this.durationField = Duration.zero,
+    this.constClass = const ConstClass('value'),
+    this.valueFromConverter = const ConstClass('value'),
+    this.valueFromFunction = const ConstClass('value'),
+    required this.intDefaultValueFromFunction,
+    required this.valueFromDefaultValueDefaultConstructor,
+    required this.valueFromDefaultValueNamedConstructor,
+  });
 
   factory DefaultValue.fromJson(Map<String, dynamic> json) =>
       _$DefaultValueFromJson(json);

@@ -15,8 +15,8 @@ Object _toObject(Object input) => throw UnimplementedError();
 String _toStringFromObject(Object? input) => throw UnimplementedError();
 
 @ShouldThrow(
-  'Error with `@JsonKey` on `field`. The `fromJson` function `_toInt` '
-  'return type `int` is not compatible with field type `String`.',
+  'Error with `@JsonKey` on the `field` field. The `fromJson` function '
+  '`_toInt` return type `int` is not compatible with field type `String`.',
   element: 'field',
 )
 @JsonSerializable()
@@ -26,7 +26,7 @@ class BadFromFuncReturnType {
 }
 
 @ShouldThrow(
-  'Error with `@JsonKey` on `field`. The `fromJson` function '
+  'Error with `@JsonKey` on the `field` field. The `fromJson` function '
   '`_twoArgFunction` must have one positional parameter.',
   element: 'field',
 )
@@ -39,10 +39,9 @@ class InvalidFromFunc2Args {
 @ShouldGenerate(
   r'''
 ValidToFromFuncClassStatic _$ValidToFromFuncClassStaticFromJson(
-    Map<String, dynamic> json) {
-  return ValidToFromFuncClassStatic()
-    ..field = ValidToFromFuncClassStatic._staticFunc(json['field'] as String);
-}
+        Map<String, dynamic> json) =>
+    ValidToFromFuncClassStatic()
+      ..field = ValidToFromFuncClassStatic._staticFunc(json['field'] as String);
 
 Map<String, dynamic> _$ValidToFromFuncClassStaticToJson(
         ValidToFromFuncClassStatic instance) =>
@@ -50,7 +49,6 @@ Map<String, dynamic> _$ValidToFromFuncClassStaticToJson(
       'field': ValidToFromFuncClassStatic._staticFunc(instance.field),
     };
 ''',
-  configurations: ['default'],
 )
 @JsonSerializable()
 class ValidToFromFuncClassStatic {
@@ -61,7 +59,7 @@ class ValidToFromFuncClassStatic {
 }
 
 @ShouldThrow(
-  'Error with `@JsonKey` on `field`. The `toJson` function `_toInt` '
+  'Error with `@JsonKey` on the `field` field. The `toJson` function `_toInt` '
   'argument type `bool` is not compatible with field type `String`.',
   element: 'field',
 )
@@ -72,7 +70,65 @@ class BadToFuncReturnType {
 }
 
 @ShouldThrow(
-  'Error with `@JsonKey` on `field`. The `toJson` function '
+  'Error with `@JsonKey` on the `values` field. The `fromJson` function '
+  '`_fromList` return type `List<int>?` is not compatible with field type '
+  '`List<int>`.',
+  element: 'values',
+)
+@JsonSerializable()
+class Reproduce869NullableGenericType {
+  @JsonKey(
+    toJson: _toList, // nullable
+    fromJson: _fromList, // nullable
+  )
+  late final List<int> values;
+}
+
+@ShouldGenerate(
+  r'''
+Reproduce869NullableGenericTypeWithDefault
+    _$Reproduce869NullableGenericTypeWithDefaultFromJson(
+            Map<String, dynamic> json) =>
+        Reproduce869NullableGenericTypeWithDefault()
+          ..values =
+              json['values'] == null ? [] : _fromList(json['values'] as List?)
+          ..valuesNullable = json['valuesNullable'] == null
+              ? []
+              : _fromList(json['valuesNullable'] as List?);
+
+Map<String, dynamic> _$Reproduce869NullableGenericTypeWithDefaultToJson(
+        Reproduce869NullableGenericTypeWithDefault instance) =>
+    <String, dynamic>{
+      'values': _toList(instance.values),
+      'valuesNullable': _toList(instance.valuesNullable),
+    };
+''',
+)
+@JsonSerializable()
+class Reproduce869NullableGenericTypeWithDefault {
+  @JsonKey(
+    toJson: _toList, // nullable
+    fromJson: _fromList, // nullable
+    defaultValue: <int>[],
+  )
+  late List<int> values;
+
+  @JsonKey(
+    toJson: _toList, // nullable
+    fromJson: _fromList, // nullable
+    defaultValue: <int>[],
+  )
+  List<int>? valuesNullable;
+}
+
+List<int>? _fromList(List? pairs) =>
+    pairs?.map((it) => (it as num).toInt()).toList(growable: false);
+
+List<List>? _toList(List<int>? pairs) =>
+    pairs?.map((it) => [it]).toList(growable: false);
+
+@ShouldThrow(
+  'Error with `@JsonKey` on the `field` field. The `toJson` function '
   '`_twoArgFunction` must have one positional parameter.',
   element: 'field',
 )
@@ -95,7 +151,6 @@ class ObjectConvertMethods {
 @ShouldGenerate(
   "_toDynamic(json['field'])",
   contains: true,
-  configurations: ['default'],
 )
 @JsonSerializable()
 class DynamicConvertMethods {
@@ -108,13 +163,14 @@ String _toString(String input) => 'null';
 @ShouldGenerate(
   "_toString(json['field'] as String)",
   contains: true,
-  configurations: ['default'],
 )
 @JsonSerializable()
 class TypedConvertMethods {
   @JsonKey(fromJson: _toString, toJson: _toString)
   late String field;
 }
+
+String? _toStringNullOnEmpty(String input) => input.isEmpty ? null : input;
 
 @ShouldGenerate(
   r'''
@@ -128,15 +184,14 @@ Map<String, dynamic> _$ToJsonNullableFalseIncludeIfNullFalseToJson(
     }
   }
 
-  writeNotNull('field', _toString(instance.field));
+  writeNotNull('field', _toStringNullOnEmpty(instance.field));
   return val;
 }
 ''',
-  configurations: ['default'],
 )
 @JsonSerializable(createFactory: false)
 class ToJsonNullableFalseIncludeIfNullFalse {
-  @JsonKey(toJson: _toString, includeIfNull: false)
+  @JsonKey(toJson: _toStringNullOnEmpty, includeIfNull: false)
   late String field;
 }
 
@@ -149,14 +204,12 @@ String _fromDynamicIterable(Iterable input) => 'null';
 @ShouldGenerate(
   r'''
 FromDynamicCollection _$FromDynamicCollectionFromJson(
-    Map<String, dynamic> json) {
-  return FromDynamicCollection()
-    ..mapField = _fromDynamicMap(json['mapField'] as Map)
-    ..listField = _fromDynamicList(json['listField'] as List)
-    ..iterableField = _fromDynamicIterable(json['iterableField'] as List);
-}
+        Map<String, dynamic> json) =>
+    FromDynamicCollection()
+      ..mapField = _fromDynamicMap(json['mapField'] as Map)
+      ..listField = _fromDynamicList(json['listField'] as List)
+      ..iterableField = _fromDynamicIterable(json['iterableField'] as List);
 ''',
-  configurations: ['default'],
 )
 @JsonSerializable(createToJson: false)
 class FromDynamicCollection {
@@ -177,15 +230,13 @@ String _fromNullableDynamicIterable(Iterable? input) => 'null';
 @ShouldGenerate(
   r'''
 FromNullableDynamicCollection _$FromNullableDynamicCollectionFromJson(
-    Map<String, dynamic> json) {
-  return FromNullableDynamicCollection()
-    ..mapField = _fromNullableDynamicMap(json['mapField'] as Map?)
-    ..listField = _fromNullableDynamicList(json['listField'] as List?)
-    ..iterableField =
-        _fromNullableDynamicIterable(json['iterableField'] as List?);
-}
+        Map<String, dynamic> json) =>
+    FromNullableDynamicCollection()
+      ..mapField = _fromNullableDynamicMap(json['mapField'] as Map?)
+      ..listField = _fromNullableDynamicList(json['listField'] as List?)
+      ..iterableField =
+          _fromNullableDynamicIterable(json['iterableField'] as List?);
 ''',
-  configurations: ['default'],
 )
 @JsonSerializable(createToJson: false)
 class FromNullableDynamicCollection {
@@ -200,7 +251,7 @@ class FromNullableDynamicCollection {
 String _noArgs() => throw UnimplementedError();
 
 @ShouldThrow(
-  'Error with `@JsonKey` on `field`. The `fromJson` function '
+  'Error with `@JsonKey` on the `field` field. The `fromJson` function '
   '`_noArgs` must have one positional parameter.',
   element: 'field',
 )
@@ -213,7 +264,7 @@ class BadNoArgs {
 String? _twoArgs(a, b) => null;
 
 @ShouldThrow(
-  'Error with `@JsonKey` on `field`. The `fromJson` function '
+  'Error with `@JsonKey` on the `field` field. The `fromJson` function '
   '`_twoArgs` must have one positional parameter.',
   element: 'field',
 )
@@ -226,7 +277,7 @@ class BadTwoRequiredPositional {
 String? _oneNamed({a}) => null;
 
 @ShouldThrow(
-  'Error with `@JsonKey` on `field`. The `fromJson` function '
+  'Error with `@JsonKey` on the `field` field. The `fromJson` function '
   '`_oneNamed` must have one positional parameter.',
   element: 'field',
 )
@@ -261,4 +312,25 @@ String _onlyOptionalPositional([a, b]) => throw UnimplementedError();
 class OkayOnlyOptionalPositional {
   @JsonKey(fromJson: _onlyOptionalPositional)
   String? field;
+}
+
+@ShouldGenerate(
+  r'''
+_BetterPrivateNames _$BetterPrivateNamesFromJson(Map<String, dynamic> json) =>
+    _BetterPrivateNames(
+      name: json['name'] as String,
+    );
+
+Map<String, dynamic> _$BetterPrivateNamesToJson(_BetterPrivateNames instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+    };
+''',
+)
+@JsonSerializable(createFactory: true, createToJson: true)
+// ignore: unused_element
+class _BetterPrivateNames {
+  final String name;
+
+  _BetterPrivateNames({required this.name});
 }

@@ -2,19 +2,25 @@
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+import 'package:json_annotation/json_annotation.dart';
 import 'package:test/test.dart';
 
 import '../test_utils.dart';
+import 'converter_examples.dart';
+import 'create_per_field_to_json_example.dart';
+import 'field_map_example.dart';
+import 'json_enum_example.dart';
+import 'json_keys_example.dart' as js_keys;
 import 'json_test_common.dart' show Category, Platform, StatusCode;
 import 'json_test_example.dart';
 
-Matcher _throwsArgumentError(matcher) =>
+Matcher _throwsArgumentError(Object matcher) =>
     throwsA(isArgumentError.having((e) => e.message, 'message', matcher));
 
 void main() {
   group('Person', () {
     void roundTripPerson(Person p) {
-      roundTripObject(p, (json) => Person.fromJson(json));
+      roundTripObject(p, Person.fromJson);
     }
 
     test('now', () {
@@ -48,22 +54,23 @@ void main() {
 
   group('Order', () {
     void roundTripOrder(Order p) {
-      roundTripObject(p, (json) => Order.fromJson(json));
+      roundTripObject(p, Order.fromJson);
     }
 
     test('null', () {
-      roundTripOrder(Order(Category.charmed)..statusCode = StatusCode.success);
+      roundTripOrder(
+          Order.custom(Category.charmed)..statusCode = StatusCode.success);
     });
 
     test('empty', () {
-      roundTripOrder(Order(Category.strange, const [])
+      roundTripOrder(Order.custom(Category.strange, const [])
         ..statusCode = StatusCode.success
         ..count = 0
         ..isRushed = false);
     });
 
     test('simple', () {
-      roundTripOrder(Order(Category.top, <Item>[
+      roundTripOrder(Order.custom(Category.top, <Item>[
         Item(24)
           ..itemNumber = 42
           ..saleDates = [DateTime.now()]
@@ -103,7 +110,7 @@ void main() {
     });
 
     test('platform', () {
-      final order = Order(Category.charmed)
+      final order = Order.custom(Category.charmed)
         ..statusCode = StatusCode.success
         ..platform = Platform.undefined
         ..altPlatforms = {
@@ -115,7 +122,7 @@ void main() {
     });
 
     test('homepage', () {
-      final order = Order(Category.charmed)
+      final order = Order.custom(Category.charmed)
         ..platform = Platform.undefined
         ..statusCode = StatusCode.success
         ..altPlatforms = {
@@ -152,7 +159,7 @@ void main() {
     });
 
     test('duration toJson', () {
-      final order = Order(Category.notDiscoveredYet)
+      final order = Order.custom(Category.notDiscoveredYet)
         ..statusCode = StatusCode.success
         ..duration = const Duration(
           days: 2,
@@ -187,7 +194,7 @@ void main() {
 
   group('Item', () {
     void roundTripItem(Item p) {
-      roundTripObject(p, (json) => Item.fromJson(json));
+      roundTripObject(p, Item.fromJson);
     }
 
     test('empty json', () {
@@ -195,8 +202,16 @@ void main() {
       expect(item.saleDates, isNull);
       roundTripItem(item);
 
-      expect(item.toJson().keys, orderedEquals(['price', 'saleDates', 'rates']),
-          reason: 'Omits null `itemNumber`');
+      expect(
+        item.toJson().keys,
+        orderedEquals([
+          'price',
+          'saleDates',
+          'rates',
+          'geoPoint',
+        ]),
+        reason: 'Omits null `itemNumber`',
+      );
     });
 
     test('set itemNumber - with custom JSON key', () {
@@ -204,15 +219,23 @@ void main() {
       expect(item.itemNumber, 42);
       roundTripItem(item);
 
-      expect(item.toJson().keys,
-          orderedEquals(['price', 'item-number', 'saleDates', 'rates']),
-          reason: 'Includes non-null `itemNumber` - with custom key');
+      expect(
+        item.toJson().keys,
+        orderedEquals([
+          'price',
+          'item-number',
+          'saleDates',
+          'rates',
+          'geoPoint',
+        ]),
+        reason: 'Includes non-null `itemNumber` - with custom key',
+      );
     });
   });
 
   group('Numbers', () {
     void roundTripNumber(Numbers p) {
-      roundTripObject(p, (json) => Numbers.fromJson(json));
+      roundTripObject(p, Numbers.fromJson);
     }
 
     test('simple', () {
@@ -235,18 +258,23 @@ void main() {
     test('support ints as doubles', () {
       final value = {
         'doubles': [0, 0.0],
-        'nnDoubles': [0, 0.0]
+        'nnDoubles': [0, 0.0],
+        'doubleAsString': 3,
       };
 
-      roundTripNumber(Numbers.fromJson(value));
+      final output = roundTripObject(Numbers.fromJson(value), Numbers.fromJson);
+      expect(output.doubleAsString, 3.0.toString());
     });
 
-    test('does not support doubles as ints', () {
+    test('support doubles as ints', () {
       final value = {
-        'ints': [3.14, 0],
+        'ints': [3, 3.0, 3.14, 0],
       };
 
-      expect(() => Numbers.fromJson(value), throwsTypeError);
+      final output = roundTripObject(Numbers.fromJson(value), Numbers.fromJson);
+
+      // NOTE: all of the double values are truncated
+      expect(output.ints, [3, 3, 3, 0]);
     });
   });
 
@@ -257,10 +285,7 @@ void main() {
       ..intIntMap = {3: 3}
       ..uriIntMap = {Uri.parse('https://example.com'): 4};
 
-    final roundTrip =
-        roundTripObject(instance, (j) => MapKeyVariety.fromJson(j));
-
-    expect(roundTrip, instance);
+    roundTripObject(instance, MapKeyVariety.fromJson);
   });
 
   test('UnknownEnumValue', () {
@@ -275,5 +300,185 @@ void main() {
     expect(instance.enumIterable, [Category.notDiscoveredYet]);
     expect(instance.enumList, [Category.notDiscoveredYet]);
     expect(instance.enumSet, [Category.notDiscoveredYet]);
+  });
+
+  test('PrivateConstructor', () {
+    final value = PrivateConstructor('test');
+
+    roundTripObject(value, PrivateConstructor.fromJson);
+  });
+
+  test('enum helpers', () {
+    expect(standAloneEnumValues, ['a', 'b', 'g', 'd']);
+    expect(dayTypeEnumValues, ['no-good', 'rotten', 'very-bad']);
+  });
+
+  test(
+      'serializing a non-nullable enum as a key in a map should produce a '
+      'non-nullable string key', () {
+    final cls =
+        Issue1145RegressionA(status: {Issue1145RegressionEnum.gamma: true});
+    // Due to issue 1145 this resulted in Map<String?, dynamic>
+    expect(cls.toJson()['status'], const TypeMatcher<Map<String, dynamic>>());
+  });
+
+  test(
+      'serializing a nullable enum in a list should produce a list with'
+      ' nullable entries', () {
+    final cls = Issue1145RegressionB(status: [Issue1145RegressionEnum.gamma]);
+    // Issue 1145 should not have affected nullable enums
+    expect(cls.toJson()['status'], const TypeMatcher<List<String?>>());
+  });
+
+  test('unknown as null for enum', () {
+    expect(
+      () => Issue559Regression.fromJson({}).status,
+      throwsA(isA<MissingRequiredKeysException>()),
+    );
+    expect(
+      () => Issue559Regression.fromJson({'status': null}).status,
+      throwsA(isA<DisallowedNullValueException>()),
+    );
+    expect(
+      Issue559Regression.fromJson({'status': 'gamma'}).status,
+      Issue559RegressionEnum.gamma,
+    );
+    expect(
+      Issue559Regression.fromJson({'status': 'bob'}).status,
+      isNull,
+    );
+  });
+
+  test(r'_$ModelFieldMap', () {
+    expect(
+      modelFieldMap,
+      {
+        'firstName': 'first-name',
+        'lastName': 'LAST_NAME',
+      },
+    );
+  });
+
+  test(r'Generates _$PrivateModelFieldMap instead of __$PrivateModelFieldMap',
+      () {
+    expect(
+      privateModelFieldMap,
+      {'fullName': 'full-name'},
+    );
+  });
+
+  test(r'_$ModelPerFieldToJson', () {
+    expect(ModelPerFieldToJson.firstName('foo'), 'foo');
+
+    expect(ModelPerFieldToJson.enumValue(EnumValue.first), '1');
+    expect(ModelPerFieldToJson.enumValue(EnumValue.second), 'second');
+
+    expect(ModelPerFieldToJson.nested(Nested('foo')), {'value': 'foo'});
+    expect(ModelPerFieldToJson.nested(null), null);
+    expect(
+      ModelPerFieldToJson.nestedExcludeIfNull(Nested('foo')),
+      {'value': 'foo'},
+    );
+    expect(ModelPerFieldToJson.nestedExcludeIfNull(null), null);
+    expect(
+      ModelPerFieldToJson.nestedGeneric(GenericFactory(42, {'key': 21})),
+      {
+        'value': 42,
+        'map': {'key': 21},
+      },
+    );
+  });
+
+  test(r'_$GenericFactoryPerFieldToJson', () {
+    expect(
+      GenericFactoryPerFieldToJson.value<int>(42, (value) => '$value'),
+      '42',
+    );
+    expect(
+      GenericFactoryPerFieldToJson.value<String>('42', int.tryParse),
+      42,
+    );
+
+    expect(
+      GenericFactoryPerFieldToJson.map<int>({'foo': 21}, (value) => '$value'),
+      {'foo': '21'},
+    );
+    expect(
+      GenericFactoryPerFieldToJson.map<String>({'key': '42'}, int.tryParse),
+      {'key': 42},
+    );
+  });
+
+  group('classes with converters', () {
+    Issue1202RegressionClass roundTripIssue1202RegressionClass(int value) {
+      final instance = Issue1202RegressionClass(
+        normalNullableValue: value,
+        notNullableValueWithConverter: value,
+        notNullableValueWithNullableConverter: value,
+        value: Issue1202RegressionEnum.normalValue,
+        valueWithFunctions: value,
+        valueWithNullableFunctions: value,
+      );
+      return roundTripObject(instance, Issue1202RegressionClass.fromJson);
+    }
+
+    test('With default values', () {
+      final thing = roundTripIssue1202RegressionClass(42);
+
+      expect(thing.toJson(), {
+        'valueWithFunctions': '42',
+        'notNullableValueWithConverter': '42',
+        'value': 42,
+        'normalNullableValue': 42,
+      });
+    });
+
+    test('With non-default values', () {
+      final thing = roundTripIssue1202RegressionClass(43);
+
+      expect(thing.toJson(), {
+        'valueWithFunctions': '43',
+        'notNullableValueWithConverter': '43',
+        'value': 42,
+        'normalNullableValue': 43,
+        'notNullableValueWithNullableConverter': '43',
+        'valueWithNullableFunctions': '43',
+      });
+    });
+
+    test('enum with null value', () {
+      final instance = Issue1202RegressionClass(
+        normalNullableValue: 42,
+        notNullableValueWithConverter: 42,
+        notNullableValueWithNullableConverter: 42,
+        value: Issue1202RegressionEnum.nullValue,
+        valueWithFunctions: 42,
+        valueWithNullableFunctions: 42,
+      );
+
+      expect(instance.toJson(), {
+        'valueWithFunctions': '42',
+        'notNullableValueWithConverter': '42',
+        'normalNullableValue': 42,
+      });
+    });
+  });
+
+  test('Issue1226Regression', () {
+    final instance = Issue1226Regression(durationType: null);
+    expect(instance.toJson(), isEmpty);
+  });
+
+  test('Regression1229', () {
+    final instance = Regression1229();
+    expect(instance.toJson(), isEmpty);
+  });
+
+  test('value field index fun', () {
+    expect(enumValueFieldIndexValues, [0, 701, 2]);
+  });
+
+  test('ModelJsonKeys', () {
+    expect(js_keys.keys, {'first-name', 'LAST_NAME'});
   });
 }

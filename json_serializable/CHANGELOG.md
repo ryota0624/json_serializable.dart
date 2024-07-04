@@ -1,3 +1,198 @@
+## 6.8.0
+
+- Add type arguments to `Map` literals used for `Record` serialization.
+- Add support for `JsonSerializable(createJsonKeys: true)`.
+  ([#1401](https://github.com/google/json_serializable.dart/pull/1401))
+- Handle decoding an `int` value from a `double` literal. 
+  This now matches the behavior of `double` values being encoded as `int`.
+
+## 6.7.1
+
+- Support the latest `package:analyzer`.
+
+## 6.7.0
+
+- Support `Record` types.
+- Require Dart 3.0
+- Require `analyzer: ^5.12.0`
+
+## 6.6.2
+
+- Better handling of `Object?` or `dynamic` as `fromJson` constructor param.
+- Require Dart 2.19
+
+## 6.6.1
+
+- Fix bug when `JsonKey.includeToJson` is `false`.
+
+## 6.6.0
+
+- Support for `JsonKey.includeFromJson` and `JsonKey.includeToJson`.
+- Support `JsonEnum.valueField` being set with `'index'`.
+- Support `JsonSerializable.createPerFieldToJson`.
+- Require Dart SDK `>=2.18.0`.
+- Require `analyzer: ^5.2.0`
+- Require `json_annotation: '>=4.8.0 <4.9.0'`
+
+## 6.5.4
+
+- Fixed handling of nullable fields with converters which return non-nullable
+  values.
+
+## 6.5.3
+
+- Fixed handling of nullable `enum` fields with `includeIfNull: false`.
+
+## 6.5.2
+
+- Better handling of `null` when encoding `enum` values or values with
+  conversions.
+
+## 6.5.1
+
+- Fixed `BigInt`, `DateTime`, and `Uri` support for `JsonKey.defaultValue` with
+  a function value.
+
+## 6.5.0
+
+- Allow constructors to be passed to `JsonKey` parameters that support
+  `Function` types.
+- Accept `Function` values for `JsonKey.defaultValue`. The provided
+  `Function` will be invoked for the default value if the target JSON element is
+  missing or `null`.
+
+## 6.4.1
+
+- Fixed a bug when an `@JsonSerializable` class uses a mixin with fields.
+- Added more documentation `@JsonEnum`.
+
+## 6.4.0
+
+- Add support for `JsonEnum.valueField` which allows specifying a field in an
+  "enhanced enum" to use for serialization instead of specifying each value
+  individually with `JsonValue
+- Require `json_annotation: '>=4.7.0 <4.8.0'`
+
+## 6.3.2
+
+- Require `analyzer: '>=4.6.0 <6.0.0'`
+- Require `sdk: '>=2.17.0 <3.0.0'`
+
+## 6.3.1
+
+- Fixed support for `Duration` fields with default values.
+  ([#1170](https://github.com/google/json_serializable.dart/issues/1170))
+
+## 6.3.0
+
+- Added support for generating `_$ExampleFieldMap`, which can be used by other
+  code-generators that needs to interact with JSON serialization.
+  ([#1164](https://github.com/google/json_serializable.dart/pull/1164))
+- Added support for using a `JsonConverter<MyClass, Object>` on properties of
+  type `MyClass?`.
+  ([#822](https://github.com/google/json_serializable.dart/issues/822))
+- Added support for `JsonSerializable(converters: <JsonConverter>[])`
+  ([#1072](https://github.com/google/json_serializable.dart/issues/1072))
+- Fix issue with serialization of non-nullable enumerations emitting a nullable
+  type ([#1146](https://github.com/google/json_serializable.dart/pull/1146))
+
+## 6.2.0
+
+- Added support for the new `FieldRename.screamingSnake` field in
+  `package:json_annotation`.
+
+## 6.1.6
+
+- Allow latest `package:analyzer`.
+
+## 6.1.5
+
+- Fix enum support for upcoming enhanced enums in Dart 2.17.
+
+## 6.1.4
+
+- Fix issues with latest `package:analyzer` related to enums and annotations.
+
+## 6.1.3
+
+- Allow latest `package:analyzer`.
+
+## 6.1.2
+
+- Fix issue with nested generics and `genericArgumentFactories: true`.
+  ([#1047](https://github.com/google/json_serializable.dart/issues/1047))
+
+## 6.1.1
+
+- Fix `JsonKey.readValue` support to allow static functions.
+
+## 6.1.0
+
+- Support `JsonKey.readValue` to allow customized reading of values from source
+  JSON map objects.
+- The check to make sure there is a correctly constrained dependency on
+  `package:json_annotation` is now a warning and doesn't fail the build.
+- Require `json_annotation` `'>=4.4.0 <4.5.0'`.
+
+## 6.0.1
+
+- Don't require `json_annotation` in `dependencies` if it's just used in tests.
+
+## 6.0.0
+
+- Added support for `JsonSerializable.constructor` to allow specifying an
+  alternative constructor to invoke when creating a `fromJson` helper.
+- Support the new `@JsonEnum` annotation in `package:json_annotation`.
+- Support `JsonKey.nullForUndefinedEnumValue` as a value for
+  `JsonKey.unknownEnumValue` when you want to use `null` as the unknown value.
+- Use the new `$enumDecodeNullable` and `$enumDecode` in `json_annotation'
+  instead of generating these for each library. **NOTE**: This is a potential
+  breaking change if any user code relies on the previously generated private
+  functions.
+- The builder now checks to make sure there is a correctly constrained
+  dependency on `package:json_annotation`.
+- Require Dart SDK `>=2.14.0`.
+- Require `json_annotation` `'>=4.3.0 <4.4.0'`.
+
+## 5.0.2
+
+- Include type arguments when invoking `fromJson` on custom types. This fixes an
+  edge case where the generic arguments could not be inferred.
+
+## 5.0.1
+
+- Correctly handle nullable custom objects within `Iterable` and `Map`.
+- Require the latest `package:source_helper`.
+
+## 5.0.0
+
+- Use the default value for optional constructor parameters if
+  `JsonKey.defaultValue` is not provided. This could be a breaking behavior
+  change in generated code in some cases.
+- Fixed `fromJson` for `Map` fields with nullable values.
+- Improve names of private classes generated for `toJson` and `fromJson`.
+- Use the new `$checkedCreate` helper exposed in `package:json_annotation`
+  v4.1+.
+- Generated code now conforms to this `prefer_expression_function_bodies` lint.
+- Support default values and types with a `fromJson` constructor.
+- Support default values with class- and function-based converters.
+- `type_helper.dart`:
+  - **BREAKING**: removed `typeArgumentsOf`. This is now an extension exposed by
+    `package:source_helper`.
+- Require `package:analyzer` `^2.0.0`.
+
+## 4.1.4
+
+- Allow the latest `package:json_annotation`.
+
+## 4.1.3
+
+- Correctly handle nullable types with type arguments in generated code.
+
+## 4.1.2
+
+- Correctly decode `Map<String, double>` when the input has `int` literals.
+
 ## 4.1.1
 
 - Allow the latest `package:build_config`.
@@ -35,6 +230,10 @@
     determined by the Dart type system.
 - **BREAKING** `bool defaultProvided` arg added to `TypeHelper.deserialize`.
   _Only applies to code using `TypeHelper` directly._
+
+## 3.5.2
+
+- Widen `package:analyzer` range to allow v1.x.
 
 ## 3.5.1
 
@@ -117,7 +316,7 @@
 
 ## 3.2.3
 
-- Bug fix for analyzer 0.38.5.
+- Fixed bug related to `package:analyzer` 0.38.5.
 
 ## 3.2.2
 
@@ -206,12 +405,12 @@ future feature work.
 ## 2.0.3
 
 - When invoking a `fromJson` constructor on a field type, generate a conversion
-  expression derived from the the constructor parameter type.
+  expression derived from the constructor parameter type.
 
 - Be more strict about the supported `List`, `Set`, or `Map` types. This may
-  causes errors to be raised in cases where invalid code was generated before.
-  It also allows implementations of these types to add a `fromJson` constructor
-  to support custom decoding.
+  cause errors to be raised in cases where invalid code was generated before. It
+  also allows implementations of these types to add a `fromJson` constructor to
+  support custom decoding.
 
 - Small change to the whitespace around converted maps to improve a very slow
   path when formatting generated code.
@@ -254,8 +453,7 @@ future feature work.
 
   - **BREAKING** `JsonSerializableGenerator` now exposes a `config` property of
     type `JsonSerializable` instead of individual properties for `checked`,
-    `anyMay`, etc. This will affect anyone creating or using this class via
-    code.
+    `anyMay`, etc. This will affect creating or using this class via code.
 
 - `type_helper.dart`
 
@@ -386,7 +584,7 @@ future feature work.
 - Added `JsonKey.disallowNullValue`.
 
   - When `true`, generated code throws a `DisallowedNullValueException` if the
-    corresponding keys exist in in the JSON map, but it's value is null.
+    corresponding keys exist in the JSON map, but its value is `null`.
   - Will be captured and wrapped in a `CheckedFromJsonException` if `checked` is
     enabled in `json_serializable`.
 
@@ -576,7 +774,7 @@ future feature work.
 - Moved the annotations in `annotations.dart` to `package:json_annotations`.
 
   - Allows package authors to release code that has the corresponding
-    annotations without requiring package users to inherit all of the transitive
+    annotations without requiring package users to inherit all the transitive
     dependencies.
 
 - Deprecated `annotations.dart`.
@@ -622,7 +820,7 @@ future feature work.
     and related helpers which allow custom generation for specific types.
 
 - **BREAKING** Generation fails for types that are not a JSON primitive or that
-  do not explicitly supports JSON serialization.
+  do not explicitly support JSON serialization.
 
 - **BREAKING** `TypeHelper`:
 
