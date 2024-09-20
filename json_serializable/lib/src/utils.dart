@@ -235,11 +235,11 @@ String? defaultDecodeLogic(
   } else if (targetType.isDartCoreDouble) {
     final targetTypeNullable = defaultProvided || targetType.isNullableType;
     final question = targetTypeNullable ? '?' : '';
-    return '($expression as num$question)$question.toDouble()';
+    return '$expression as double$question';
   } else if (targetType.isDartCoreInt) {
     final targetTypeNullable = defaultProvided || targetType.isNullableType;
     final question = targetTypeNullable ? '?' : '';
-    return '($expression as num$question)$question.toInt()';
+    return '$expression as int$question';
   } else if (simpleJsonTypeChecker.isAssignableFromType(targetType)) {
     final typeCode = typeToCode(targetType, forceNullable: defaultProvided);
     return '$expression as $typeCode';
